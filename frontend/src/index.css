@@ -167,6 +167,39 @@
   mask-image: radial-gradient(circle at 50% 38%, #000 0%, transparent 72%);
 }
 
+.otake-blog {
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(
+      ellipse 46% 34% at 50% 6%,
+      rgba(255, 205, 232, 0.92) 0%,
+      transparent 74%
+    ),
+    radial-gradient(
+      ellipse 40% 32% at 50% 56%,
+      rgba(214, 202, 255, 0.88) 0%,
+      transparent 76%
+    ),
+    radial-gradient(
+      ellipse 34% 26% at 16% 84%,
+      rgba(255, 218, 238, 0.8) 0%,
+      transparent 74%
+    ),
+    radial-gradient(
+      ellipse 34% 26% at 84% 84%,
+      rgba(205, 218, 255, 0.8) 0%,
+      transparent 74%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #faf4ff 45%,
+      #f0e8ff 100%
+    );
+}
+
 .otake-solutions {
   position: relative;
   overflow-x: clip;

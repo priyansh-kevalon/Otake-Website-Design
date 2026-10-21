@@ -5,6 +5,7 @@ import ProductFeatures from './components/sections/ProductFeatures.jsx'
 import BusinessGrowth from './components/sections/BusinessGrowth.jsx'
 import PowerfulSolutions from './components/sections/PowerfulSolutions.jsx'
 import Testimonials from './components/sections/Testimonials.jsx'
+import BlogArticles from './components/sections/BlogArticles.jsx'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <BusinessGrowth />
         <PowerfulSolutions />
         <Testimonials />
+        <BlogArticles />
       </main>
     </div>
   )
