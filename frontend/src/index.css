@@ -98,3 +98,56 @@
       #f4efff 100%
     );
 }
+
+.otake-growth {
+  position: relative;
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(
+      ellipse 46% 38% at 50% 0%,
+      rgba(238, 236, 255, 0.9) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 38% 32% at 50% 20%,
+      rgba(255, 238, 247, 0.85) 0%,
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 30% 26% at 14% 26%,
+      rgba(255, 243, 249, 0.75) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 30% 26% at 86% 26%,
+      rgba(240, 244, 255, 0.75) 0%,
+      transparent 70%
+    );
+}
+
+.otake-solutions {
+  position: relative;
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(
+      ellipse 40% 30% at 78% 16%,
+      rgba(243, 238, 255, 0.85) 0%,
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 36% 28% at 20% 46%,
+      rgba(255, 240, 248, 0.8) 0%,
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 40% 32% at 60% 82%,
+      rgba(238, 244, 255, 0.75) 0%,
+      transparent 72%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fefdff 45%,
+      #fdf8fc 100%
+    );
+}

@@ -2,6 +2,8 @@ import Header from './components/layout/Header.jsx'
 import Hero from './components/sections/Hero.jsx'
 import TrustedBrands from './components/sections/TrustedBrands.jsx'
 import ProductFeatures from './components/sections/ProductFeatures.jsx'
+import BusinessGrowth from './components/sections/BusinessGrowth.jsx'
+import PowerfulSolutions from './components/sections/PowerfulSolutions.jsx'
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
         <Hero />
         <TrustedBrands />
         <ProductFeatures />
+        <BusinessGrowth />
+        <PowerfulSolutions />
       </main>
     </div>
   )
