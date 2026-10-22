@@ -76,8 +76,10 @@ function RightDecor() {
 }
 
 function Register({ onNavigate }) {
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
   const [rememberMe, setRememberMe] = useState(false)
   const [error, setError] = useState('')
 
@@ -85,6 +87,10 @@ function Register({ onNavigate }) {
     e.preventDefault()
     setError('')
 
+    if (!name.trim()) {
+      setError('Please enter your full name.')
+      return
+    }
     if (!email) {
       setError('Please enter your email address.')
       return
@@ -97,8 +103,12 @@ function Register({ onNavigate }) {
       setError('Password must be at least 8 characters.')
       return
     }
+    if (password !== confirmPassword) {
+      setError('Passwords do not match.')
+      return
+    }
     // No actual auth implementation - just validation per requirements
-    setError('Login functionality is not configured in this environment.')
+    setError('Registration functionality is not configured in this environment.')
   }
 
   const handleGoogleSignIn = () => {
@@ -110,6 +120,7 @@ function Register({ onNavigate }) {
     <div className="relative w-full py-10 sm:py-14">
       {/* Background gradients */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute inset-x-0 bottom-0 h-[440px] bg-[linear-gradient(to_top,#B99CF2_0%,#D9B3EC_16%,#F1B0DC_34%,#F7CDB4_52%,#FBE9A4_68%,#FDF7DC_82%,rgba(255,255,255,0)_100%)]" />
         <div className="absolute -bottom-40 -left-40 h-[420px] w-[420px] rounded-full bg-gradient-to-tr from-pink-200/40 via-rose-100/30 to-transparent blur-3xl" />
         <div className="absolute -bottom-32 left-1/4 h-[380px] w-[480px] rounded-full bg-gradient-to-tr from-purple-200/35 via-violet-100/25 to-transparent blur-3xl" />
         <div className="absolute -bottom-36 right-0 h-[440px] w-[440px] rounded-full bg-gradient-to-bl from-orange-200/35 via-amber-100/25 to-transparent blur-3xl" />
@@ -131,20 +142,39 @@ function Register({ onNavigate }) {
         </div>
 
         {/* Form Container */}
-        <div className="relative z-10 mx-auto mt-7 w-full max-w-[420px] rounded-lg border border-neutral-200 bg-white px-6 py-7 shadow-none sm:max-w-[430px] sm:px-7 sm:py-8">
+        <div className="relative z-10 mx-auto mt-7 w-full max-w-[420px] rounded-lg border border-neutral-200/90 bg-transparent px-6 py-7 shadow-none sm:max-w-[430px] sm:px-7 sm:py-8">
           <form onSubmit={handleSubmit} noValidate className="space-y-4">
+            <div>
+              <label htmlFor="register-name" className="mb-1.5 block text-[12px] font-medium text-neutral-800">
+                Full Name
+              </label>
+              <input
+                id="register-name"
+                name="name"
+                type="text"
+                autoComplete="name"
+                required
+                placeholder="John Doe"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="h-11 w-full rounded-lg border border-neutral-300 bg-white px-3 text-[13px] text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-400"
+              />
+            </div>
+
             <div>
               <label htmlFor="register-email" className="mb-1.5 block text-[12px] font-medium text-neutral-800">
                 Email Address
               </label>
               <input
                 id="register-email"
+                name="email"
                 type="email"
+                autoComplete="email"
                 required
                 placeholder="business@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="h-11 w-full rounded-lg border border-neutral-200 bg-white px-3 text-[13px] text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-400"
+                className="h-11 w-full rounded-lg border border-neutral-300 bg-white px-3 text-[13px] text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-400"
               />
             </div>
 
@@ -154,12 +184,31 @@ function Register({ onNavigate }) {
               </label>
               <input
                 id="register-password"
+                name="new-password"
                 type="password"
+                autoComplete="new-password"
                 required
                 placeholder="8+ characters"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="h-11 w-full rounded-lg border border-neutral-200 bg-white px-3 text-[13px] text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-400"
+                className="h-11 w-full rounded-lg border border-neutral-300 bg-white px-3 text-[13px] text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-400"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="register-confirm" className="mb-1.5 block text-[12px] font-medium text-neutral-800">
+                Confirm Password
+              </label>
+              <input
+                id="register-confirm"
+                name="confirm-password"
+                type="password"
+                autoComplete="new-password"
+                required
+                placeholder="Re-enter password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                className="h-11 w-full rounded-lg border border-neutral-300 bg-white px-3 text-[13px] text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-400"
               />
             </div>
 
@@ -185,7 +234,7 @@ function Register({ onNavigate }) {
               type="submit"
               className="mt-1 h-11 w-full rounded-lg bg-black text-[13px] font-medium text-white transition-colors hover:bg-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
             >
-              Login
+              Register
             </button>
 
             {error && (
