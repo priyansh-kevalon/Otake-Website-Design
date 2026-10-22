@@ -42,7 +42,7 @@ function OtakePerformancePreview() {
             {TABS.map((tab, index) => (
               <span
                 key={tab}
-                className={`rounded-full px-2.5 py-[3px] text-[8.5px] font-medium leading-[1.4] ${
+                className={`rounded-full px-2.5 py-[3px] text-[9.5px] font-medium leading-[1.4] sm:text-[8.5px] ${
                   index === 0
                     ? 'bg-[#171717] text-white'
                     : 'bg-white text-[#5C5866] ring-1 ring-[#E8E4F0]'
@@ -63,7 +63,7 @@ function OtakePerformancePreview() {
                 className="h-10 w-10 shrink-0 rounded-full object-cover"
               />
               <div className="min-w-0">
-                <p className="text-[7px] font-semibold uppercase tracking-wider text-[#85818F]">
+                <p className="text-[8.5px] font-semibold uppercase tracking-wider sm:text-[7px] text-[#85818F]">
                   Top Users
                 </p>
                 <p className="mt-1 truncate text-[11px] font-semibold text-[#202027]">
@@ -73,7 +73,7 @@ function OtakePerformancePreview() {
             </div>
 
             <div className="shrink-0 text-right">
-              <p className="text-[7px] font-semibold uppercase tracking-wider text-[#85818F]">
+              <p className="text-[8.5px] font-semibold uppercase tracking-wider sm:text-[7px] text-[#85818F]">
                 Purchase
               </p>
               <p className="mt-1 text-[11px] font-semibold text-[#202027]">7 Items</p>
@@ -81,7 +81,7 @@ function OtakePerformancePreview() {
           </div>
 
           <div className="mt-5 border-t border-[#E8E4F0] pt-5">
-            <p className="text-[7px] font-semibold uppercase tracking-wider text-[#85818F]">
+            <p className="text-[8.5px] font-semibold uppercase tracking-wider sm:text-[7px] text-[#85818F]">
               Total New Users
             </p>
 
@@ -101,7 +101,7 @@ function OtakePerformancePreview() {
                 <p className="text-[24px] font-bold leading-none tracking-tight text-[#202027]">
                   12.4K
                 </p>
-                <p className="truncate text-[8.5px] text-[#85818F]">Otake Users</p>
+                <p className="truncate text-[9.5px] text-[#85818F] sm:text-[8.5px]">Otake Users</p>
               </div>
 
               <LightningIcon />
@@ -109,7 +109,7 @@ function OtakePerformancePreview() {
           </div>
         </div>
 
-        <p className="text-center text-[8.5px] leading-[1.6] text-[#85818F]">
+        <p className="text-center text-[9.5px] leading-[1.6] text-[#85818F] sm:text-[8.5px]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim
           lacus.
         </p>

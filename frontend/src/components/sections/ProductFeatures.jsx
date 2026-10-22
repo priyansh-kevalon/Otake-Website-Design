@@ -88,29 +88,29 @@ function TaskDashboard() {
   return (
     <div className="rounded-2xl bg-[#f3f2f9] p-3.5">
       <div className="flex items-center justify-between">
-        <span className="rounded-md bg-neutral-900 px-2 py-0.5 text-[9px] font-semibold text-white">
+        <span className="rounded-md bg-neutral-900 px-2 py-0.5 text-[10px] font-semibold text-white sm:text-[9px]">
           Today
         </span>
-        <span className="text-[9px] text-neutral-400">2 of 8</span>
+        <span className="text-[10px] text-neutral-400 sm:text-[9px]">2 of 8</span>
       </div>
 
       <div className="mt-2.5 space-y-2">
         <div className="flex items-center gap-2.5 rounded-xl border border-neutral-100 bg-white p-2.5">
           <span className="h-5 w-5 shrink-0 rounded-full bg-gradient-to-br from-pink-300 to-fuchsia-400" />
           <span className="min-w-0 flex-1">
-            <span className="block truncate text-[10px] font-medium text-neutral-700">
+            <span className="block truncate text-[11px] font-medium text-neutral-700 sm:text-[10px]">
               Design review
             </span>
-            <span className="mt-0.5 block text-[8px] text-neutral-400">09:30 AM</span>
+            <span className="mt-0.5 block text-[9px] text-neutral-400 sm:text-[8px]">09:30 AM</span>
           </span>
         </div>
         <div className="flex items-center gap-2.5 rounded-xl border border-neutral-100 bg-white p-2.5">
           <span className="h-5 w-5 shrink-0 rounded-full bg-gradient-to-br from-amber-300 to-orange-400" />
           <span className="min-w-0 flex-1">
-            <span className="block truncate text-[10px] font-medium text-neutral-700">
+            <span className="block truncate text-[11px] font-medium text-neutral-700 sm:text-[10px]">
               Landing page build
             </span>
-            <span className="mt-0.5 block text-[8px] text-neutral-400">11:00 AM</span>
+            <span className="mt-0.5 block text-[9px] text-neutral-400 sm:text-[8px]">11:00 AM</span>
           </span>
         </div>
       </div>
@@ -132,8 +132,8 @@ function AnalyticsDashboard() {
   return (
     <div className="rounded-2xl bg-[#f3f2f9] p-3.5">
       <div className="flex items-center justify-between">
-        <p className="text-[11px] font-semibold text-neutral-800">Sales Report</p>
-        <span className="rounded-md border border-neutral-200 bg-white px-2 py-0.5 text-[8px] text-neutral-500">
+        <p className="text-[12px] font-semibold text-neutral-800 sm:text-[11px]">Sales Report</p>
+        <span className="rounded-md border border-neutral-200 bg-white px-2 py-0.5 text-[9px] text-neutral-500 sm:text-[8px]">
           Last 7 Days
         </span>
       </div>
@@ -141,18 +141,18 @@ function AnalyticsDashboard() {
       <div className="mt-3 flex items-center gap-3">
         <div className="flex flex-1 items-center gap-2">
           <span className="h-1.5 w-1.5 rounded-full bg-violet-700" />
-          <span className="text-[9px] text-neutral-500">Revenue</span>
-          <span className="text-[9px] font-semibold text-neutral-700">$8.2K</span>
+          <span className="text-[10px] text-neutral-500 sm:text-[9px]">Revenue</span>
+          <span className="text-[10px] font-semibold text-neutral-700 sm:text-[9px]">$8.2K</span>
         </div>
         <div className="flex flex-1 items-center gap-2">
           <span className="h-1.5 w-1.5 rounded-full bg-neutral-300" />
-          <span className="text-[9px] text-neutral-500">Orders</span>
-          <span className="text-[9px] font-semibold text-neutral-700">412</span>
+          <span className="text-[10px] text-neutral-500 sm:text-[9px]">Orders</span>
+          <span className="text-[10px] font-semibold text-neutral-700 sm:text-[9px]">412</span>
         </div>
       </div>
 
       <div className="relative mt-3 flex h-20 items-end justify-between gap-1.5 rounded-xl border border-neutral-100 bg-white px-2.5 pb-2 pt-3">
-        <span className="absolute left-1/2 top-1.5 -translate-x-1/2 rounded-md bg-neutral-900 px-1.5 py-0.5 text-[8px] font-medium text-white">
+        <span className="absolute left-1/2 top-1.5 -translate-x-1/2 rounded-md bg-neutral-900 px-1.5 py-0.5 text-[9px] font-medium text-white sm:text-[8px]">
           $1.4K
         </span>
         {bars.map((bar, index) => (
@@ -166,7 +166,7 @@ function AnalyticsDashboard() {
         ))}
       </div>
 
-      <div className="mt-1.5 flex justify-between text-[8px] text-neutral-400">
+      <div className="mt-1.5 flex justify-between text-[9px] text-neutral-400 sm:text-[8px]">
         <span>Mon</span>
         <span>Tue</span>
         <span>Wed</span>
@@ -183,7 +183,7 @@ function SalesDashboard() {
   return (
     <div className="rounded-2xl bg-[#f3f2f9] p-3.5">
       <div className="flex items-center justify-between">
-        <p className="text-[11px] font-semibold text-neutral-800">
+        <p className="text-[12px] font-semibold text-neutral-800 sm:text-[11px]">
           Today&apos;s transaction
         </p>
         <span className="flex flex-col gap-[3px]" aria-hidden="true">
@@ -199,7 +199,7 @@ function SalesDashboard() {
             <span className="block text-[14px] font-bold leading-none text-neutral-800">
               342
             </span>
-            <span className="mt-1 block text-[8px] text-neutral-400">Paid</span>
+            <span className="mt-1 block text-[9px] text-neutral-400 sm:text-[8px]">Paid</span>
           </span>
           <span
             className="h-6 w-6 shrink-0 rounded-full border-[3px] border-violet-500 border-r-transparent"
@@ -211,7 +211,7 @@ function SalesDashboard() {
             <span className="block text-[14px] font-bold leading-none text-neutral-800">
               17
             </span>
-            <span className="mt-1 block text-[8px] text-neutral-400">Pending</span>
+            <span className="mt-1 block text-[9px] text-neutral-400 sm:text-[8px]">Pending</span>
           </span>
           <span
             className="h-6 w-6 shrink-0 rounded-full border-[3px] border-rose-400 border-r-transparent"
@@ -267,7 +267,7 @@ function ProductFeatures() {
     <section id="features" className="otake-features w-full scroll-mt-6">
       <div className="mx-auto max-w-[1080px] px-6 py-16 sm:px-8 lg:py-24">
         <div className="mx-auto max-w-[640px] text-center">
-          <span className="inline-block rounded-full bg-yellow-300 px-3 py-1 text-[11px] font-semibold text-neutral-800">
+          <span className="inline-block rounded-full bg-yellow-300 px-3 py-1 text-[12px] font-semibold text-neutral-800 sm:text-[11px]">
             Product Features
           </span>
           <h2 className="mt-5 text-[28px] font-bold leading-[1.12] tracking-tight text-neutral-900 sm:text-[34px] lg:text-[38px]">

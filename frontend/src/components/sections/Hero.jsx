@@ -147,7 +147,7 @@ function Hero() {
               className="relative z-10 h-auto w-full max-w-[400px] object-contain drop-shadow-[0_40px_60px_rgba(30,8,25,0.9)] lg:max-w-[480px]"
             />
 
-            <div className="absolute bottom-10 left-1/2 z-20 w-[180px] -translate-x-[190px] -rotate-3 rounded-2xl bg-white p-3 shadow-lg shadow-pink-100/60">
+            <div className="absolute bottom-6 left-4 z-20 w-[150px] -rotate-3 rounded-2xl bg-white p-3 shadow-lg shadow-pink-100/60 sm:bottom-10 sm:left-1/2 sm:w-[180px] sm:-translate-x-[190px]">
               <p className="text-[11px] font-semibold text-neutral-800">
                 AI Designers
               </p>
@@ -161,7 +161,7 @@ function Hero() {
               </div>
             </div>
 
-            <div className="absolute right-1/2 top-20 z-20 flex translate-x-[170px] -rotate-3 items-center gap-2 rounded-2xl bg-white px-3 py-2 shadow-lg shadow-pink-100/60">
+            <div className="absolute right-4 top-16 z-20 flex -rotate-3 items-center gap-2 rounded-2xl bg-white px-3 py-2 shadow-lg shadow-pink-100/60 sm:right-1/2 sm:translate-x-[170px] sm:top-20">
               <div className="leading-tight">
                 <p className="text-[12px] font-bold text-neutral-900">+416</p>
                 <p className="text-[10px] text-neutral-400">Happy Customer</p>

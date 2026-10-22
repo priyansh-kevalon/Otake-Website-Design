@@ -194,7 +194,7 @@ function Contact() {
               <div className="mt-6">
                 <a
                   href="mailto:contact@otake.com"
-                  className="inline-flex items-center gap-2 text-[12.5px] font-semibold text-neutral-900 transition-colors hover:text-purple-600"
+                  className="inline-flex min-h-[44px] items-center gap-2 py-1 text-[12.5px] font-semibold text-neutral-900 transition-colors hover:text-purple-600"
                 >
                   <span className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-100">
                     ✉
@@ -216,7 +216,7 @@ function Contact() {
               <div className="mt-6">
                 <a
                   href="tel:+15550001234"
-                  className="inline-flex items-center gap-2 text-[12.5px] font-semibold text-neutral-900 transition-colors hover:text-purple-600"
+                  className="inline-flex min-h-[44px] items-center gap-2 py-1 text-[12.5px] font-semibold text-neutral-900 transition-colors hover:text-purple-600"
                 >
                   <span className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-100">
                     ☎
@@ -404,7 +404,7 @@ function Contact() {
                 className="h-4 w-4 rounded border-neutral-300 text-neutral-900 focus:ring-purple-400"
               />
               <label htmlFor="contact-agreed" className="text-[12px] text-neutral-600">
-                I agree to our <a href="#privacy" className="underline hover:text-neutral-900">Terms & Privacy</a>
+                I agree to our <a href="#privacy" className="inline-flex min-h-[24px] items-center underline hover:text-neutral-900">Terms &amp; Privacy</a>
               </label>
             </div>
 

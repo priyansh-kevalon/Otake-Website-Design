@@ -165,7 +165,7 @@ function Login({ onNavigate }) {
 
                 <a
                   href="#forgot-password"
-                  className="text-[12px] font-medium text-neutral-700 transition-colors hover:text-neutral-900 hover:underline"
+                  className="inline-flex min-h-[24px] items-center text-[12px] font-medium text-neutral-700 transition-colors hover:text-neutral-900 hover:underline"
                 >
                   Forgot password?
                 </a>
@@ -189,7 +189,7 @@ function Login({ onNavigate }) {
                   e.preventDefault()
                   if (onNavigate) onNavigate('register')
                 }}
-                className="font-semibold text-neutral-900 hover:underline"
+                className="inline-flex min-h-[24px] items-center font-semibold text-neutral-900 hover:underline"
               >
                 Register
               </a>

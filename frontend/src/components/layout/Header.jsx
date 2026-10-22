@@ -17,7 +17,7 @@ function Logo({ onNavigate }) {
           onNavigate('home')
         }
       }}
-      className="flex items-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+      className="flex h-11 items-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
       aria-label="Otake home"
     >
       <img
@@ -56,7 +56,7 @@ function Header({ currentPage = 'home', onNavigate }) {
                 <a
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link)}
-                  className={`rounded text-[12px] font-semibold tracking-wide transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
+                  className={`rounded py-2 text-[12px] font-semibold tracking-wide transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
                     isActive
                       ? 'text-neutral-900 underline decoration-pink-400 decoration-2 underline-offset-4'
                       : 'text-neutral-600 hover:text-neutral-900'
@@ -78,7 +78,7 @@ function Header({ currentPage = 'home', onNavigate }) {
                 onNavigate('login')
               }
             }}
-            className={`rounded text-[12px] tracking-wide transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
+            className={`rounded py-2 text-[12px] tracking-wide transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
               currentPage === 'login'
                 ? 'font-bold text-neutral-900 underline decoration-pink-400 decoration-2 underline-offset-4'
                 : 'text-neutral-600 hover:text-neutral-900'
@@ -106,7 +106,7 @@ function Header({ currentPage = 'home', onNavigate }) {
 
         <button
           type="button"
-          className="rounded p-1 text-neutral-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded text-neutral-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 md:hidden"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
           aria-controls="mobile-nav"
@@ -140,7 +140,7 @@ function Header({ currentPage = 'home', onNavigate }) {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className={`block rounded py-2 text-[13px] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
+                    className={`block rounded py-3 text-[13px] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
                       isActive
                         ? 'font-bold text-neutral-900'
                         : 'text-neutral-500 hover:text-neutral-900'
@@ -155,7 +155,7 @@ function Header({ currentPage = 'home', onNavigate }) {
             <li>
               <a
                 href="#login"
-                className={`block rounded py-2 text-[13px] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
+                className={`block rounded py-3 text-[13px] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
                   currentPage === 'login' ? 'font-bold text-neutral-900' : 'text-neutral-500 hover:text-neutral-900'
                 }`}
                 onClick={(e) => {
@@ -170,7 +170,7 @@ function Header({ currentPage = 'home', onNavigate }) {
             <li className="py-2">
               <a
                 href="#register"
-                className="inline-flex h-9 items-center rounded-md bg-neutral-900 px-4 text-[13px] font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+                className="inline-flex h-11 items-center rounded-md bg-neutral-900 px-4 text-[13px] font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
                 onClick={(e) => {
                   e.preventDefault()
                   if (onNavigate) onNavigate('register')

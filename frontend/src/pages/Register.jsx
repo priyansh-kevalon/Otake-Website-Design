@@ -144,7 +144,7 @@ function Register({ onNavigate }) {
                 placeholder="business@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="h-10 w-full rounded-lg border border-neutral-200 bg-white px-3 text-[13px] text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-400"
+                className="h-11 w-full rounded-lg border border-neutral-200 bg-white px-3 text-[13px] text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-400"
               />
             </div>
 
@@ -159,7 +159,7 @@ function Register({ onNavigate }) {
                 placeholder="8+ characters"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="h-10 w-full rounded-lg border border-neutral-200 bg-white px-3 text-[13px] text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-400"
+                className="h-11 w-full rounded-lg border border-neutral-200 bg-white px-3 text-[13px] text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-400"
               />
             </div>
 
@@ -175,7 +175,7 @@ function Register({ onNavigate }) {
               </label>
               <a
                 href="#forgot-password"
-                className="text-[12px] text-neutral-700 hover:text-neutral-900 hover:underline"
+                className="inline-flex min-h-[24px] items-center text-[12px] text-neutral-700 hover:text-neutral-900 hover:underline"
               >
                 Forgot password?
               </a>
@@ -183,7 +183,7 @@ function Register({ onNavigate }) {
 
             <button
               type="submit"
-              className="mt-1 h-10 w-full rounded-lg bg-black text-[13px] font-medium text-white transition-colors hover:bg-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+              className="mt-1 h-11 w-full rounded-lg bg-black text-[13px] font-medium text-white transition-colors hover:bg-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
             >
               Login
             </button>
@@ -201,7 +201,7 @@ function Register({ onNavigate }) {
           <button
             type="button"
             onClick={handleGoogleSignIn}
-            className="flex h-10 w-full items-center justify-center gap-2.5 rounded-lg border border-neutral-200 bg-white text-[12.5px] font-medium text-neutral-800 transition-colors hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+            className="flex h-11 w-full items-center justify-center gap-2.5 rounded-lg border border-neutral-200 bg-white text-[12.5px] font-medium text-neutral-800 transition-colors hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
           >
             <GoogleIcon />
             <span>Continue with Google</span>
@@ -216,7 +216,7 @@ function Register({ onNavigate }) {
               e.preventDefault()
               if (onNavigate) onNavigate('login')
             }}
-            className="font-medium text-neutral-900 hover:underline"
+            className="inline-flex min-h-[24px] items-center font-medium text-neutral-900 hover:underline"
           >
             Login
           </a>

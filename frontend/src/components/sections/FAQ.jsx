@@ -181,7 +181,7 @@ function FAQ() {
   }
 
   return (
-    <section id="faq" className="otake-faq relative w-full scroll-mt-6 py-16 sm:py-24">
+    <section id="faq" className="otake-faq relative w-full scroll-mt-6 overflow-hidden py-16 sm:py-24">
       {/* Subtle Ambient Background Pastel Glows */}
       <div
         className="pointer-events-none absolute -left-20 top-1/4 h-[380px] w-[380px] rounded-full bg-gradient-to-tr from-pink-200/35 via-purple-100/30 to-transparent blur-3xl"
@@ -260,7 +260,7 @@ function FAQ() {
                     type="button"
                     onClick={() => toggleAccordion(idx)}
                     aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-4 text-left transition-colors hover:text-neutral-900"
+                    className="flex min-h-[44px] w-full items-center justify-between gap-4 py-1.5 text-left transition-colors hover:text-neutral-900"
                   >
                     <span className="text-[13.5px] font-medium leading-snug text-[#25232A] sm:text-[14px]">
                       {item.q}

@@ -65,13 +65,13 @@ function OtakeProductPreview() {
           <p className="text-[26px] font-bold leading-none tracking-tight text-[#202027]">
             Otake
           </p>
-          <p className="mt-2 text-[9.5px] font-medium text-[#85818F]">500+ Experience</p>
+          <p className="mt-2 text-[10.5px] font-medium text-[#85818F] sm:text-[9.5px]">500+ Experience</p>
 
           <div className="absolute -top-2 right-0 flex flex-col items-end gap-[6px]">
             {TAGS.map((tag) => (
               <span
                 key={tag.label}
-                className={`rounded-full border px-2 py-[2px] text-[8px] font-medium leading-[1.3] ${tag.className}`}
+                className={`rounded-full border px-2 py-[2px] text-[9px] font-medium leading-[1.3] sm:text-[8px] ${tag.className}`}
               >
                 {tag.label}
               </span>
@@ -84,12 +84,12 @@ function OtakeProductPreview() {
             <div key={feature.label}>
               <div className="flex items-center gap-2">
                 <FeatureIcon type={feature.icon} />
-                <p className="text-[9.5px] font-semibold text-[#9A79F5]">{feature.label}</p>
+                <p className="text-[10.5px] font-semibold text-[#9A79F5] sm:text-[9.5px]">{feature.label}</p>
               </div>
 
               <div className="relative mt-2.5 min-h-[62px] rounded-lg border border-[#E8E4F0] bg-white px-3 py-3">
                 <SelectionHandles />
-                <p className="text-[8.5px] leading-[1.55] text-[#85818F]">{feature.copy}</p>
+                <p className="text-[9.5px] leading-[1.55] text-[#85818F] sm:text-[8.5px]">{feature.copy}</p>
               </div>
             </div>
           ))}
@@ -99,7 +99,7 @@ function OtakeProductPreview() {
           type="button"
           tabIndex={-1}
           aria-hidden="true"
-          className="mt-auto w-full cursor-default rounded-lg border border-[#E8E4F0] bg-white py-2.5 text-[9.5px] font-medium text-[#5C5866]"
+          className="mt-auto w-full cursor-default rounded-lg border border-[#E8E4F0] bg-white py-2.5 text-[10.5px] font-medium text-[#5C5866] sm:text-[9.5px]"
         >
           Redefining UI/UX
         </button>
