@@ -148,7 +148,7 @@ function Contact() {
   return (
     <div className="w-full">
       {/* ---------------- 1. CONTACT HERO & CHANNEL CARDS ---------------- */}
-      <section className="otake-about-hero relative w-full pt-8 pb-16 sm:pt-12 sm:pb-24">
+      <section className="otake-about-hero otake-hero-color relative w-full pt-8 pb-16 sm:pt-12 sm:pb-24">
         <div className="relative mx-auto max-w-[1080px] px-4 sm:px-6 lg:px-8">
           <div className="relative mx-auto max-w-[680px] text-center">
             <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
@@ -287,7 +287,16 @@ function Contact() {
           </div>
 
           {/* The Contact Form */}
-          <form onSubmit={handleSubmit} className="mt-10 space-y-4">
+          <div className="relative mt-10">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute left-1/2 -top-28 -bottom-28 w-screen -translate-x-1/2"
+              style={{
+                backgroundImage:
+                  'radial-gradient(ellipse 48% 62% at 50% 50%, rgba(229,210,254,0.95) 0%, rgba(238,223,254,0.8) 40%, rgba(247,240,255,0.42) 68%, rgba(255,255,255,0) 100%)',
+              }}
+            />
+            <form onSubmit={handleSubmit} className="relative space-y-4">
             {/* First and Last Name */}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
@@ -418,6 +427,7 @@ function Contact() {
               </button>
             </div>
           </form>
+          </div>
         </div>
       </section>
 
