@@ -128,6 +128,10 @@ function Contact() {
     }))
   }
 
+  const supportEmail = import.meta.env.VITE_SUPPORT_EMAIL || 'contact@otake.com'
+  const supportPhone = import.meta.env.VITE_SUPPORT_PHONE || '+1 (555) 000-1234'
+  const supportPhoneHref = `tel:${supportPhone.replace(/[^\d+]/g, '')}`
+
   const handleSubmit = (e) => {
     e.preventDefault()
     setSubmitted(true)
@@ -193,13 +197,13 @@ function Contact() {
               </p>
               <div className="mt-6">
                 <a
-                  href="mailto:contact@otake.com"
+                  href={`mailto:${supportEmail}`}
                   className="inline-flex min-h-[44px] items-center gap-2 py-1 text-[12.5px] font-semibold text-neutral-900 transition-colors hover:text-purple-600"
                 >
                   <span className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-100">
                     ✉
                   </span>
-                  contact@otake.com
+                  {supportEmail}
                 </a>
               </div>
             </div>
@@ -215,13 +219,13 @@ function Contact() {
               </p>
               <div className="mt-6">
                 <a
-                  href="tel:+15550001234"
+                  href={supportPhoneHref}
                   className="inline-flex min-h-[44px] items-center gap-2 py-1 text-[12.5px] font-semibold text-neutral-900 transition-colors hover:text-purple-600"
                 >
                   <span className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-100">
                     ☎
                   </span>
-                  +1 (555) 000-1234
+                  {supportPhone}
                 </a>
               </div>
             </div>
