@@ -116,21 +116,28 @@ function Pricing() {
           <div className="relative mx-auto max-w-[680px] text-center">
             {/* Ambient decorative 3D accents */}
             <span
-              className="pointer-events-none absolute -left-8 top-1 hidden select-none drop-shadow sm:block"
+              className="pointer-events-none absolute -left-2 top-1 hidden select-none sm:block lg:-left-10"
               aria-hidden="true"
             >
-              <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-                <circle cx="17" cy="17" r="14" fill="#FB923C" />
-                <circle cx="14" cy="13" r="3.5" fill="#FFFFFF" opacity="0.6" />
-              </svg>
+              <img
+                src="/images/6d78f5c25e29d1b3c3efb378a0895ab50206643b.png"
+                alt=""
+                width="52"
+                height="52"
+                className="h-[52px] w-[52px] object-contain"
+              />
             </span>
             <span
-              className="pointer-events-none absolute -right-8 top-12 hidden select-none drop-shadow sm:block"
+              className="pointer-events-none absolute -right-2 top-12 hidden select-none sm:block lg:-right-10"
               aria-hidden="true"
             >
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-                <path d="M15 2L18 10L26 12L20 18L21 26L15 22L9 26L10 18L4 12L12 10L15 2Z" fill="#C084FC" />
-              </svg>
+              <img
+                src="/images/73d9b74f1e858692091fb4e1a35f610182e1e25f.png"
+                alt=""
+                width="48"
+                height="48"
+                className="h-[48px] w-[48px] object-contain"
+              />
             </span>
 
             <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
