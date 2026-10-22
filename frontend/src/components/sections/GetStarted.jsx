@@ -1,14 +1,8 @@
 function OtakeIconBadge() {
   return (
     <div className="relative flex items-center justify-center">
-      {/* Outer soft ambient colored glow radiating around the badge */}
-      <div
-        className="pointer-events-none absolute -inset-3 rounded-full bg-gradient-to-tr from-[#f472b6]/50 via-[#c084fc]/50 to-[#60a5fa]/40 blur-xl"
-        aria-hidden="true"
-      />
-
       {/* Rounded Octagon Badge */}
-      <div className="relative flex h-14 w-14 items-center justify-center drop-shadow-[0_8px_16px_rgba(192,132,252,0.35)] sm:h-16 sm:w-16">
+      <div className="relative flex h-14 w-14 items-center justify-center sm:h-16 sm:w-16">
         <svg
           viewBox="0 0 64 64"
           className="h-full w-full"
