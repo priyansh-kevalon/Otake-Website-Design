@@ -125,8 +125,8 @@ function About() {
   return (
     <div className="w-full">
       {/* ---------------- 1. HERO SECTION ---------------- */}
-      <section className="otake-about-hero relative w-full pt-8 pb-16 sm:pt-12 sm:pb-24">
-        <div className="relative mx-auto max-w-[1080px] px-6 sm:px-8">
+      <section className="otake-about-hero otake-about-hero-deep relative z-10 w-full pt-6 pb-12 sm:pt-10 sm:pb-0">
+        <div className="relative mx-auto flow-root max-w-[1080px] px-6 sm:px-8">
           <div className="relative mx-auto max-w-[680px] text-center">
             {/* Floating 3D accents around heading */}
             <span
@@ -158,20 +158,20 @@ function About() {
               About Us
             </span>
 
-            <h1 className="mt-5 text-[32px] font-bold leading-[1.15] tracking-tight text-neutral-900 sm:text-[42px] md:text-[48px]">
+            <h1 className="mt-4 text-[32px] font-bold leading-[1.15] tracking-tight text-neutral-900 sm:text-[42px] md:text-[48px]">
               Empowering Businesses
               <br />
               Large And Small
             </h1>
 
-            <p className="mx-auto mt-4 max-w-[480px] text-[13.5px] leading-relaxed text-[#8B8A93] sm:text-[14.5px]">
+            <p className="mx-auto mt-3 max-w-[480px] text-[13.5px] leading-relaxed text-[#8B8A93] sm:text-[14.5px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <br className="hidden sm:inline" /> Vivamus non enim lacus.
             </p>
           </div>
 
           {/* 3 Character Persona Cards */}
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:gap-8">
+          <div className="mt-5 grid grid-cols-1 gap-6 sm:-mb-[172px] sm:grid-cols-3 lg:gap-8">
             {/* Card 1: Curly hair with headphones & orange jacket */}
             <div className="group relative flex flex-col items-center justify-end overflow-hidden rounded-[28px] border border-white/80 bg-[#E8F4FC] p-4 shadow-[0_16px_36px_rgba(180,210,240,0.35)] transition-transform duration-300 hover:-translate-y-1">
               <div className="relative flex h-[280px] w-full items-end justify-center sm:h-[310px]">
@@ -209,7 +209,7 @@ function About() {
       </section>
 
       {/* ---------------- 2. MISSION & METRICS ---------------- */}
-      <section className="w-full bg-white py-14 sm:py-20">
+      <section className="w-full bg-white pt-14 pb-14 sm:pt-56 sm:pb-20">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[30px] md:text-[32px]">
