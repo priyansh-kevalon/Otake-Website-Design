@@ -39,7 +39,7 @@ function UserIcon() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.7"
+      strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
@@ -61,7 +61,7 @@ function AnalyticsIcon() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.7"
+      strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
@@ -83,7 +83,7 @@ function IntegrationIcon() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.7"
+      strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
@@ -107,7 +107,7 @@ function SecurityIcon() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.7"
+      strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
@@ -127,7 +127,7 @@ const FEATURES = [
 ]
 
 const ICON_GRADIENT =
-  'bg-[linear-gradient(135deg,#fbcfe8_0%,#fdd9c0_35%,#d8b4fe_70%,#bfdbfe_100%)]'
+  'bg-[linear-gradient(135deg,#d9b4fe_0%,#fbcfe8_25%,#fcd9c9_60%,#bfdbfe_100%)]'
 
 function BusinessGrowth() {
   return (
@@ -151,7 +151,7 @@ function BusinessGrowth() {
           {FEATURES.map((feature) => (
             <div key={feature.id} className="flex flex-col items-center text-center">
               <span
-                className={`flex h-11 w-11 items-center justify-center rounded-[11px] text-white shadow-[0_8px_18px_rgba(196,160,220,0.35)] ${ICON_GRADIENT}`}
+                className={`flex h-11 w-11 items-center justify-center rounded-[11px] text-[#3B0764] shadow-[0_10px_22px_rgba(124,58,237,0.32)] ${ICON_GRADIENT}`}
                 aria-hidden="true"
               >
                 {feature.icon}
