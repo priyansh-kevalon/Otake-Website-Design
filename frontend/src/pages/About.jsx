@@ -130,7 +130,7 @@ function About() {
           <div className="relative mx-auto max-w-[680px] text-center">
             {/* Floating 3D accents around heading */}
             <span
-              className="pointer-events-none absolute -left-10 top-1 hidden select-none sm:block"
+              className="pointer-events-none absolute -left-2 top-1 hidden select-none sm:block lg:-left-10"
               aria-hidden="true"
             >
               <img
@@ -142,7 +142,7 @@ function About() {
               />
             </span>
             <span
-              className="pointer-events-none absolute -right-10 top-12 hidden select-none sm:block"
+              className="pointer-events-none absolute -right-2 top-12 hidden select-none sm:block lg:-right-10"
               aria-hidden="true"
             >
               <img
