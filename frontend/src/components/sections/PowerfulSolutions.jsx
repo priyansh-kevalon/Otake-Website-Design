@@ -135,7 +135,7 @@ function PreviewShell({ children, decoration, decorationClass, glowClass }) {
 
 function PowerfulSolutions() {
   return (
-    <section className="otake-solutions w-full">
+    <section id="solutions" className="otake-solutions w-full scroll-mt-6">
       <div className="mx-auto max-w-[1160px] px-6 py-16 sm:px-8 lg:py-24">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,560px)_minmax(0,1fr)] lg:items-center lg:gap-10">
           <div className="order-1">

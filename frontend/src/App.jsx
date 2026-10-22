@@ -8,6 +8,7 @@ import Testimonials from './components/sections/Testimonials.jsx'
 import BlogArticles from './components/sections/BlogArticles.jsx'
 import FAQ from './components/sections/FAQ.jsx'
 import GetStarted from './components/sections/GetStarted.jsx'
+import Footer from './components/layout/Footer.jsx'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <FAQ />
         <GetStarted />
       </main>
+      <Footer />
     </div>
   )
 }

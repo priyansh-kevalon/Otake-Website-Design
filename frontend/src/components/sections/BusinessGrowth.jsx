@@ -131,7 +131,7 @@ const ICON_GRADIENT =
 
 function BusinessGrowth() {
   return (
-    <section className="otake-growth w-full">
+    <section id="growth" className="otake-growth w-full scroll-mt-6">
       <div className="mx-auto max-w-[1080px] px-6 py-16 sm:px-8 lg:py-24">
         <div className="flex justify-center">
           <CloudIllustration />

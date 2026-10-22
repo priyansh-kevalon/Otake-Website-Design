@@ -10,14 +10,14 @@ const ARTICLES = [
     title: ['Use data analytics to', 'improve shipping times.'],
   },
   {
-    id: 'sales',
+    id: 'sales-growth',
     imageBg: 'bg-[#EDE9FF]',
     imageFilter: 'hue-rotate-[45deg]',
     categories: ['Data', 'Sales Growth'],
     title: ['Sales growth stories', 'powered by marketing.'],
   },
   {
-    id: 'customers',
+    id: 'customer-base',
     imageBg: 'bg-[#FCE7F3]',
     imageFilter: 'hue-rotate-[-50deg]',
     categories: ['Data', 'Shipping', 'Sales Growth'],
@@ -25,10 +25,11 @@ const ARTICLES = [
   },
 ]
 
-function ArticleCard({ imageBg, imageFilter, categories, title, wideOnSm }) {
+function ArticleCard({ id, imageBg, imageFilter, categories, title, wideOnSm }) {
   return (
     <article
-      className={`flex min-h-[345px] flex-col rounded-[18px] bg-white p-2.5 ${
+      id={id}
+      className={`flex min-h-[345px] flex-col scroll-mt-6 rounded-[18px] bg-white p-2.5 ${
         wideOnSm
           ? 'sm:col-span-2 sm:mx-auto sm:w-full sm:max-w-[calc(50%-8px)] lg:col-span-1 lg:mx-0 lg:w-auto lg:max-w-none'
           : ''
@@ -78,7 +79,7 @@ function ArticleCard({ imageBg, imageFilter, categories, title, wideOnSm }) {
 
 function BlogArticles() {
   return (
-    <section className="otake-blog relative w-full overflow-hidden">
+    <section id="blog" className="otake-blog relative w-full scroll-mt-6 overflow-hidden">
       <div className="relative mx-auto max-w-[1150px] px-6 pb-20 pt-24 sm:px-8 lg:pb-28 lg:pt-32">
         <div className="flex flex-col items-center text-center">
           <span className="inline-block rounded-full bg-[#FFE36A] px-3 py-[5px] text-[11px] font-semibold leading-none text-[#1A1A1A]">
@@ -102,6 +103,7 @@ function BlogArticles() {
           {ARTICLES.map((article, index) => (
             <ArticleCard
               key={article.id}
+              id={article.id}
               imageBg={article.imageBg}
               imageFilter={article.imageFilter}
               categories={article.categories}

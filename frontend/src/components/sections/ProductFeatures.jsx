@@ -264,7 +264,7 @@ const FEATURES = [
 
 function ProductFeatures() {
   return (
-    <section className="otake-features w-full">
+    <section id="features" className="otake-features w-full scroll-mt-6">
       <div className="mx-auto max-w-[1080px] px-6 py-16 sm:px-8 lg:py-24">
         <div className="mx-auto max-w-[640px] text-center">
           <span className="inline-block rounded-full bg-yellow-300 px-3 py-1 text-[11px] font-semibold text-neutral-800">

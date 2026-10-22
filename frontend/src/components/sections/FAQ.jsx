@@ -223,7 +223,7 @@ function FAQ() {
   }
 
   return (
-    <section id="faq" className="relative w-full overflow-hidden bg-white py-16 sm:py-24">
+    <section id="faq" className="relative w-full scroll-mt-6 overflow-hidden bg-white py-16 sm:py-24">
       {/* Subtle Ambient Background Pastel Glows */}
       <div
         className="pointer-events-none absolute -left-20 top-1/4 h-[380px] w-[380px] rounded-full bg-gradient-to-tr from-pink-200/35 via-purple-100/30 to-transparent blur-3xl"

@@ -109,7 +109,7 @@ function FacetedMeshBackground() {
 
 function GetStarted() {
   return (
-    <section className="relative w-full bg-white px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
+    <section id="try-for-free" className="relative w-full scroll-mt-6 bg-white px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
       <div className="relative mx-auto w-full max-w-[840px]">
         {/* Top Floating Otake Badge (half above card) */}
         <div className="absolute -top-7 left-1/2 z-20 -translate-x-1/2 sm:-top-8">
@@ -145,7 +145,7 @@ function GetStarted() {
 
             <div className="mt-7 sm:mt-8">
               <a
-                href="#apply"
+                href="#contact"
                 className="inline-flex items-center justify-center rounded-lg bg-white px-5 py-2.5 text-[12px] font-medium tracking-tight text-[#111015] transition-all hover:bg-neutral-100 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
               >
                 Apply Now ~ Otake Template

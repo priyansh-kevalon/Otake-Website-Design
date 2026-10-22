@@ -232,3 +232,37 @@
       #f5efff 100%
     );
 }
+
+.otake-footer {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #0b0a0f;
+  background-image:
+    radial-gradient(
+      ellipse 60% 40% at 50% 0%,
+      rgba(146, 118, 255, 0.12) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 50% 100%,
+      rgba(236, 100, 213, 0.08) 0%,
+      transparent 70%
+    );
+}
+
+.otake-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: repeating-conic-gradient(
+    from 0deg at 50% 20%,
+    rgba(255, 255, 255, 0.035) 0deg 0.25deg,
+    transparent 0.25deg 8deg
+  );
+  -webkit-mask-image: radial-gradient(circle at 50% 35%, #000 0%, transparent 80%);
+  mask-image: radial-gradient(circle at 50% 35%, #000 0%, transparent 80%);
+}
+

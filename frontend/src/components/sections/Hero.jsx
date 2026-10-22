@@ -27,7 +27,7 @@ function Hero() {
   }
 
   return (
-    <section className="mt-6 w-full overflow-hidden">
+    <section id="top" className="mt-6 w-full scroll-mt-6 overflow-hidden">
       <div className="otake-hero relative w-full">
         <div className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-0">
           <div className="max-w-[620px] px-6 py-12 lg:py-[72px] lg:pl-[11%]">
