@@ -128,30 +128,30 @@ function About() {
       <section className="otake-about-hero relative w-full pt-8 pb-16 sm:pt-12 sm:pb-24">
         <div className="relative mx-auto max-w-[1080px] px-6 sm:px-8">
           <div className="relative mx-auto max-w-[680px] text-center">
-            {/* Floating subtle 3D accents around heading */}
+            {/* Floating 3D accents around heading */}
             <span
-              className="pointer-events-none absolute -left-8 top-1 hidden select-none drop-shadow sm:block"
+              className="pointer-events-none absolute -left-10 top-1 hidden select-none sm:block"
               aria-hidden="true"
             >
-              <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-                <circle cx="17" cy="17" r="14" fill="url(#hero-acc-orange)" />
-                <circle cx="14" cy="13" r="3.5" fill="#FFFFFF" opacity="0.6" />
-                <defs>
-                  <radialGradient id="hero-acc-orange" cx="30%" cy="30%" r="70%">
-                    <stop offset="0%" stopColor="#FED7AA" />
-                    <stop offset="60%" stopColor="#FB923C" />
-                    <stop offset="100%" stopColor="#EA580C" />
-                  </radialGradient>
-                </defs>
-              </svg>
+              <img
+                src="/images/6d78f5c25e29d1b3c3efb378a0895ab50206643b.png"
+                alt=""
+                width="52"
+                height="52"
+                className="h-[52px] w-[52px] object-contain"
+              />
             </span>
             <span
-              className="pointer-events-none absolute -right-8 top-12 hidden select-none drop-shadow sm:block"
+              className="pointer-events-none absolute -right-10 top-12 hidden select-none sm:block"
               aria-hidden="true"
             >
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-                <path d="M15 2L18 10L26 12L20 18L21 26L15 22L9 26L10 18L4 12L12 10L15 2Z" fill="#C084FC" />
-              </svg>
+              <img
+                src="/images/73d9b74f1e858692091fb4e1a35f610182e1e25f.png"
+                alt=""
+                width="48"
+                height="48"
+                className="h-[48px] w-[48px] object-contain"
+              />
             </span>
 
             <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
@@ -176,9 +176,9 @@ function About() {
             <div className="group relative flex flex-col items-center justify-end overflow-hidden rounded-[28px] border border-white/80 bg-[#E8F4FC] p-4 shadow-[0_16px_36px_rgba(180,210,240,0.35)] transition-transform duration-300 hover:-translate-y-1">
               <div className="relative flex h-[280px] w-full items-end justify-center sm:h-[310px]">
                 <img
-                  src="/images/hero-character.png"
+                  src="/images/2786fe25f4b989d98d13e7610dce4df13eaeb6da.png"
                   alt="Creative team member with headphones"
-                  className="relative z-10 h-full w-full object-contain drop-shadow-[0_18px_25px_rgba(30,10,25,0.25)] transition-transform duration-300 group-hover:scale-105"
+                  className="relative z-10 h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </div>
@@ -187,9 +187,9 @@ function About() {
             <div className="group relative flex flex-col items-center justify-end overflow-hidden rounded-[28px] border border-white/80 bg-[#F1ECFE] p-4 shadow-[0_16px_36px_rgba(200,180,245,0.35)] transition-transform duration-300 hover:-translate-y-1">
               <div className="relative flex h-[280px] w-full items-end justify-center sm:h-[310px]">
                 <img
-                  src="/images/hero-character.png"
+                  src="/images/a785e06d39ad27b7b523a3d4f8c3b1f40cd7971b.png"
                   alt="Team lead innovator"
-                  className="relative z-10 h-full w-full object-contain hue-rotate-[45deg] drop-shadow-[0_18px_25px_rgba(40,10,50,0.25)] transition-transform duration-300 group-hover:scale-105"
+                  className="relative z-10 h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </div>
@@ -198,9 +198,9 @@ function About() {
             <div className="group relative flex flex-col items-center justify-end overflow-hidden rounded-[28px] border border-white/80 bg-[#FCEEF2] p-4 shadow-[0_16px_36px_rgba(245,180,200,0.35)] transition-transform duration-300 hover:-translate-y-1">
               <div className="relative flex h-[280px] w-full items-end justify-center sm:h-[310px]">
                 <img
-                  src="/images/hero-character.png"
+                  src="/images/c2c6e128aaea5e42ab32d4a6f02c0d8981c2454d.png"
                   alt="Support specialist"
-                  className="relative z-10 h-full w-full object-contain hue-rotate-[-50deg] drop-shadow-[0_18px_25px_rgba(50,10,20,0.25)] transition-transform duration-300 group-hover:scale-105"
+                  className="relative z-10 h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </div>
