@@ -7,7 +7,6 @@ import Testimonials from '../components/sections/Testimonials.jsx'
 import BlogArticles from '../components/sections/BlogArticles.jsx'
 import FAQ from '../components/sections/FAQ.jsx'
 import GetStarted from '../components/sections/GetStarted.jsx'
-import Footer from '../components/layout/Footer.jsx'
 
 function Home() {
   return (
@@ -19,9 +18,8 @@ function Home() {
       <PowerfulSolutions />
       <Testimonials />
       <BlogArticles />
-      <GetStarted />
       <FAQ />
-      <Footer />
+      <GetStarted />
     </>
   )
 }

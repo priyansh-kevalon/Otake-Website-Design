@@ -1,15 +1,22 @@
 import { useState } from 'react'
 
 const NAV_LINKS = [
-  { label: 'About', href: '#about' },
+  { label: 'Home', page: 'home', href: '#home' },
+  { label: 'About', page: 'about', href: '#about' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Contact', href: '#contact' },
 ]
 
-function Logo() {
+function Logo({ onNavigate }) {
   return (
     <a
-      href="#top"
+      href="#home"
+      onClick={(e) => {
+        if (onNavigate) {
+          e.preventDefault()
+          onNavigate('home')
+        }
+      }}
       className="flex items-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
       aria-label="Otake home"
     >
@@ -22,28 +29,44 @@ function Logo() {
   )
 }
 
-function Header() {
+function Header({ currentPage = 'home', onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const handleLinkClick = (e, link) => {
+    if (link.page && onNavigate) {
+      e.preventDefault()
+      onNavigate(link.page)
+    }
+    setMenuOpen(false)
+  }
 
   return (
     <header className="mt-6 w-full bg-white text-neutral-900">
       <nav
         aria-label="Primary"
-        className="mx-auto flex h-11 max-w-[1440px] items-center justify-between px-4"
+        className="mx-auto flex h-11 max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-8"
       >
-        <Logo />
+        <Logo onNavigate={onNavigate} />
 
         <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
-          {NAV_LINKS.map((link) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                className="rounded text-[12px] font-semibold tracking-wide text-neutral-700 transition-colors hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = link.page && currentPage === link.page
+            return (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  onClick={(e) => handleLinkClick(e, link)}
+                  className={`rounded text-[12px] font-semibold tracking-wide transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
+                    isActive
+                      ? 'text-neutral-900 underline decoration-pink-400 decoration-2 underline-offset-4'
+                      : 'text-neutral-600 hover:text-neutral-900'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            )
+          })}
         </ul>
 
         <div className="hidden items-center gap-5 md:flex">
@@ -91,17 +114,24 @@ function Header() {
       {menuOpen && (
         <div id="mobile-nav" className="border-t border-neutral-200 md:hidden">
           <ul className="flex flex-col px-4 py-2">
-            {NAV_LINKS.map((link) => (
-              <li key={link.label}>
-                <a
-                  href={link.href}
-                  className="block rounded py-2 text-[13px] text-neutral-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive = link.page && currentPage === link.page
+              return (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className={`block rounded py-2 text-[13px] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
+                      isActive
+                        ? 'font-bold text-neutral-900'
+                        : 'text-neutral-500 hover:text-neutral-900'
+                    }`}
+                    onClick={(e) => handleLinkClick(e, link)}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              )
+            })}
             <li>
               <a
                 href="#signin"

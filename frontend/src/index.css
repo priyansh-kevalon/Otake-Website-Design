@@ -294,3 +294,26 @@
   mask-image: radial-gradient(circle at 50% 35%, #000 0%, transparent 80%);
 }
 
+.otake-about-hero {
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(
+      ellipse 50% 38% at 15% 15%,
+      rgba(255, 215, 235, 0.7) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 38% at 85% 15%,
+      rgba(225, 215, 255, 0.75) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 30% at 50% 25%,
+      rgba(255, 248, 235, 0.6) 0%,
+      transparent 65%
+    );
+}
+
+

@@ -7,10 +7,10 @@ const HIGHLIGHTS = [
 ]
 
 const PAGE_LINKS = [
-  { label: 'Home', href: '#top' },
-  { label: 'Features', href: '#features' },
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'Reviews', href: '#customer-reviews' },
+  { label: 'Home', href: '#home', page: 'home' },
+  { label: 'About', href: '#about', page: 'about' },
+  { label: 'Pricing', href: '#pricing' },
+  { label: 'Contact', href: '#contact', badge: true },
 ]
 
 const SOLUTION_LINKS = [
@@ -295,7 +295,7 @@ function SocialIcon({ link }) {
   )
 }
 
-function LinkColumn({ title, links, label }) {
+function LinkColumn({ title, links, label, onNavigate }) {
   return (
     <nav aria-label={label}>
       <p className="text-[16px] font-semibold text-white">{title}</p>
@@ -304,6 +304,12 @@ function LinkColumn({ title, links, label }) {
           <li key={link.label} className="flex items-center">
             <a
               href={link.href}
+              onClick={(e) => {
+                if (link.page && onNavigate) {
+                  e.preventDefault()
+                  onNavigate(link.page)
+                }
+              }}
               className="inline-flex min-h-[26px] items-center text-[#8B8A93] transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
             >
               {link.label}
@@ -316,7 +322,7 @@ function LinkColumn({ title, links, label }) {
   )
 }
 
-function Footer() {
+function Footer({ onNavigate }) {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('')
   const resetTimer = useRef(null)
@@ -436,9 +442,9 @@ function Footer() {
             </p>
           </div>
 
-          <LinkColumn title="Pages" label="Footer pages" links={PAGE_LINKS} />
-          <LinkColumn title="Solutions" label="Footer solutions" links={SOLUTION_LINKS} />
-          <LinkColumn title="Resources" label="Footer resources" links={RESOURCE_LINKS} />
+          <LinkColumn title="Pages" label="Footer pages" links={PAGE_LINKS} onNavigate={onNavigate} />
+          <LinkColumn title="Solutions" label="Footer solutions" links={SOLUTION_LINKS} onNavigate={onNavigate} />
+          <LinkColumn title="Resources" label="Footer resources" links={RESOURCE_LINKS} onNavigate={onNavigate} />
         </div>
 
         {/* ---------------- 4. BOTTOM TIER: Copyright & License ---------------- */}
