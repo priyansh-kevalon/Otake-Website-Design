@@ -253,7 +253,7 @@ function About() {
       </section>
 
       {/* ---------------- 3. PRINCIPLES SECTION ---------------- */}
-      <section className="otake-values-bg w-full py-16 sm:py-24">
+      <section className="otake-soft-purple w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
             <div>
@@ -322,7 +322,7 @@ function About() {
       </section>
 
       {/* ---------------- 4. GROWTH JOURNEY ---------------- */}
-      <section className="w-full bg-white py-16 sm:py-24">
+      <section className="otake-soft-purple w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="text-center">
             <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
@@ -392,7 +392,7 @@ function About() {
       </section>
 
       {/* ---------------- 5. PRIMARY FEATURES ---------------- */}
-      <section className="w-full bg-[#FAFAFC] py-16 sm:py-24">
+      <section className="otake-soft-purple w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="text-center">
             <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
