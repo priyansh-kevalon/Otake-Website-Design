@@ -56,38 +56,15 @@ function LeftFloating3D() {
       className="pointer-events-none select-none drop-shadow-[0_16px_24px_rgba(40,20,90,0.22)]"
       aria-hidden="true"
     >
-      <svg width="68" height="76" viewBox="0 0 68 76" fill="none">
-        <defs>
-          <linearGradient id="lf-orange" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#FFA62B" />
-            <stop offset="50%" stopColor="#FF7A00" />
-            <stop offset="100%" stopColor="#E05300" />
-          </linearGradient>
-          <linearGradient id="lf-blue-top" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#85A9FF" />
-            <stop offset="100%" stopColor="#4A6CF7" />
-          </linearGradient>
-          <linearGradient id="lf-blue-bot" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#5E72E4" />
-            <stop offset="100%" stopColor="#2D3B8F" />
-          </linearGradient>
-        </defs>
-
-        {/* Bottom folded blue/purple cushion layers */}
-        <path
-          d="M16 46c-6 0-11 5-11 11s5 11 11 11c10 0 17-4 27-4 8 0 15 3 20 0 5-3 5-10 1-13-5-4-15-5-24-5-8 0-16 0-24 0Z"
-          fill="url(#lf-blue-bot)"
-        />
-        <path
-          d="M12 37c-5 0-9 4-9 9s4 9 9 9c9 0 16-3 25-3 8 0 14 3 19 0 4-3 4-8 0-11-4-3-13-4-21-4-8 0-15 0-23 0Z"
-          fill="url(#lf-blue-top)"
-        />
-
-        {/* Top segmented warm orange rounded block */}
-        <rect x="2" y="16" width="58" height="18" rx="8" fill="url(#lf-orange)" />
-        <line x1="21" y1="16" x2="21" y2="34" stroke="#B34100" strokeWidth="1.2" opacity="0.4" />
-        <line x1="40" y1="16" x2="40" y2="34" stroke="#B34100" strokeWidth="1.2" opacity="0.4" />
-      </svg>
+      <img
+        src="/images/66303513e76c9555d5583ac0_Element-05.png"
+        alt=""
+        width="80"
+        height="80"
+        loading="lazy"
+        decoding="async"
+        className="h-20 w-20"
+      />
     </div>
   )
 }
@@ -98,34 +75,15 @@ function RightFloating3D() {
       className="pointer-events-none select-none drop-shadow-[0_16px_24px_rgba(40,20,90,0.22)]"
       aria-hidden="true"
     >
-      <svg width="68" height="68" viewBox="0 0 68 68" fill="none">
-        <defs>
-          <linearGradient id="rf-purple" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#6D5BD0" />
-            <stop offset="50%" stopColor="#4A3B9F" />
-            <stop offset="100%" stopColor="#2C2168" />
-          </linearGradient>
-          <linearGradient id="rf-yellow" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#FFF176" />
-            <stop offset="60%" stopColor="#FFA000" />
-            <stop offset="100%" stopColor="#E65100" />
-          </linearGradient>
-        </defs>
-
-        {/* Outer White / Light Ring */}
-        <circle cx="48" cy="34" r="17" stroke="#FFFFFF" strokeWidth="7" fill="none" />
-        {/* Outer Yellow Bevel Ring */}
-        <circle cx="48" cy="34" r="17" stroke="url(#rf-yellow)" strokeWidth="4.5" fill="none" />
-
-        {/* Inner Orange Core */}
-        <rect x="22" y="27" width="28" height="14" rx="7" fill="url(#rf-yellow)" />
-
-        {/* Purple Claw / Horseshoe Ring encircling */}
-        <path
-          d="M44 14C30 14 19 23 19 34s11 20 25 20c4 0 7-1 9-2-5-2-8-6-8-10 0-4 3-7 7-9 1-1 1-3 0-4-4-2-7-5-7-9 0-4 3-8 8-10-3-1-6-2-9-2Z"
-          fill="url(#rf-purple)"
-        />
-      </svg>
+      <img
+        src="/images/66303513e76c9555d5583aa1_Element-07.png"
+        alt=""
+        width="80"
+        height="80"
+        loading="lazy"
+        decoding="async"
+        className="h-20 w-20"
+      />
     </div>
   )
 }

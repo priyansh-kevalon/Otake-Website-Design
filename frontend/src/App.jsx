@@ -22,8 +22,8 @@ function App() {
         <PowerfulSolutions />
         <Testimonials />
         <BlogArticles />
-        <FAQ />
         <GetStarted />
+        <FAQ />
       </main>
       <Footer />
     </div>
