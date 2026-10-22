@@ -316,6 +316,17 @@
     );
 }
 
+.otake-values-bg {
+  background-image: radial-gradient(
+    ellipse 60% 78% at 50% 50%,
+    #e4d5fc 0%,
+    #ece0fd 35%,
+    #f4ecfe 62%,
+    #fbf8ff 84%,
+    #ffffff 100%
+  );
+}
+
 .otake-about-hero-deep {
   overflow: visible;
   background-image:
