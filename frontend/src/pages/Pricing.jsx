@@ -111,7 +111,7 @@ function Pricing() {
   return (
     <div className="w-full">
       {/* ---------------- 1. PRICING HERO SECTION ---------------- */}
-      <section className="otake-about-hero relative w-full pt-8 pb-16 sm:pt-12 sm:pb-20">
+      <section className="otake-about-hero otake-hero-color relative w-full pt-8 pb-16 sm:pt-12 sm:pb-20">
         <div className="relative mx-auto max-w-[1080px] px-4 sm:px-6 lg:px-8">
           <div className="relative mx-auto max-w-[680px] text-center">
             {/* Ambient decorative 3D accents */}
@@ -186,7 +186,16 @@ function Pricing() {
           </div>
 
           {/* ---------------- MAIN INTERACTIVE PRICING CARD ---------------- */}
-          <div className="mx-auto mt-12 max-w-[840px] overflow-hidden rounded-[28px] border border-neutral-200/80 bg-white shadow-[0_24px_60px_rgba(150,130,200,0.16)] sm:rounded-[36px]">
+          <div className="relative mx-auto mt-12 max-w-[840px]">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute left-1/2 top-1/2 h-[1400px] w-screen -translate-x-1/2"
+              style={{
+                backgroundImage:
+                  'linear-gradient(to bottom, rgba(255,255,255,0) 0px, rgba(255,255,255,0.96) 120px, #ffffff 200px)',
+              }}
+            />
+            <div className="relative z-10 overflow-hidden rounded-[28px] border border-neutral-200/80 bg-white shadow-[0_24px_60px_rgba(150,130,200,0.16)] sm:rounded-[36px]">
             {/* Dark Top Bar */}
             <div className="flex flex-col justify-between gap-6 bg-[#0D0C10] p-6 text-white sm:flex-row sm:items-center sm:p-8">
               <div>
@@ -355,15 +364,16 @@ function Pricing() {
               </div>
             </div>
           </div>
+        </div>
 
-          <p className="mx-auto mt-8 max-w-[480px] text-center text-[13px] leading-relaxed text-[#8B8A93]">
+          <p className="relative z-10 mx-auto mt-8 max-w-[480px] text-center text-[13px] leading-relaxed text-[#8B8A93]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
           </p>
         </div>
       </section>
 
-      {/* ---------------- 2. 3 PRINCIPLES CARDS ---------------- */}
-      <section className="w-full bg-[#FAFAFC] py-16 sm:py-20">
+      {/* ---------------- 2. PRINCIPLES & TRUSTED BY ---------------- */}
+      <section className="otake-soft-purple w-full py-16 sm:py-20">
         <div className="mx-auto max-w-[1040px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
@@ -405,75 +415,72 @@ function Pricing() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* ---------------- 3. TRUSTED BY TECHNICAL TEAMS ---------------- */}
-      <section className="w-full bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-[1040px] px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-[22px] font-bold text-neutral-900 sm:text-[26px]">
-            Trusted by technical teams at companies of all sizes
-          </h2>
+          <div className="mt-16 text-center">
+            <h2 className="text-[22px] font-bold text-neutral-900 sm:text-[26px]">
+              Trusted by technical teams at companies of all sizes
+            </h2>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-8 sm:gap-14">
-            <BrandLogo
-              name="Cyrus"
-              icon={
-                <svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true">
-                  <rect x="3" y="3" width="3" height="3" rx="0.5" fill="currentColor" />
-                  <rect x="7.5" y="3" width="3" height="3" rx="0.5" fill="currentColor" />
-                  <rect x="12" y="3" width="3" height="3" rx="0.5" fill="currentColor" />
-                </svg>
-              }
-            />
-            <BrandLogo
-              name="Jambo"
-              icon={
-                <svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true">
-                  <path d="M7 5l3 4-3 4" stroke="currentColor" strokeWidth="1.6" fill="none" strokeLinecap="round" />
-                </svg>
-              }
-            />
-            <BrandLogo
-              name="Kadu"
-              icon={
-                <svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true">
-                  <path d="M5 6l4-3v6l-4-3Z" fill="currentColor" />
-                </svg>
-              }
-            />
-            <BrandLogo
-              name="Vario"
-              icon={
-                <svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true">
-                  <rect x="4" y="5" width="2" height="8" rx="1" fill="currentColor" />
-                  <rect x="8" y="7" width="2" height="6" rx="1" fill="currentColor" />
-                  <rect x="12" y="4" width="2" height="9" rx="1" fill="currentColor" />
-                </svg>
-              }
-            />
-            <BrandLogo
-              name="Aspect"
-              icon={
-                <svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true">
-                  <circle cx="6" cy="9" r="2" fill="currentColor" />
-                  <circle cx="12" cy="9" r="2" fill="currentColor" />
-                </svg>
-              }
-            />
-          </div>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-8 sm:gap-14">
+              <BrandLogo
+                name="Cyrus"
+                icon={
+                  <svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true">
+                    <rect x="3" y="3" width="3" height="3" rx="0.5" fill="currentColor" />
+                    <rect x="7.5" y="3" width="3" height="3" rx="0.5" fill="currentColor" />
+                    <rect x="12" y="3" width="3" height="3" rx="0.5" fill="currentColor" />
+                  </svg>
+                }
+              />
+              <BrandLogo
+                name="Jambo"
+                icon={
+                  <svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true">
+                    <path d="M7 5l3 4-3 4" stroke="currentColor" strokeWidth="1.6" fill="none" strokeLinecap="round" />
+                  </svg>
+                }
+              />
+              <BrandLogo
+                name="Kadu"
+                icon={
+                  <svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true">
+                    <path d="M5 6l4-3v6l-4-3Z" fill="currentColor" />
+                  </svg>
+                }
+              />
+              <BrandLogo
+                name="Vario"
+                icon={
+                  <svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true">
+                    <rect x="4" y="5" width="2" height="8" rx="1" fill="currentColor" />
+                    <rect x="8" y="7" width="2" height="6" rx="1" fill="currentColor" />
+                    <rect x="12" y="4" width="2" height="9" rx="1" fill="currentColor" />
+                  </svg>
+                }
+              />
+              <BrandLogo
+                name="Aspect"
+                icon={
+                  <svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true">
+                    <circle cx="6" cy="9" r="2" fill="currentColor" />
+                    <circle cx="12" cy="9" r="2" fill="currentColor" />
+                  </svg>
+                }
+              />
+            </div>
 
-          <p className="mx-auto mt-8 max-w-[460px] text-[13px] leading-relaxed text-[#8B8A93]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
-          </p>
+            <p className="mx-auto mt-8 max-w-[460px] text-[13px] leading-relaxed text-[#8B8A93]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
+            </p>
 
-          <div className="mt-6">
-            <a
-              href="#case-studies"
-              className="inline-flex items-center rounded-lg bg-neutral-900 px-5 py-2.5 text-[12px] font-medium text-white transition-colors hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
-            >
-              Explore Case Studies
-            </a>
+            <div className="mt-6">
+              <a
+                href="#case-studies"
+                className="inline-flex items-center rounded-lg bg-neutral-900 px-5 py-2.5 text-[12px] font-medium text-white transition-colors hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+              >
+                Explore Case Studies
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -520,7 +527,7 @@ function Pricing() {
 
             {/* Right Column: BrowserShell with OtakeProductPreview */}
             <div className="flex justify-center">
-              <div className="w-full max-w-[360px] drop-shadow-xl">
+              <div className="otake-soft-purple-strong w-full max-w-[392px] rounded-[26px] p-4 sm:p-5">
                 <OtakeProductPreview />
               </div>
             </div>
