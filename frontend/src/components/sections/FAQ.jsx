@@ -211,7 +211,7 @@ function FAQ() {
             Frequently Asked Questions
           </h2>
 
-          <p className="mt-3 text-[13.5px] text-[#6E6C79] sm:text-[14.5px]">
+          <p className="mt-3 text-[13.5px] text-[#5C5A68] sm:text-[14.5px]">
             All Plans come with a 14-day free trial period.
           </p>
         </div>
@@ -230,8 +230,8 @@ function FAQ() {
                 }}
                 className={`flex items-center gap-3 rounded-2xl p-4 text-left transition-all ${
                   isActive
-                    ? 'border border-[#9A79F5]/70 bg-white shadow-[0_8px_24px_rgba(154,121,245,0.12)] ring-1 ring-[#9A79F5]/40'
-                    : 'border border-neutral-100 bg-white shadow-[0_4px_16px_rgba(0,0,0,0.02)] hover:border-neutral-200 hover:shadow-md'
+                    ? 'border border-[#9A79F5]/70 bg-white/90 shadow-[0_8px_24px_rgba(154,121,245,0.16)] ring-1 ring-[#9A79F5]/40'
+                    : 'border border-neutral-200/80 bg-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.03)] hover:border-neutral-300 hover:bg-white'
                 }`}
               >
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center">
@@ -287,7 +287,7 @@ function FAQ() {
                   </button>
 
                   {isOpen && (
-                    <div className="mt-2.5 pr-6 text-[12.5px] leading-relaxed text-[#6E6C79] sm:text-[13px]">
+                    <div className="mt-2.5 pr-6 text-[12.5px] leading-relaxed text-[#5C5A68] sm:text-[13px]">
                       <p>{item.a}</p>
                     </div>
                   )}
