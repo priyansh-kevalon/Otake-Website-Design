@@ -72,12 +72,12 @@ function Login({ onNavigate }) {
 
   return (
     <div className="w-full py-6 sm:py-10">
-      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-[98%]">
         {/* Main Card Container */}
-        <div className="overflow-hidden rounded-[28px] border border-neutral-200/80 bg-white shadow-[0_24px_60px_rgba(150,130,200,0.12)] sm:rounded-[36px] lg:grid lg:grid-cols-12">
+        <div className="grid overflow-hidden rounded-[28px] border border-neutral-200/80 bg-[linear-gradient(100deg,#FFFFFF_0%,#FDFBFF_16%,#F9F4FE_34%,#F7EAFB_52%,#FBE6F1_70%,#FDEDE4_86%,#FFF0EA_100%)] shadow-[0_24px_60px_rgba(150,130,200,0.12)] sm:rounded-[36px] lg:grid-cols-12">
           {/* ---------------- LEFT COLUMN: LOGIN FORM ---------------- */}
-          <div className="flex flex-col justify-center p-8 sm:p-12 lg:col-span-5 lg:p-14">
-            <div>
+          <div className="relative z-10 flex flex-col justify-center p-8 sm:p-12 lg:col-span-5 lg:p-14">
+            <div className="relative z-10">
               <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
                 Otake Login
               </span>
@@ -85,13 +85,12 @@ function Login({ onNavigate }) {
               <h1 className="mt-4 text-[28px] font-bold tracking-tight text-neutral-900 sm:text-[34px]">
                 Otake Login
               </h1>
-            </div>
 
             {/* Social Logins */}
             <div className="mt-7 space-y-3">
               <button
                 type="button"
-                className="flex h-11 w-full items-center justify-center gap-2.5 rounded-xl border border-neutral-200 bg-white px-4 text-[12.5px] font-medium text-neutral-700 transition-colors hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+                className="flex h-11 w-full items-center justify-center gap-2.5 rounded-xl border border-neutral-300 bg-white/90 px-4 text-[12.5px] backdrop-blur-sm font-medium text-neutral-700 transition-colors hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
               >
                 <GoogleIcon />
                 <span>Continue with Google</span>
@@ -99,7 +98,7 @@ function Login({ onNavigate }) {
 
               <button
                 type="button"
-                className="flex h-11 w-full items-center justify-center gap-2.5 rounded-xl border border-neutral-200 bg-white px-4 text-[12.5px] font-medium text-neutral-700 transition-colors hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+                className="flex h-11 w-full items-center justify-center gap-2.5 rounded-xl border border-neutral-300 bg-white/90 px-4 text-[12.5px] backdrop-blur-sm font-medium text-neutral-700 transition-colors hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
               >
                 <TwitterIcon />
                 <span>Continue with Twitter</span>
@@ -108,9 +107,9 @@ function Login({ onNavigate }) {
 
             {/* Divider */}
             <div className="my-6 flex items-center justify-center">
-              <span className="h-[1px] w-full bg-neutral-200" />
+              <span className="h-[1px] w-full bg-neutral-400/40" />
               <span className="px-3 text-[11.5px] text-neutral-400">or</span>
-              <span className="h-[1px] w-full bg-neutral-200" />
+              <span className="h-[1px] w-full bg-neutral-400/40" />
             </div>
 
             {/* Form */}
@@ -129,7 +128,7 @@ function Login({ onNavigate }) {
                   placeholder="business@mail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="mt-1 h-11 w-full rounded-xl border border-neutral-200 bg-white px-3.5 text-[13px] text-neutral-900 placeholder:text-neutral-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-100"
+                  className="mt-1 h-11 w-full rounded-xl border border-neutral-300 bg-white px-3.5 text-[13px] backdrop-blur-sm text-neutral-900 placeholder:text-neutral-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-100"
                 />
               </div>
 
@@ -147,7 +146,7 @@ function Login({ onNavigate }) {
                   placeholder="min 8 character."
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="mt-1 h-11 w-full rounded-xl border border-neutral-200 bg-white px-3.5 text-[13px] text-neutral-900 placeholder:text-neutral-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-100"
+                  className="mt-1 h-11 w-full rounded-xl border border-neutral-300 bg-white px-3.5 text-[13px] backdrop-blur-sm text-neutral-900 placeholder:text-neutral-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-100"
                 />
               </div>
 
@@ -194,10 +193,11 @@ function Login({ onNavigate }) {
                 Register
               </a>
             </p>
+            </div>
           </div>
 
           {/* ---------------- RIGHT COLUMN: 3D HERO VISUAL ---------------- */}
-          <div className="relative flex min-h-[480px] items-center justify-center overflow-hidden bg-gradient-to-tr from-[#ECE7FF] via-[#FCE7F3] to-[#FFF0EA] p-8 sm:p-12 lg:col-span-7 lg:min-h-[640px]">
+          <div className="relative flex min-h-[480px] items-center justify-center overflow-hidden p-8 sm:p-12 lg:col-span-7 lg:min-h-[640px]">
             {/* Perspective grid lines */}
             <PerspectiveLines />
 
