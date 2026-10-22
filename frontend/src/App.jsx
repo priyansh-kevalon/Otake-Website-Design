@@ -6,6 +6,7 @@ import BusinessGrowth from './components/sections/BusinessGrowth.jsx'
 import PowerfulSolutions from './components/sections/PowerfulSolutions.jsx'
 import Testimonials from './components/sections/Testimonials.jsx'
 import BlogArticles from './components/sections/BlogArticles.jsx'
+import GetStarted from './components/sections/GetStarted.jsx'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <PowerfulSolutions />
         <Testimonials />
         <BlogArticles />
+        <GetStarted />
       </main>
     </div>
   )

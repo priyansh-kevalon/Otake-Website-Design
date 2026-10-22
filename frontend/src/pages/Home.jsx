@@ -1,5 +1,25 @@
+import Hero from '../components/sections/Hero.jsx'
+import TrustedBrands from '../components/sections/TrustedBrands.jsx'
+import ProductFeatures from '../components/sections/ProductFeatures.jsx'
+import BusinessGrowth from '../components/sections/BusinessGrowth.jsx'
+import PowerfulSolutions from '../components/sections/PowerfulSolutions.jsx'
+import Testimonials from '../components/sections/Testimonials.jsx'
+import BlogArticles from '../components/sections/BlogArticles.jsx'
+import GetStarted from '../components/sections/GetStarted.jsx'
+
 function Home() {
-  return null
+  return (
+    <>
+      <Hero />
+      <TrustedBrands />
+      <ProductFeatures />
+      <BusinessGrowth />
+      <PowerfulSolutions />
+      <Testimonials />
+      <BlogArticles />
+      <GetStarted />
+    </>
+  )
 }
 
 export default Home
