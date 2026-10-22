@@ -407,7 +407,7 @@ function Footer() {
               />
               <button
                 type="submit"
-                className="inline-flex h-11 w-full shrink-0 items-center justify-center rounded-xl bg-white px-6 text-[13.5px] font-medium tracking-tight text-[#111015] transition-colors hover:bg-neutral-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300 sm:w-auto"
+                className="inline-flex h-11 w-full shrink-0 items-center justify-center rounded-xl bg-[#9585FF] px-6 text-[13.5px] font-medium tracking-tight text-white transition-colors hover:bg-[#8575F0] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300 sm:w-auto"
               >
                 Get Started – it&apos;s free
               </button>
