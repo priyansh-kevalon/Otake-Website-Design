@@ -9,8 +9,8 @@ const HIGHLIGHTS = [
 const PAGE_LINKS = [
   { label: 'Home', href: '#home', page: 'home' },
   { label: 'About', href: '#about', page: 'about' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Contact', href: '#contact', badge: true },
+  { label: 'Pricing', href: '#pricing', page: 'pricing' },
+  { label: 'Contact', href: '#contact', page: 'contact', badge: true },
 ]
 
 const SOLUTION_LINKS = [

@@ -3,10 +3,16 @@ import Header from './components/layout/Header.jsx'
 import Footer from './components/layout/Footer.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
+import Pricing from './pages/Pricing.jsx'
+import Contact from './pages/Contact.jsx'
 
 function App() {
   const [currentPage, setCurrentPage] = useState(() => {
-    return window.location.hash.toLowerCase() === '#about' ? 'about' : 'home'
+    const hash = window.location.hash.toLowerCase()
+    if (hash === '#about') return 'about'
+    if (hash === '#pricing') return 'pricing'
+    if (hash === '#contact') return 'contact'
+    return 'home'
   })
 
   useEffect(() => {
@@ -14,6 +20,12 @@ function App() {
       const hash = window.location.hash.toLowerCase()
       if (hash === '#about') {
         setCurrentPage('about')
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else if (hash === '#pricing') {
+        setCurrentPage('pricing')
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else if (hash === '#contact') {
+        setCurrentPage('contact')
         window.scrollTo({ top: 0, behavior: 'smooth' })
       } else if (hash === '#home' || hash === '#top' || !hash) {
         setCurrentPage('home')
@@ -27,7 +39,7 @@ function App() {
 
   const handleNavigate = (page) => {
     setCurrentPage(page)
-    window.location.hash = page === 'about' ? '#about' : '#home'
+    window.location.hash = page === 'home' ? '#home' : `#${page}`
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -35,11 +47,14 @@ function App() {
     <div className="min-h-screen bg-white">
       <Header currentPage={currentPage} onNavigate={handleNavigate} />
       <main id="main-content">
-        {currentPage === 'about' ? <About /> : <Home />}
+        {currentPage === 'about' && <About />}
+        {currentPage === 'pricing' && <Pricing />}
+        {currentPage === 'contact' && <Contact />}
+        {currentPage === 'home' && <Home />}
       </main>
       <Footer onNavigate={handleNavigate} />
 
-      {/* Floating Fast Page Switcher for quick testing/preview */}
+      {/* Floating Fast Page Switcher for quick previewing */}
       <aside
         aria-label="Page switcher"
         className="fixed bottom-5 right-5 z-50 flex items-center gap-1.5 rounded-full border border-neutral-200/90 bg-white/95 px-3 py-1.5 text-[11.5px] font-medium text-neutral-800 shadow-xl backdrop-blur-md"
@@ -66,6 +81,28 @@ function App() {
           }`}
         >
           About
+        </button>
+        <button
+          type="button"
+          onClick={() => handleNavigate('pricing')}
+          className={`rounded-full px-2.5 py-1 transition-colors ${
+            currentPage === 'pricing'
+              ? 'bg-neutral-900 font-semibold text-white'
+              : 'text-neutral-600 hover:text-neutral-900'
+          }`}
+        >
+          Pricing
+        </button>
+        <button
+          type="button"
+          onClick={() => handleNavigate('contact')}
+          className={`rounded-full px-2.5 py-1 transition-colors ${
+            currentPage === 'contact'
+              ? 'bg-neutral-900 font-semibold text-white'
+              : 'text-neutral-600 hover:text-neutral-900'
+          }`}
+        >
+          Contact
         </button>
       </aside>
     </div>

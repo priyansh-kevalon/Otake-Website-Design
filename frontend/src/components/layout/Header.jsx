@@ -3,8 +3,8 @@ import { useState } from 'react'
 const NAV_LINKS = [
   { label: 'Home', page: 'home', href: '#home' },
   { label: 'About', page: 'about', href: '#about' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Pricing', page: 'pricing', href: '#pricing' },
+  { label: 'Contact', page: 'contact', href: '#contact' },
 ]
 
 function Logo({ onNavigate }) {
