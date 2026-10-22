@@ -8,6 +8,48 @@ import Contact from './pages/Contact.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
 
+function BackToTopButton() {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setVisible(window.scrollY > 400)
+    }
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  if (!visible) return null
+
+  return (
+    <button
+      type="button"
+      onClick={scrollToTop}
+      aria-label="Back to top"
+      className="fixed bottom-6 right-6 z-50 inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-white shadow-lg transition-all hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+    >
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </button>
+  )
+}
+
 function App() {
   const [currentPage, setCurrentPage] = useState(() => {
     const hash = window.location.hash.toLowerCase()
@@ -65,83 +107,11 @@ function App() {
         {currentPage === 'home' && <Home />}
       </main>
       <Footer onNavigate={handleNavigate} />
-
-      {/* Floating Fast Page Switcher for quick previewing */}
-      <aside
-        aria-label="Page switcher"
-        className="fixed bottom-5 right-5 z-50 flex items-center gap-1.5 rounded-full border border-neutral-200/90 bg-white/95 px-3 py-1.5 text-[11.5px] font-medium text-neutral-800 shadow-xl backdrop-blur-md"
-      >
-        <span className="text-[10px] uppercase tracking-wider text-neutral-400">Page:</span>
-        <button
-          type="button"
-          onClick={() => handleNavigate('home')}
-          className={`rounded-full px-2.5 py-1 transition-colors ${
-            currentPage === 'home'
-              ? 'bg-neutral-900 font-semibold text-white'
-              : 'text-neutral-600 hover:text-neutral-900'
-          }`}
-        >
-          Home
-        </button>
-        <button
-          type="button"
-          onClick={() => handleNavigate('about')}
-          className={`rounded-full px-2.5 py-1 transition-colors ${
-            currentPage === 'about'
-              ? 'bg-neutral-900 font-semibold text-white'
-              : 'text-neutral-600 hover:text-neutral-900'
-          }`}
-        >
-          About
-        </button>
-        <button
-          type="button"
-          onClick={() => handleNavigate('pricing')}
-          className={`rounded-full px-2.5 py-1 transition-colors ${
-            currentPage === 'pricing'
-              ? 'bg-neutral-900 font-semibold text-white'
-              : 'text-neutral-600 hover:text-neutral-900'
-          }`}
-        >
-          Pricing
-        </button>
-        <button
-          type="button"
-          onClick={() => handleNavigate('contact')}
-          className={`rounded-full px-2.5 py-1 transition-colors ${
-            currentPage === 'contact'
-              ? 'bg-neutral-900 font-semibold text-white'
-              : 'text-neutral-600 hover:text-neutral-900'
-          }`}
-        >
-          Contact
-        </button>
-        <button
-          type="button"
-          onClick={() => handleNavigate('login')}
-          className={`rounded-full px-2.5 py-1 transition-colors ${
-            currentPage === 'login'
-              ? 'bg-neutral-900 font-semibold text-white'
-              : 'text-neutral-600 hover:text-neutral-900'
-          }`}
-        >
-          Login
-        </button>
-        <button
-          type="button"
-          onClick={() => handleNavigate('register')}
-          className={`rounded-full px-2.5 py-1 transition-colors ${
-            currentPage === 'register'
-              ? 'bg-neutral-900 font-semibold text-white'
-              : 'text-neutral-600 hover:text-neutral-900'
-          }`}
-        >
-          Register
-        </button>
-      </aside>
+      <BackToTopButton />
     </div>
   )
 }
 
 export default App
+
 
