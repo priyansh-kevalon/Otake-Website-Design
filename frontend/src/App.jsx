@@ -5,6 +5,8 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Pricing from './pages/Pricing.jsx'
 import Contact from './pages/Contact.jsx'
+import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
 
 function App() {
   const [currentPage, setCurrentPage] = useState(() => {
@@ -12,6 +14,8 @@ function App() {
     if (hash === '#about') return 'about'
     if (hash === '#pricing') return 'pricing'
     if (hash === '#contact') return 'contact'
+    if (hash === '#login' || hash === '#signin') return 'login'
+    if (hash === '#register' || hash === '#signup' || hash === '#try-for-free') return 'register'
     return 'home'
   })
 
@@ -26,6 +30,12 @@ function App() {
         window.scrollTo({ top: 0, behavior: 'smooth' })
       } else if (hash === '#contact') {
         setCurrentPage('contact')
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else if (hash === '#login' || hash === '#signin') {
+        setCurrentPage('login')
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else if (hash === '#register' || hash === '#signup' || hash === '#try-for-free') {
+        setCurrentPage('register')
         window.scrollTo({ top: 0, behavior: 'smooth' })
       } else if (hash === '#home' || hash === '#top' || !hash) {
         setCurrentPage('home')
@@ -50,6 +60,8 @@ function App() {
         {currentPage === 'about' && <About />}
         {currentPage === 'pricing' && <Pricing />}
         {currentPage === 'contact' && <Contact />}
+        {currentPage === 'login' && <Login onNavigate={handleNavigate} />}
+        {currentPage === 'register' && <Register onNavigate={handleNavigate} />}
         {currentPage === 'home' && <Home />}
       </main>
       <Footer onNavigate={handleNavigate} />
@@ -104,9 +116,32 @@ function App() {
         >
           Contact
         </button>
+        <button
+          type="button"
+          onClick={() => handleNavigate('login')}
+          className={`rounded-full px-2.5 py-1 transition-colors ${
+            currentPage === 'login'
+              ? 'bg-neutral-900 font-semibold text-white'
+              : 'text-neutral-600 hover:text-neutral-900'
+          }`}
+        >
+          Login
+        </button>
+        <button
+          type="button"
+          onClick={() => handleNavigate('register')}
+          className={`rounded-full px-2.5 py-1 transition-colors ${
+            currentPage === 'register'
+              ? 'bg-neutral-900 font-semibold text-white'
+              : 'text-neutral-600 hover:text-neutral-900'
+          }`}
+        >
+          Register
+        </button>
       </aside>
     </div>
   )
 }
 
 export default App
+

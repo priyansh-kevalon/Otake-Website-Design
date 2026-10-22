@@ -71,14 +71,34 @@ function Header({ currentPage = 'home', onNavigate }) {
 
         <div className="hidden items-center gap-5 md:flex">
           <a
-            href="#signin"
-            className="rounded text-[12px] text-neutral-500 transition-colors hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+            href="#login"
+            onClick={(e) => {
+              if (onNavigate) {
+                e.preventDefault()
+                onNavigate('login')
+              }
+            }}
+            className={`rounded text-[12px] tracking-wide transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
+              currentPage === 'login'
+                ? 'font-bold text-neutral-900 underline decoration-pink-400 decoration-2 underline-offset-4'
+                : 'text-neutral-600 hover:text-neutral-900'
+            }`}
           >
             Sign In
           </a>
           <a
-            href="#try-for-free"
-            className="inline-flex h-9 items-center rounded-md bg-neutral-900 px-4 text-[12px] font-medium text-white transition-colors hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+            href="#register"
+            onClick={(e) => {
+              if (onNavigate) {
+                e.preventDefault()
+                onNavigate('register')
+              }
+            }}
+            className={`inline-flex h-9 items-center rounded-md px-4 text-[12px] font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
+              currentPage === 'register'
+                ? 'bg-neutral-800 text-white ring-2 ring-purple-400'
+                : 'bg-neutral-900 text-white hover:bg-neutral-800'
+            }`}
           >
             Try for Free
           </a>
@@ -134,18 +154,28 @@ function Header({ currentPage = 'home', onNavigate }) {
             })}
             <li>
               <a
-                href="#signin"
-                className="block rounded py-2 text-[13px] text-neutral-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
-                onClick={() => setMenuOpen(false)}
+                href="#login"
+                className={`block rounded py-2 text-[13px] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
+                  currentPage === 'login' ? 'font-bold text-neutral-900' : 'text-neutral-500 hover:text-neutral-900'
+                }`}
+                onClick={(e) => {
+                  e.preventDefault()
+                  if (onNavigate) onNavigate('login')
+                  setMenuOpen(false)
+                }}
               >
                 Sign In
               </a>
             </li>
             <li className="py-2">
               <a
-                href="#try-for-free"
+                href="#register"
                 className="inline-flex h-9 items-center rounded-md bg-neutral-900 px-4 text-[13px] font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault()
+                  if (onNavigate) onNavigate('register')
+                  setMenuOpen(false)
+                }}
               >
                 Try for Free
               </a>
