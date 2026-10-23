@@ -1,131 +1,11 @@
 import Testimonials from '../components/sections/Testimonials.jsx'
 import FAQ from '../components/sections/FAQ.jsx'
 
-function PinkGemIcon() {
-  return (
-    <svg width="48" height="48" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="pg-a" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#FED7AA" />
-          <stop offset="40%" stopColor="#FB7185" />
-          <stop offset="100%" stopColor="#E11D48" />
-        </linearGradient>
-        <linearGradient id="pg-top" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#FFF1F2" />
-          <stop offset="100%" stopColor="#FECDD3" />
-        </linearGradient>
-      </defs>
-      <ellipse cx="32" cy="54" rx="16" ry="4" fill="#9F1239" opacity="0.15" />
-      <path d="M22 16h20l12 14-22 22-22-22 12-14Z" fill="url(#pg-a)" />
-      <path d="M22 16l10 14 10-14H22Z" fill="url(#pg-top)" />
-      <path d="M10 30l12-14 10 14-22 0Z" fill="#FDA4AF" opacity="0.6" />
-      <path d="M54 30l-12-14-10 14 22 0Z" fill="#F43F5E" opacity="0.7" />
-      <path d="M32 52L22 30h20L32 52Z" fill="#BE123C" opacity="0.8" />
-      <circle cx="28" cy="22" r="2" fill="#FFFFFF" opacity="0.8" />
-    </svg>
-  )
-}
-
-function CoralOrangeIcon() {
-  return (
-    <svg width="48" height="48" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <defs>
-        <radialGradient id="co-grad" cx="35%" cy="30%" r="65%">
-          <stop offset="0%" stopColor="#FED7AA" />
-          <stop offset="40%" stopColor="#FB923C" />
-          <stop offset="100%" stopColor="#EA580C" />
-        </radialGradient>
-      </defs>
-      <ellipse cx="32" cy="54" rx="16" ry="4" fill="#7C2D12" opacity="0.16" />
-      <circle cx="25" cy="38" r="8" fill="url(#co-grad)" />
-      <circle cx="39" cy="38" r="8" fill="url(#co-grad)" />
-      <circle cx="20" cy="28" r="7.5" fill="url(#co-grad)" />
-      <circle cx="44" cy="28" r="7.5" fill="url(#co-grad)" />
-      <circle cx="26" cy="20" r="8" fill="url(#co-grad)" />
-      <circle cx="38" cy="20" r="8" fill="url(#co-grad)" />
-      <circle cx="32" cy="27" r="9.5" fill="url(#co-grad)" />
-      <circle cx="30" cy="24" r="2.2" fill="#FFFFFF" opacity="0.7" />
-    </svg>
-  )
-}
-
-function PastelShellIcon() {
-  return (
-    <svg width="48" height="48" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="ps-shell" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#FDE68A" />
-          <stop offset="35%" stopColor="#F472B6" />
-          <stop offset="70%" stopColor="#C084FC" />
-          <stop offset="100%" stopColor="#60A5FA" />
-        </linearGradient>
-      </defs>
-      <ellipse cx="32" cy="54" rx="16" ry="4" fill="#4C1D95" opacity="0.14" />
-      <path
-        d="M20 44c-5-5-5-14 0-19 5-5 14-5 19 0l7 7c3 3 3 8 0 11-3 3-8 3-11 0l-4-4c-1-1-1-3 0-4 1-1 3-1 4 0l2 2"
-        stroke="url(#ps-shell)"
-        strokeWidth="6"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <circle cx="30" cy="26" r="2.5" fill="#FFFFFF" opacity="0.8" />
-    </svg>
-  )
-}
-
-function RedCubeIcon() {
-  return (
-    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-rose-50">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 2L3 7v10l9 5 9-5V7l-9-5Z" fill="#FDA4AF" />
-        <path d="M12 2l9 5-9 5-9-5 9-5Z" fill="#F43F5E" />
-        <path d="M12 12l9-5v10l-9 5V12Z" fill="#E11D48" />
-        <path d="M12 12L3 7v10l9 5V12Z" fill="#FB7185" />
-      </svg>
-    </div>
-  )
-}
-
-function PurpleCloverIcon() {
-  return (
-    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-50">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <circle cx="8" cy="8" r="5" fill="#C084FC" />
-        <circle cx="16" cy="8" r="5" fill="#A855F7" />
-        <circle cx="8" cy="16" r="5" fill="#A855F7" />
-        <circle cx="16" cy="16" r="5" fill="#9333EA" />
-        <circle cx="12" cy="12" r="3" fill="#FFFFFF" opacity="0.8" />
-      </svg>
-    </div>
-  )
-}
-
-function YellowFlameIcon() {
-  return (
-    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-50">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path
-          d="M12 2c0 4-3 6-3 10a6 6 0 0 0 12 0c0-4-3-6-3-10l-6 0Z"
-          fill="#FBBF24"
-        />
-        <path
-          d="M12 7c0 3-2 4.5-2 7.5a4.5 4.5 0 0 0 9 0c0-3-2-4.5-2-7.5l-5 0Z"
-          fill="#F59E0B"
-        />
-        <path
-          d="M12 12c0 2-1 3-1 5a2.5 2.5 0 0 0 5 0c0-2-1-3-1-5l-3 0Z"
-          fill="#FEF3C7"
-        />
-      </svg>
-    </div>
-  )
-}
-
 function About() {
   return (
     <div className="w-full">
       {/* ---------------- 1. HERO SECTION ---------------- */}
-      <section className="otake-about-hero otake-about-hero-deep relative z-10 w-full pt-6 pb-12 sm:pt-10 sm:pb-0">
+      <section className="otake-about-hero otake-about-hero-deep relative z-10 w-full pt-6 pb-12 sm:pt-24 sm:pb-0">
         <div className="relative mx-auto flow-root max-w-[1080px] px-6 sm:px-8">
           <div className="relative mx-auto max-w-[680px] text-center">
             {/* Floating 3D accents around heading */}
@@ -171,10 +51,10 @@ function About() {
           </div>
 
           {/* 3 Character Persona Cards */}
-          <div className="mt-5 grid grid-cols-1 gap-6 sm:-mb-[172px] sm:grid-cols-3 lg:gap-8">
+          <div className="mt-5 grid grid-cols-1 gap-6 sm:-mb-[52px] sm:grid-cols-3 lg:gap-8">
             {/* Card 1: Curly hair with headphones & orange jacket */}
-            <div className="group relative flex flex-col items-center justify-end overflow-hidden rounded-[28px] border border-white/80 bg-[#E8F4FC] p-4 shadow-[0_16px_36px_rgba(180,210,240,0.35)] transition-transform duration-300 hover:-translate-y-1">
-              <div className="relative flex h-[280px] w-full items-end justify-center sm:h-[310px]">
+            <div className="group relative flex aspect-square flex-col items-center justify-end overflow-hidden rounded-[20px] border-2 border-white/80 bg-[#E8F4FC] p-2 shadow-[0_16px_36px_rgba(180,210,240,0.35)] transition-transform duration-300 hover:-translate-y-1">
+              <div className="relative flex h-full w-full items-end justify-center">
                 <img
                   src="/images/2786fe25f4b989d98d13e7610dce4df13eaeb6da.png"
                   alt="Creative team member with headphones"
@@ -184,8 +64,8 @@ function About() {
             </div>
 
             {/* Card 2: Creative explosion / glasses character */}
-            <div className="group relative flex flex-col items-center justify-end overflow-hidden rounded-[28px] border border-white/80 bg-[#F1ECFE] p-4 shadow-[0_16px_36px_rgba(200,180,245,0.35)] transition-transform duration-300 hover:-translate-y-1">
-              <div className="relative flex h-[280px] w-full items-end justify-center sm:h-[310px]">
+            <div className="group relative flex aspect-square flex-col items-center justify-end overflow-hidden rounded-[20px] border-2 border-white/80 bg-[#F1ECFE] p-2 shadow-[0_16px_36px_rgba(200,180,245,0.35)] transition-transform duration-300 hover:-translate-y-1">
+              <div className="relative flex h-full w-full items-end justify-center">
                 <img
                   src="/images/a785e06d39ad27b7b523a3d4f8c3b1f40cd7971b.png"
                   alt="Team lead innovator"
@@ -195,8 +75,8 @@ function About() {
             </div>
 
             {/* Card 3: Red hair with headphones */}
-            <div className="group relative flex flex-col items-center justify-end overflow-hidden rounded-[28px] border border-white/80 bg-[#FCEEF2] p-4 shadow-[0_16px_36px_rgba(245,180,200,0.35)] transition-transform duration-300 hover:-translate-y-1">
-              <div className="relative flex h-[280px] w-full items-end justify-center sm:h-[310px]">
+            <div className="group relative flex aspect-square flex-col items-center justify-end overflow-hidden rounded-[20px] border-2 border-white/80 bg-[#FCEEF2] p-2 shadow-[0_16px_36px_rgba(245,180,200,0.35)] transition-transform duration-300 hover:-translate-y-1">
+              <div className="relative flex h-full w-full items-end justify-center">
                 <img
                   src="/images/c2c6e128aaea5e42ab32d4a6f02c0d8981c2454d.png"
                   alt="Support specialist"
@@ -253,7 +133,7 @@ function About() {
       </section>
 
       {/* ---------------- 3. PRINCIPLES SECTION ---------------- */}
-      <section className="otake-soft-purple w-full py-16 sm:py-24">
+      <section className="otake-values w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
             <div>
@@ -266,7 +146,7 @@ function About() {
                 our principles!
               </h2>
             </div>
-            <div className="space-y-3 text-[13.5px] leading-relaxed text-[#8B8A93]">
+            <div className="space-y-3 text-[13.5px] leading-relaxed text-black">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam, sit amet scelerisque turpis.
@@ -281,12 +161,17 @@ function About() {
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
             <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
-                <PinkGemIcon />
+                <img
+                  src="/images/value-client-focused.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-12 w-12 object-contain"
+                />
               </div>
               <h3 className="mt-4 text-[16px] font-bold text-neutral-900">
                 Client Focused
               </h3>
-              <p className="mt-2.5 text-[12.5px] leading-relaxed text-[#8B8A93]">
+              <p className="mt-2.5 text-[12.5px] leading-relaxed text-black">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam.
               </p>
@@ -294,12 +179,17 @@ function About() {
 
             <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
-                <CoralOrangeIcon />
+                <img
+                  src="/images/value-innovate-optimize.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-12 w-12 object-contain"
+                />
               </div>
               <h3 className="mt-4 text-[16px] font-bold text-neutral-900">
                 Innovate & Optimize
               </h3>
-              <p className="mt-2.5 text-[12.5px] leading-relaxed text-[#8B8A93]">
+              <p className="mt-2.5 text-[12.5px] leading-relaxed text-black">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam.
               </p>
@@ -307,12 +197,17 @@ function About() {
 
             <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
-                <PastelShellIcon />
+                <img
+                  src="/images/value-community-driven.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-12 w-12 object-contain"
+                />
               </div>
               <h3 className="mt-4 text-[16px] font-bold text-neutral-900">
                 Community Driven
               </h3>
-              <p className="mt-2.5 text-[12.5px] leading-relaxed text-[#8B8A93]">
+              <p className="mt-2.5 text-[12.5px] leading-relaxed text-black">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam.
               </p>
@@ -322,68 +217,75 @@ function About() {
       </section>
 
       {/* ---------------- 4. GROWTH JOURNEY ---------------- */}
-      <section className="otake-soft-purple w-full py-16 sm:py-24">
-        <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
+      <section className="otake-journey mx-auto min-h-[680px] w-full max-w-[848px] px-6 py-12 pb-16 md:h-[680px] md:px-0 md:py-0">
+        <div className="mx-auto box-border h-full w-full max-w-[1040px] px-6 py-12 pb-16 sm:px-8 sm:pt-[64px] sm:pb-[70px] md:flex md:flex-col">
           <div className="text-center">
-            <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
-              Our Journey
+            <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-0.5 text-[10px] font-semibold text-neutral-800">
+              Our Story
             </span>
-            <h2 className="mt-4 text-[30px] font-bold tracking-tight text-neutral-900 sm:text-[38px]">
+            <h2 className="mt-3 text-[32px] font-bold leading-tight tracking-tight text-neutral-900">
               Our growth journey.
             </h2>
-            <p className="mx-auto mt-3 max-w-[460px] text-[13.5px] leading-relaxed text-[#8B8A93]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
+            <p className="mx-auto mt-2 max-w-[500px] text-[14px] leading-relaxed text-neutral-900">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus. Nullam
+              congue blandit quam, sit amet scelerisque turpis.
             </p>
           </div>
 
-          <div className="mt-14 grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <div className="mx-auto mt-8 grid max-w-[700px] grid-cols-1 items-center gap-10 md:mt-10 md:flex-1 md:grid-cols-[320px_300px] md:gap-[80px]">
             {/* Left Column: Milestones */}
-            <div className="space-y-8">
+            <div className="space-y-6 md:-translate-y-[17px] md:space-y-8">
               <div>
-                <p className="text-[32px] font-bold tracking-tight text-neutral-900 sm:text-[38px]">
+                <p className="text-[24px] font-bold leading-tight tracking-tight text-neutral-900">
                   +100,000
                 </p>
-                <p className="mt-1.5 max-w-[360px] text-[13px] leading-relaxed text-[#8B8A93]">
+                <p className="mt-2 max-w-[300px] text-[14px] leading-[1.4] text-[#6F6C78]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue blandit quam.
                 </p>
               </div>
 
               <div>
-                <p className="text-[32px] font-bold tracking-tight text-neutral-900 sm:text-[38px]">
+                <p className="text-[24px] font-bold leading-tight tracking-tight text-neutral-900">
                   5 Minutes
                 </p>
-                <p className="mt-1.5 max-w-[360px] text-[13px] leading-relaxed text-[#8B8A93]">
+                <p className="mt-2 max-w-[300px] text-[14px] leading-[1.4] text-[#6F6C78]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue blandit quam.
                 </p>
               </div>
 
               <div>
-                <p className="text-[32px] font-bold tracking-tight text-neutral-900 sm:text-[38px]">
-                  2-3 Years
+                <p className="text-[24px] font-bold leading-tight tracking-tight text-neutral-900">
+                  20 Years
                 </p>
-                <p className="mt-1.5 max-w-[360px] text-[13px] leading-relaxed text-[#8B8A93]">
+                <p className="mt-2 max-w-[300px] text-[14px] leading-[1.4] text-[#6F6C78]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue blandit quam.
                 </p>
               </div>
             </div>
 
             {/* Right Column: 3D Character Card with Floating Badge */}
-            <div className="relative mx-auto flex w-full max-w-[420px] items-center justify-center overflow-hidden rounded-[32px] bg-gradient-to-br from-[#EEF2FF] to-[#E0E7FE] p-6 shadow-[0_20px_50px_rgba(180,190,240,0.3)]">
-              <div className="relative h-[320px] w-full sm:h-[360px]">
+            <div className="relative mx-auto flex w-full max-w-[300px] -translate-y-4 items-center justify-center rounded-[24px] border-[7px] border-white bg-[#EFECFF] p-2.5 shadow-[0_20px_50px_rgba(180,170,220,0.28)] md:-translate-y-[21px]">
+              <div className="relative h-[350px] w-full">
                 <img
-                  src="/images/hero-character.png"
+                  src="/images/about-journey-character.png"
                   alt="Growth journey visual"
-                  className="h-full w-full object-contain drop-shadow-[0_20px_30px_rgba(20,10,30,0.2)]"
+                  className="h-full w-full object-contain"
                 />
               </div>
 
               {/* Floating Glass Pill Badge */}
-              <div className="absolute bottom-6 left-6 z-20 flex items-center gap-2 rounded-2xl border border-white/90 bg-white/95 px-4 py-2.5 shadow-lg shadow-purple-500/10 backdrop-blur-md">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-pink-400 to-purple-600">
-                  <span className="h-2 w-2 rounded-full bg-white" />
+              <div className="absolute bottom-10 -left-[62px] z-20 flex items-center gap-3 rounded-[18px] border border-white bg-white px-4 py-3.5 shadow-[0_14px_30px_rgba(44,33,76,0.16)]">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#FFF0F5]">
+                  <img
+                    src="/images/value-innovate-optimize.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="h-8 w-8 object-contain"
+                  />
                 </span>
-                <span className="text-[12px] font-semibold text-neutral-800">
-                  Otake ~ Redefining UI/UX
+                <span>
+                  <span className="block text-[18px] font-bold leading-tight text-neutral-900">+416k</span>
+                  <span className="mt-1 block text-[11px] leading-tight text-[#6F6C78]">Happy Customer</span>
                 </span>
               </div>
             </div>
@@ -392,7 +294,7 @@ function About() {
       </section>
 
       {/* ---------------- 5. PRIMARY FEATURES ---------------- */}
-      <section className="otake-soft-purple w-full py-16 sm:py-24">
+      <section className="otake-product-features w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="text-center">
             <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
@@ -407,55 +309,70 @@ function About() {
           </div>
 
           {/* 3 Stacked Cards */}
-          <div className="mx-auto mt-12 flex max-w-[580px] flex-col gap-4">
-            <div className="flex items-center gap-4 rounded-2xl border border-neutral-100 bg-white p-5 shadow-[0_6px_24px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-md">
-              <RedCubeIcon />
+          <div className="mx-auto mt-12 flex w-full max-w-[476px] flex-col gap-3">
+            <div className="flex h-[204.39px] items-center gap-4 rounded-2xl border border-neutral-100 bg-white px-5 py-4 shadow-[0_6px_24px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-md">
+              <img
+                src="/images/value-client-focused.png"
+                alt=""
+                aria-hidden="true"
+                className="h-14 w-14 shrink-0 object-contain"
+              />
               <div className="flex-1">
-                <h3 className="text-[15px] font-bold text-neutral-900">
-                  Streamline Tasks
+                <h3 className="text-[18px] font-bold text-neutral-900">
+                  Business insurance
                 </h3>
-                <p className="mt-1 text-[12.5px] text-[#8B8A93]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim.
+                <p className="mt-2 text-[14px] leading-[1.5] text-black">
+                  We keep our promises, provide upfront timelines and bring predictability .
                 </p>
                 <button
                   type="button"
-                  className="mt-2.5 rounded-md border border-neutral-200 px-3 py-1 text-[11px] font-medium text-neutral-700 transition-colors hover:bg-neutral-50"
+                  className="mt-3 rounded-md border border-neutral-200 px-3 py-1.5 text-[12px] font-medium text-neutral-700 transition-colors hover:bg-neutral-50"
                 >
                   Learn More
                 </button>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-neutral-100 bg-white p-5 shadow-[0_6px_24px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-md">
-              <PurpleCloverIcon />
+            <div className="flex h-[204.39px] items-center gap-4 rounded-2xl border border-neutral-100 bg-white px-5 py-4 shadow-[0_6px_24px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-md">
+              <img
+                src="/images/business-growth-cloud.png"
+                alt=""
+                aria-hidden="true"
+                className="h-14 w-14 shrink-0 object-contain"
+              />
               <div className="flex-1">
-                <h3 className="text-[15px] font-bold text-neutral-900">
-                  Powerful Insights
+                <h3 className="text-[18px] font-bold text-neutral-900">
+                  Home insurance
                 </h3>
-                <p className="mt-1 text-[12.5px] text-[#8B8A93]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim.
+                <p className="mt-2 text-[14px] leading-[1.5] text-black">
+                  We keep our promises, provide upfront timelines and bring predictability .
                 </p>
                 <button
                   type="button"
-                  className="mt-2.5 rounded-md border border-neutral-200 px-3 py-1 text-[11px] font-medium text-neutral-700 transition-colors hover:bg-neutral-50"
+                  className="mt-3 rounded-md border border-neutral-200 px-3 py-1.5 text-[12px] font-medium text-neutral-700 transition-colors hover:bg-neutral-50"
                 >
                   Learn More
                 </button>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-neutral-100 bg-white p-5 shadow-[0_6px_24px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-md">
-              <YellowFlameIcon />
+            <div className="flex h-[204.39px] items-center gap-4 rounded-2xl border border-neutral-100 bg-white px-5 py-4 shadow-[0_6px_24px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-md">
+              <img
+                src="/images/0decbf5f3674553f5aa9cd39eca32e91b51adb52.png"
+                alt=""
+                aria-hidden="true"
+                className="h-14 w-14 shrink-0 object-contain"
+              />
               <div className="flex-1">
-                <h3 className="text-[15px] font-bold text-neutral-900">
-                  Effortless Growth
+                <h3 className="text-[18px] font-bold text-neutral-900">
+                  Life insurance
                 </h3>
-                <p className="mt-1 text-[12.5px] text-[#8B8A93]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim.
+                <p className="mt-2 text-[14px] leading-[1.5] text-black">
+                  We keep our promises, provide upfront timelines and bring predictability .
                 </p>
                 <button
                   type="button"
-                  className="mt-2.5 rounded-md border border-neutral-200 px-3 py-1 text-[11px] font-medium text-neutral-700 transition-colors hover:bg-neutral-50"
+                  className="mt-3 rounded-md border border-neutral-200 px-3 py-1.5 text-[12px] font-medium text-neutral-700 transition-colors hover:bg-neutral-50"
                 >
                   Learn More
                 </button>
