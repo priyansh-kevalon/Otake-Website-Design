@@ -10,6 +10,9 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     server: {
       port,
+      headers: {
+        'Cache-Control': 'no-store',
+      },
     },
     preview: {
       port,
