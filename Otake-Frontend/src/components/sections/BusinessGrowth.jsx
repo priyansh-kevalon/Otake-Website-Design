@@ -1,41 +1,19 @@
 function CloudIllustration() {
   return (
-    <svg width="54" height="42" viewBox="0 0 64 48" aria-hidden="true" focusable="false">
-      <defs>
-        <linearGradient id="bg-cloud-fill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#ffffff" />
-          <stop offset="100%" stopColor="#f0eff6" />
-        </linearGradient>
-        <filter id="bg-cloud-shadow" x="-40%" y="-40%" width="180%" height="180%">
-          <feGaussianBlur stdDeviation="5" />
-        </filter>
-      </defs>
-      <ellipse
-        cx="32"
-        cy="39"
-        rx="19"
-        ry="4.5"
-        fill="#c4b5fd"
-        opacity="0.55"
-        filter="url(#bg-cloud-shadow)"
-      />
-      <path
-        d="M17 34a8.5 8.5 0 0 1 .9-16.9A11.5 11.5 0 0 1 39 19.6a7.5 7.5 0 0 1-.5 14.4H17Z"
-        fill="url(#bg-cloud-fill)"
-        stroke="#e5e3ee"
-        strokeWidth="1.2"
-        strokeLinejoin="round"
-      />
-      <ellipse cx="26" cy="25" rx="5" ry="3.4" fill="#ffffff" opacity="0.9" />
-    </svg>
+    <img
+      src="/images/business-growth-cloud.png"
+      alt=""
+      aria-hidden="true"
+      className="h-9 w-12 object-contain"
+    />
   )
 }
 
 function UserIcon() {
   return (
     <svg
-      width="22"
-      height="22"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -45,10 +23,9 @@ function UserIcon() {
       aria-hidden="true"
       focusable="false"
     >
-      <circle cx="9.5" cy="8" r="3.4" />
-      <path d="M3.5 19.5a6 6 0 0 1 12 0" />
-      <circle cx="17.5" cy="9" r="2.2" />
-      <path d="M16.2 14.2a4.6 4.6 0 0 1 4.3 4.6" />
+      <path d="M9.5 14.5 7 17a3.5 3.5 0 0 1-5-5l3-3a3.5 3.5 0 0 1 5 0" />
+      <path d="m14.5 9.5 2.5-2.5a3.5 3.5 0 0 1 5 5l-3 3a3.5 3.5 0 0 1-5 0" />
+      <path d="m8.5 15.5 7-7" />
     </svg>
   )
 }
@@ -56,8 +33,8 @@ function UserIcon() {
 function AnalyticsIcon() {
   return (
     <svg
-      width="22"
-      height="22"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -67,10 +44,10 @@ function AnalyticsIcon() {
       aria-hidden="true"
       focusable="false"
     >
-      <path d="M4 20h16" />
-      <path d="M7 20v-6" />
-      <path d="M12 20V7" />
-      <path d="M17 20v-9" />
+      <path d="M9 18h6" />
+      <path d="M10 21h4" />
+      <path d="M8.2 14.5a6 6 0 1 1 7.6 0c-.9.7-1.3 1.4-1.5 2.5h-4.6c-.2-1.1-.6-1.8-1.5-2.5Z" />
+      <path d="M12 2v1.5M4.9 4.9 6 6M19.1 4.9 18 6" />
     </svg>
   )
 }
@@ -78,8 +55,8 @@ function AnalyticsIcon() {
 function IntegrationIcon() {
   return (
     <svg
-      width="22"
-      height="22"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -89,12 +66,9 @@ function IntegrationIcon() {
       aria-hidden="true"
       focusable="false"
     >
-      <circle cx="6" cy="6" r="2.6" />
-      <circle cx="18" cy="6" r="2.6" />
-      <circle cx="12" cy="18" r="2.6" />
-      <path d="M8.3 7.6l2.3 8.2" />
-      <path d="M15.7 7.6l-2.3 8.2" />
-      <path d="M8.6 6h6.8" />
+      <circle cx="6" cy="17" r="3.5" />
+      <circle cx="18" cy="17" r="3.5" />
+      <path d="M3 8h5l2 6M21 8h-5l-2 6M8 10h8" />
     </svg>
   )
 }
@@ -102,8 +76,8 @@ function IntegrationIcon() {
 function SecurityIcon() {
   return (
     <svg
-      width="22"
-      height="22"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -113,8 +87,9 @@ function SecurityIcon() {
       aria-hidden="true"
       focusable="false"
     >
-      <path d="M12 3.2l7 2.8v5.4c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6L12 3.2Z" />
-      <path d="M9.2 11.9l2 2 3.6-3.8" />
+      <path d="M14.5 3.5c-4.5.4-8.2 3.2-9.8 7.8l-.8 2.2 3.1 3.1 2.2-.8c4.6-1.6 7.4-5.3 7.8-9.8l.2-2.7-2.7.2Z" />
+      <path d="m7.5 15.5-2 4 4-2M10 11l3 3" />
+      <circle cx="13.5" cy="7.5" r="1" />
     </svg>
   )
 }
@@ -132,34 +107,34 @@ const ICON_GRADIENT =
 function BusinessGrowth() {
   return (
     <section id="growth" className="otake-growth w-full scroll-mt-6">
-      <div className="mx-auto max-w-[1080px] px-6 py-16 sm:px-8 lg:py-24">
+      <div className="mx-auto h-auto min-h-[408px] w-full max-w-[1136px] px-6 py-10 sm:px-8 lg:h-[408px] lg:py-12">
         <div className="flex justify-center">
           <CloudIllustration />
         </div>
 
-        <h2 className="mt-8 text-center text-[24px] font-bold leading-[1.2] tracking-tight text-neutral-900 sm:text-[28px] lg:text-[31px]">
+        <h2 className="mt-3 text-center text-[20px] font-bold leading-[1.2] tracking-tight text-neutral-900 sm:text-[22px]">
           Grow your business to the next level.
         </h2>
 
-        <p className="mx-auto mt-4 max-w-[400px] text-center text-[14px] leading-relaxed text-neutral-500">
+        <p className="mx-auto mt-2 max-w-[400px] text-center text-[11px] leading-[1.45] text-neutral-600">
           Lorem ipsum dolor sit amet, consectetur
           <br />
           adipiscing elit. Vivamus non enim lacus.
         </p>
 
-        <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <div className="mt-11 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {FEATURES.map((feature) => (
             <div key={feature.id} className="flex flex-col items-center text-center">
               <span
-                className={`flex h-11 w-11 items-center justify-center rounded-[11px] text-[#3B0764] shadow-[0_10px_22px_rgba(124,58,237,0.32)] ${ICON_GRADIENT}`}
+                className={`flex h-7 w-7 items-center justify-center rounded-[7px] text-white shadow-[0_5px_12px_rgba(124,58,237,0.2)] [&_svg]:h-4 [&_svg]:w-4 ${ICON_GRADIENT}`}
                 aria-hidden="true"
               >
                 {feature.icon}
               </span>
-              <h3 className="mt-4 text-[17px] font-bold leading-snug text-neutral-900 lg:text-[18px]">
+              <h3 className="mt-3 text-[13px] font-semibold leading-snug text-neutral-900 lg:text-[14px]">
                 {feature.heading}
               </h3>
-              <p className="mt-2 max-w-[250px] text-[13px] leading-relaxed text-neutral-500">
+              <p className="mt-1.5 max-w-[220px] text-[9px] leading-[1.5] text-neutral-500">
                 Lorem ipsum dolor sit amet, consectetur
                 <br />
                 adipiscing elit. Vivamus non enim lacus.
