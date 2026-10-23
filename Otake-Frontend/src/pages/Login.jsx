@@ -31,31 +31,6 @@ function TwitterIcon() {
   )
 }
 
-function PerspectiveLines() {
-  return (
-    <svg
-      className="pointer-events-none absolute inset-0 h-full w-full"
-      viewBox="0 0 700 600"
-      preserveAspectRatio="none"
-      aria-hidden="true"
-    >
-      <line x1="0" y1="0" x2="350" y2="300" stroke="#FFFFFF" strokeOpacity="0.35" />
-      <line x1="700" y1="0" x2="350" y2="300" stroke="#FFFFFF" strokeOpacity="0.35" />
-      <line x1="0" y1="600" x2="350" y2="300" stroke="#FFFFFF" strokeOpacity="0.35" />
-      <line x1="700" y1="600" x2="350" y2="300" stroke="#FFFFFF" strokeOpacity="0.35" />
-      <rect
-        x="120"
-        y="80"
-        width="460"
-        height="440"
-        stroke="#FFFFFF"
-        strokeOpacity="0.25"
-        fill="none"
-      />
-    </svg>
-  )
-}
-
 function Login({ onNavigate }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -74,7 +49,7 @@ function Login({ onNavigate }) {
     <div className="w-full py-6 sm:py-10">
       <div className="mx-auto w-[98%]">
         {/* Main Card Container */}
-        <div className="grid overflow-hidden rounded-[28px] border border-neutral-200/80 bg-[linear-gradient(100deg,#FFFFFF_0%,#FDFBFF_16%,#F9F4FE_34%,#F7EAFB_52%,#FBE6F1_70%,#FDEDE4_86%,#FFF0EA_100%)] shadow-[0_24px_60px_rgba(150,130,200,0.12)] sm:rounded-[36px] lg:grid-cols-12">
+        <div className="grid overflow-hidden rounded-[28px] border border-neutral-200/80 bg-white shadow-[0_24px_60px_rgba(150,130,200,0.12)] sm:rounded-[36px] lg:grid-cols-12">
           {/* ---------------- LEFT COLUMN: LOGIN FORM ---------------- */}
           <div className="relative z-10 flex flex-col justify-center p-8 sm:p-12 lg:col-span-5 lg:p-14">
             <div className="relative z-10">
@@ -197,64 +172,39 @@ function Login({ onNavigate }) {
           </div>
 
           {/* ---------------- RIGHT COLUMN: 3D HERO VISUAL ---------------- */}
-          <div className="relative flex min-h-[480px] items-center justify-center overflow-hidden p-8 sm:p-12 lg:col-span-7 lg:min-h-[640px]">
-            {/* Perspective grid lines */}
-            <PerspectiveLines />
+          <div className="otake-login-visual relative flex min-h-[480px] items-center justify-center overflow-hidden p-8 sm:p-12 lg:col-span-7 lg:min-h-[640px]">
+            <div className="relative z-10 w-full max-w-[520px] lg:max-w-[660px]">
+              <img
+                src="/images/a64c4a78edadea01ca20ff829b7dda330c463f08 (1).png"
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 z-0 h-full w-full scale-125 object-contain brightness-90"
+              />
 
-            {/* Ambient Floating 3D Spheres & Clouds */}
-            <span
-              aria-hidden="true"
-              className="absolute left-16 top-16 z-10 h-10 w-10 rounded-full bg-gradient-to-br from-amber-300 to-orange-500 shadow-lg shadow-orange-300/40"
-            />
-            <span
-              aria-hidden="true"
-              className="absolute right-16 top-14 z-10 h-8 w-14 rounded-full bg-white/80 shadow-md backdrop-blur-sm"
-            />
-            <span
-              aria-hidden="true"
-              className="absolute right-12 bottom-36 z-10 h-10 w-10 rounded-full bg-gradient-to-br from-amber-200 to-yellow-400 shadow-lg shadow-yellow-200/50"
-            />
-            <span
-              aria-hidden="true"
-              className="absolute right-28 bottom-16 z-10 h-5 w-5 rounded-full bg-gradient-to-br from-yellow-300 to-orange-400"
-            />
+              <img
+                src="/images/hero-character.png"
+                alt="3D cartoon character with purple headphones jumping"
+                className="relative z-10 h-auto w-full object-contain drop-shadow-[0_40px_60px_rgba(30,8,25,0.9)]"
+              />
 
-            {/* Central 3D Jumping Character */}
-            <img
-              src="/images/hero-character.png"
-              alt="Otake 3D jumping character"
-              className="relative z-10 h-auto w-full max-w-[380px] object-contain drop-shadow-[0_30px_60px_rgba(40,10,35,0.4)] sm:max-w-[420px]"
-            />
+              <img
+                src="/images/a0bf6f49ef240e5fd88a726d1fcf7e347b1803cb.png"
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute right-[4%] top-[6%] z-0 h-auto w-[90px] rotate-[20deg] sm:w-[105px] lg:w-[120px]"
+              />
 
-            {/* Floating Card 1: All Designers */}
-            <div className="absolute bottom-10 left-6 z-20 w-[190px] rounded-2xl border border-white/80 bg-white/95 p-3.5 shadow-xl shadow-purple-500/10 backdrop-blur-md sm:bottom-12 sm:left-10">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-[11.5px] font-bold text-neutral-900">All Designers</p>
-                  <p className="text-[10px] text-neutral-400">Meeting-Up</p>
-                </div>
-                <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-orange-100 text-orange-600 text-[10px]">
-                  🦊
-                </span>
-              </div>
-              <div className="mt-2.5 flex items-center justify-between text-[10px] text-neutral-500">
-                <span>62%</span>
-                <span>2M</span>
-              </div>
-              <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-neutral-100">
-                <div className="h-full w-[62%] rounded-full bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500" />
-              </div>
-            </div>
+              <img
+                src="/images/Background+Shadow1.png"
+                alt="Designers meeting card showing 62% attendance and 2M reach"
+                className="absolute left-0 top-[53%] z-20 h-auto w-[190px] sm:-left-[3%] sm:w-[226px] lg:-left-[4%] lg:w-[262px]"
+              />
 
-            {/* Floating Card 2: +416 Happy Customer */}
-            <div className="absolute top-20 right-6 z-20 flex items-center gap-3 rounded-2xl border border-white/80 bg-white/95 px-4 py-2.5 shadow-xl shadow-purple-500/10 backdrop-blur-md sm:top-24 sm:right-10">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-pink-300 to-rose-400 text-white text-xs shadow-sm">
-                👤
-              </span>
-              <div className="leading-tight">
-                <p className="text-[13px] font-bold text-neutral-900">+416</p>
-                <p className="text-[10px] text-neutral-400">Happy Customer</p>
-              </div>
+              <img
+                src="/images/Background+Shadow.png"
+                alt="Customer statistics card showing +416 happy customers"
+                className="absolute right-0 top-[28%] z-20 h-auto w-[156px] sm:-right-[3%] sm:w-[176px] lg:right-0 lg:w-[188px] xl:-right-[2%] xl:w-[238px]"
+              />
             </div>
           </div>
         </div>

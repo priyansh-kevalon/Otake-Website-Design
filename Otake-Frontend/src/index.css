@@ -54,6 +54,27 @@
   mask-image: radial-gradient(circle at 50% 50%, #000 0%, transparent 70%);
 }
 
+.otake-login-visual {
+  background-color: #fff;
+  background-image:
+    radial-gradient(ellipse 75% 58% at 84% 12%, rgba(255, 184, 211, 0.72) 0%, transparent 76%),
+    radial-gradient(ellipse 78% 70% at 84% 92%, rgba(192, 173, 255, 0.7) 0%, transparent 76%),
+    linear-gradient(112deg, #fff 0%, #fffaf1 25%, #fce8df 48%, #f5cce1 72%, #e1d6ff 100%);
+}
+
+.otake-login-visual::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image: repeating-conic-gradient(
+    from 0deg at 52% 43%,
+    rgba(255, 255, 255, 0.18) 0deg 0.3deg,
+    transparent 0.3deg 8deg
+  );
+  content: '';
+  pointer-events: none;
+}
+
 .otake-features {
   position: relative;
   background-color: #ffffff;
