@@ -56,11 +56,24 @@
 
 .otake-features {
   position: relative;
-  background-color: #fffefe;
-  background-image: url('/images/d1fe3dc834f994ffc47862f9a88755386a7dcb6c (2).png');
-  background-size: cover;
-  background-position: center 50%;
-  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(
+      ellipse 50% 48% at 48% 58%,
+      rgba(255, 211, 229, 0.82) 0%,
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 46% 48% at 68% 66%,
+      rgba(211, 196, 255, 0.82) 0%,
+      transparent 74%
+    ),
+    radial-gradient(
+      ellipse 36% 32% at 30% 72%,
+      rgba(255, 228, 226, 0.72) 0%,
+      transparent 74%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #fffefe 52%, #ffffff 100%);
 }
 
 .otake-growth {
