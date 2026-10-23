@@ -57,42 +57,10 @@
 .otake-features {
   position: relative;
   background-color: #fffefe;
-  background-image:
-    radial-gradient(
-      ellipse 55% 46% at 50% 100%,
-      rgba(255, 208, 232, 0.9) 0%,
-      rgba(255, 224, 240, 0.5) 45%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse 44% 40% at 8% 92%,
-      rgba(219, 207, 255, 0.85) 0%,
-      rgba(233, 226, 255, 0.4) 50%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse 44% 40% at 92% 92%,
-      rgba(255, 205, 228, 0.85) 0%,
-      rgba(255, 226, 240, 0.4) 50%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse 48% 42% at 50% 58%,
-      rgba(255, 236, 243, 0.8) 0%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 34% 26% at 20% 30%,
-      rgba(255, 245, 235, 0.7) 0%,
-      transparent 70%
-    ),
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #fffbfd 38%,
-      #fdf4fa 70%,
-      #f4efff 100%
-    );
+  background-image: url('/images/d1fe3dc834f994ffc47862f9a88755386a7dcb6c (2).png');
+  background-size: cover;
+  background-position: center 50%;
+  background-repeat: no-repeat;
 }
 
 .otake-growth {

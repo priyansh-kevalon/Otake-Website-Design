@@ -265,6 +265,7 @@ const FEATURES = [
 function ProductFeatures() {
   return (
     <section id="features" className="otake-features w-full scroll-mt-6">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-white/60" />
       <div className="mx-auto max-w-[1080px] px-6 py-16 sm:px-8 lg:py-24">
         <div className="mx-auto max-w-[640px] text-center">
           <span className="inline-block rounded-full bg-yellow-300 px-3 py-1 text-[12px] font-semibold text-neutral-800 sm:text-[11px]">

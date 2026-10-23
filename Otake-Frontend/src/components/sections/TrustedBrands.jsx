@@ -74,7 +74,7 @@ function TrustedBrands() {
   return (
     <section id="about" className="w-full scroll-mt-6 bg-white">
       <div className="mx-auto max-w-[1080px] px-6 pt-24 pb-16 sm:px-8 lg:pt-32 lg:pb-20">
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1fr] lg:gap-14">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_1fr] lg:gap-24">
           <div>
             <span className="inline-block rounded-full bg-yellow-300 px-3 py-1 text-[11px] font-semibold text-neutral-800">
               Powerful Solutions
