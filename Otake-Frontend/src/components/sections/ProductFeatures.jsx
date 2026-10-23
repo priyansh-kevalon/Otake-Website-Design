@@ -86,31 +86,34 @@ function SalesIcon() {
 
 function TaskDashboard() {
   return (
-    <div className="rounded-2xl bg-[#f3f2f9] p-3.5">
-      <div className="flex items-center justify-between">
-        <span className="rounded-md bg-neutral-900 px-2 py-0.5 text-[10px] font-semibold text-white sm:text-[9px]">
+    <div className="h-[151px] rounded-xl bg-[#f3f2f7] px-3 py-3">
+      <div className="text-center">
+        <span className="inline-block rounded-md bg-neutral-900 px-2 py-0.5 text-[9px] font-medium text-white">
           Today
         </span>
-        <span className="text-[10px] text-neutral-400 sm:text-[9px]">2 of 8</span>
       </div>
 
-      <div className="mt-2.5 space-y-2">
-        <div className="flex items-center gap-2.5 rounded-xl border border-neutral-100 bg-white p-2.5">
-          <span className="h-5 w-5 shrink-0 rounded-full bg-gradient-to-br from-pink-300 to-fuchsia-400" />
+      <div className="mt-2 space-y-1.5">
+        <div className="flex items-center gap-2 rounded-lg border border-neutral-100 bg-white px-1.5 py-1">
+          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-100 to-pink-200 text-[13px]" aria-hidden="true">
+            👩🏻
+          </span>
           <span className="min-w-0 flex-1">
-            <span className="block truncate text-[11px] font-medium text-neutral-700 sm:text-[10px]">
-              Design review
+            <span className="block truncate text-[9px] font-medium text-neutral-700">
+              John just ✋ marked a task overdue.
             </span>
-            <span className="mt-0.5 block text-[9px] text-neutral-400 sm:text-[8px]">09:30 AM</span>
+            <span className="block text-[8px] text-neutral-400">3 minute ago</span>
           </span>
         </div>
-        <div className="flex items-center gap-2.5 rounded-xl border border-neutral-100 bg-white p-2.5">
-          <span className="h-5 w-5 shrink-0 rounded-full bg-gradient-to-br from-amber-300 to-orange-400" />
+        <div className="flex items-center gap-2 rounded-lg border border-neutral-100 bg-white px-1.5 py-1">
+          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-orange-100 to-rose-200 text-[13px]" aria-hidden="true">
+            👨🏻
+          </span>
           <span className="min-w-0 flex-1">
-            <span className="block truncate text-[11px] font-medium text-neutral-700 sm:text-[10px]">
-              Landing page build
+            <span className="block truncate text-[9px] font-medium text-neutral-700">
+              Anna just completed ✅ a task.
             </span>
-            <span className="mt-0.5 block text-[9px] text-neutral-400 sm:text-[8px]">11:00 AM</span>
+            <span className="block text-[8px] text-neutral-400">12 minute ago</span>
           </span>
         </div>
       </div>
@@ -120,60 +123,43 @@ function TaskDashboard() {
 
 function AnalyticsDashboard() {
   const bars = [
-    { h: 34, tone: 'bg-violet-200' },
-    { h: 52, tone: 'bg-violet-200' },
-    { h: 26, tone: 'bg-neutral-200' },
-    { h: 64, tone: 'bg-violet-700' },
-    { h: 44, tone: 'bg-violet-200' },
-    { h: 30, tone: 'bg-neutral-200' },
-    { h: 56, tone: 'bg-violet-200' },
+    { h: 35, tone: 'bg-[#c9c7d3]' },
+    { h: 50, tone: 'bg-[#c9c7d3]' },
+    { h: 39, tone: 'bg-[#c9c7d3]' },
+    { h: 63, tone: 'bg-neutral-900' },
+    { h: 52, tone: 'bg-[#c9c7d3]' },
+    { h: 25, tone: 'bg-[#c9c7d3]' },
+    { h: 44, tone: 'bg-[#c9c7d3]' },
+    { h: 29, tone: 'bg-[#c9c7d3]' },
   ]
 
   return (
-    <div className="rounded-2xl bg-[#f3f2f9] p-3.5">
+    <div className="relative h-[151px] rounded-xl bg-[#f3f2f7] px-4 py-3">
       <div className="flex items-center justify-between">
-        <p className="text-[12px] font-semibold text-neutral-800 sm:text-[11px]">Sales Report</p>
-        <span className="rounded-md border border-neutral-200 bg-white px-2 py-0.5 text-[9px] text-neutral-500 sm:text-[8px]">
-          Last 7 Days
-        </span>
-      </div>
-
-      <div className="mt-3 flex items-center gap-3">
-        <div className="flex flex-1 items-center gap-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-violet-700" />
-          <span className="text-[10px] text-neutral-500 sm:text-[9px]">Revenue</span>
-          <span className="text-[10px] font-semibold text-neutral-700 sm:text-[9px]">$8.2K</span>
+        <div>
+          <p className="text-[9px] font-semibold text-neutral-800">Sales Report</p>
+          <span className="block text-[8px] text-neutral-500">Last 7 Days</span>
         </div>
-        <div className="flex flex-1 items-center gap-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-neutral-300" />
-          <span className="text-[10px] text-neutral-500 sm:text-[9px]">Orders</span>
-          <span className="text-[10px] font-semibold text-neutral-700 sm:text-[9px]">412</span>
+        <div className="flex items-center gap-1.5">
+          <span className="text-[8px] font-medium text-neutral-700">+3,2%</span>
+          <span className="flex h-3 w-3 items-center justify-center rounded-full bg-neutral-800 text-[8px] text-white" aria-hidden="true">
+            +
+          </span>
         </div>
       </div>
 
-      <div className="relative mt-3 flex h-20 items-end justify-between gap-1.5 rounded-xl border border-neutral-100 bg-white px-2.5 pb-2 pt-3">
-        <span className="absolute left-1/2 top-1.5 -translate-x-1/2 rounded-md bg-neutral-900 px-1.5 py-0.5 text-[9px] font-medium text-white sm:text-[8px]">
-          $1.4K
+      <div className="relative mt-2 flex h-[91px] items-end justify-between gap-1 border-b border-dashed border-neutral-300 px-1 pb-1">
+        <span className="absolute left-1/2 top-0 z-10 -translate-x-1/2 rounded bg-neutral-900 px-1.5 py-0.5 text-[7px] font-medium text-white">
+          $8,82.21
         </span>
         {bars.map((bar, index) => (
           <span
             key={index}
-            className={`w-full rounded-t-[3px] ${bar.tone} ${
-              index === 3 ? 'h-16' : ''
-            }`}
-            style={index === 3 ? undefined : { height: `${bar.h}px` }}
+            className={`w-[9px] rounded-t-[2px] ${bar.tone}`}
+            style={{ height: `${bar.h}px` }}
           />
         ))}
-      </div>
-
-      <div className="mt-1.5 flex justify-between text-[9px] text-neutral-400 sm:text-[8px]">
-        <span>Mon</span>
-        <span>Tue</span>
-        <span>Wed</span>
-        <span>Thu</span>
-        <span>Fri</span>
-        <span>Sat</span>
-        <span>Sun</span>
+        <span className="absolute bottom-[61px] left-1/2 z-10 h-2 w-2 -translate-x-1/2 rounded-sm border border-neutral-800 bg-white" />
       </div>
     </div>
   )
@@ -181,42 +167,50 @@ function AnalyticsDashboard() {
 
 function SalesDashboard() {
   return (
-    <div className="rounded-2xl bg-[#f3f2f9] p-3.5">
+    <div className="h-[151px] rounded-xl bg-[#f3f2f7] px-3 py-3">
       <div className="flex items-center justify-between">
-        <p className="text-[12px] font-semibold text-neutral-800 sm:text-[11px]">
+        <p className="flex-1 text-center text-[9px] font-semibold text-neutral-800">
           Today&apos;s transaction
         </p>
-        <span className="flex flex-col gap-[3px]" aria-hidden="true">
-          <span className="h-[3px] w-[3px] rounded-full bg-neutral-400" />
-          <span className="h-[3px] w-[3px] rounded-full bg-neutral-400" />
-          <span className="h-[3px] w-[3px] rounded-full bg-neutral-400" />
+        <span className="flex flex-col gap-[2px]" aria-hidden="true">
+          <span className="h-[2px] w-[2px] rounded-full bg-neutral-500" />
+          <span className="h-[2px] w-[2px] rounded-full bg-neutral-500" />
+          <span className="h-[2px] w-[2px] rounded-full bg-neutral-500" />
         </span>
       </div>
 
-      <div className="mt-2.5 space-y-2">
-        <div className="flex items-center gap-2.5 rounded-xl border border-neutral-100 bg-white p-2.5">
-          <span className="min-w-0 flex-1">
-            <span className="block text-[14px] font-bold leading-none text-neutral-800">
-              342
-            </span>
-            <span className="mt-1 block text-[9px] text-neutral-400 sm:text-[8px]">Paid</span>
+      <div className="mx-auto mt-2 max-w-[148px] rounded-xl border border-neutral-100 bg-white px-3 py-2">
+        <div className="flex items-center justify-between border-b border-dashed border-neutral-200 pb-2">
+          <span>
+            <span className="text-[12px] font-bold text-neutral-800">32</span>
+            <span className="text-[8px] text-neutral-400">/48</span>
+            <span className="block text-[7px] text-neutral-400">Order completed</span>
           </span>
           <span
-            className="h-6 w-6 shrink-0 rounded-full border-[3px] border-violet-500 border-r-transparent"
-            aria-hidden="true"
-          />
+            className="flex h-6 w-6 items-center justify-center rounded-full p-[3px]"
+            style={{ background: 'conic-gradient(#8b78ff 0 68%, #eeeafd 68% 100%)' }}
+            aria-label="68 percent completed"
+          >
+            <span className="flex h-full w-full items-center justify-center rounded-full bg-white text-[7px] font-semibold text-neutral-700">
+              68
+            </span>
+          </span>
         </div>
-        <div className="flex items-center gap-2.5 rounded-xl border border-neutral-100 bg-white p-2.5">
-          <span className="min-w-0 flex-1">
-            <span className="block text-[14px] font-bold leading-none text-neutral-800">
-              17
-            </span>
-            <span className="mt-1 block text-[9px] text-neutral-400 sm:text-[8px]">Pending</span>
+        <div className="flex items-center justify-between pt-2">
+          <span>
+            <span className="text-[12px] font-bold text-neutral-800">17</span>
+            <span className="text-[8px] text-neutral-400">/24</span>
+            <span className="block text-[7px] text-neutral-400">On shipping</span>
           </span>
           <span
-            className="h-6 w-6 shrink-0 rounded-full border-[3px] border-rose-400 border-r-transparent"
-            aria-hidden="true"
-          />
+            className="flex h-6 w-6 items-center justify-center rounded-full p-[3px]"
+            style={{ background: 'conic-gradient(#ff8585 0 40%, #ffe9e9 40% 100%)' }}
+            aria-label="40 percent in shipping"
+          >
+            <span className="flex h-full w-full items-center justify-center rounded-full bg-white text-[7px] font-semibold text-neutral-700">
+              40
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -282,11 +276,11 @@ function ProductFeatures() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-14 grid max-w-[700px] grid-cols-1 gap-3 md:grid-cols-3">
           {FEATURES.map((feature) => (
             <article
               key={feature.key}
-              className="relative flex flex-col overflow-visible rounded-[20px] bg-white shadow-[0_12px_30px_rgba(150,130,200,0.13)]"
+              className="relative flex flex-col overflow-visible rounded-[16px] bg-white shadow-[0_12px_30px_rgba(150,130,200,0.13)]"
             >
               <span
                 className="pointer-events-none absolute -top-6 left-1/2 z-10 -translate-x-1/2"
@@ -295,24 +289,24 @@ function ProductFeatures() {
                 {feature.icon}
               </span>
 
-              <div className="px-6 pb-6 pt-12 text-center">
-                <h3 className="text-[17px] font-bold leading-[1.3] text-neutral-900">
+              <div className="px-3 pb-3 pt-10 text-center">
+                <h3 className="text-[16px] font-bold leading-[1.35] text-neutral-900">
                   {feature.heading}
                 </h3>
-                <p className="mt-3 text-[12px] leading-relaxed text-neutral-500">
+                <p className="mt-1.5 text-[10px] leading-relaxed text-neutral-500">
                   Lorem ipsum dolor sit amet, consectetur
                   <br />
                   adipiscing elit.
                 </p>
                 <button
                   type="button"
-                  className="mt-5 w-full rounded-lg border border-neutral-300 px-4 py-2 text-[12px] font-medium text-neutral-800 transition-colors hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+                  className="mt-3 w-full rounded-md border border-neutral-200 px-3 py-1.5 text-[9px] font-medium text-neutral-800 transition-colors hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
                 >
                   Learn More
                 </button>
               </div>
 
-              <div className="mt-auto px-3 pb-3">
+              <div className="mt-auto px-1.5 pb-2.5">
                 {feature.dashboard}
               </div>
             </article>
