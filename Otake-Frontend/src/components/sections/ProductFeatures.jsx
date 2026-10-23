@@ -191,7 +191,7 @@ const FEATURES = [
 function ProductFeatures() {
   return (
     <section id="features" className="otake-features w-full scroll-mt-6">
-      <div className="mx-auto max-w-[1200px] px-6 py-16 sm:px-8 lg:py-24">
+      <div className="mx-auto w-full max-w-[1136px] px-6 py-16 sm:px-8 xl:h-[807.969970703125px] xl:px-0 xl:pb-4 xl:pt-6">
         <div className="mx-auto max-w-[640px] text-center">
           <span className="inline-block rounded-full bg-yellow-300 px-3 py-1 text-[12px] font-semibold text-neutral-800 sm:text-[11px]">
             Product Features
@@ -208,11 +208,11 @@ function ProductFeatures() {
           </p>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-[1136px] grid-cols-1 justify-items-center gap-4 md:grid-cols-2 xl:grid-cols-[repeat(3,368px)]">
+        <div className="mx-auto mt-14 grid w-full grid-cols-1 justify-items-center gap-4 md:grid-cols-2 xl:mt-8 xl:grid-cols-[repeat(3,368px)]">
           {FEATURES.map((feature) => (
             <article
               key={feature.key}
-              className="relative flex h-[544.78px] w-full max-w-[368px] flex-col overflow-visible rounded-[16px] bg-white shadow-[0_12px_30px_rgba(150,130,200,0.13)]"
+              className="relative flex h-[540.780029296875px] w-full max-w-[368px] flex-col overflow-visible rounded-[16px] bg-white shadow-[0_12px_30px_rgba(150,130,200,0.13)]"
             >
               <span
                 className="pointer-events-none absolute -top-8 left-1/2 z-10 -translate-x-1/2"

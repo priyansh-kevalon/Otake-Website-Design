@@ -4,28 +4,28 @@ const ARTICLE_DESCRIPTION =
 const ARTICLES = [
   {
     id: 'shipping',
+    image: '/images/blog-shipping-character.png',
     imageBg: 'bg-[#E8F5FF]',
-    imageFilter: '',
     categories: ['Shipping'],
     title: ['Use data analytics to', 'improve shipping times.'],
   },
   {
     id: 'sales-growth',
+    image: '/images/blog-sales-character.png',
     imageBg: 'bg-[#EDE9FF]',
-    imageFilter: 'hue-rotate-[45deg]',
     categories: ['Data', 'Sales Growth'],
     title: ['Sales growth stories', 'powered by marketing.'],
   },
   {
     id: 'customer-base',
+    image: '/images/blog-customer-character.png',
     imageBg: 'bg-[#FCE7F3]',
-    imageFilter: 'hue-rotate-[-50deg]',
     categories: ['Data', 'Shipping', 'Sales Growth'],
     title: ['Tips for building a returning', 'customer base.'],
   },
 ]
 
-function ArticleCard({ id, imageBg, imageFilter, categories, title, wideOnSm }) {
+function ArticleCard({ id, image, imageBg, categories, title, wideOnSm }) {
   return (
     <article
       id={id}
@@ -39,10 +39,10 @@ function ArticleCard({ id, imageBg, imageFilter, categories, title, wideOnSm }) 
         className={`flex h-[142px] w-full items-center justify-center overflow-hidden rounded-[14px] ${imageBg}`}
       >
         <img
-          src="/images/hero-character.png"
+          src={image}
           alt=""
           aria-hidden="true"
-          className={`h-full w-full object-contain p-2 ${imageFilter}`}
+          className="h-full w-full object-contain p-2"
         />
       </div>
 
@@ -104,8 +104,8 @@ function BlogArticles() {
             <ArticleCard
               key={article.id}
               id={article.id}
+              image={article.image}
               imageBg={article.imageBg}
-              imageFilter={article.imageFilter}
               categories={article.categories}
               title={article.title}
               wideOnSm={index === ARTICLES.length - 1}
