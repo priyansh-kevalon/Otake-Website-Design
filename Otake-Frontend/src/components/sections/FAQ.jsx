@@ -182,16 +182,6 @@ function FAQ() {
 
   return (
     <section id="faq" className="otake-faq relative w-full scroll-mt-6 overflow-hidden py-16 sm:py-24">
-      {/* Subtle Ambient Background Pastel Glows */}
-      <div
-        className="pointer-events-none absolute -left-20 top-1/4 h-[380px] w-[380px] rounded-full bg-gradient-to-tr from-pink-200/35 via-purple-100/30 to-transparent blur-3xl"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute -right-20 top-1/3 h-[420px] w-[420px] rounded-full bg-gradient-to-bl from-indigo-200/35 via-violet-100/30 to-transparent blur-3xl"
-        aria-hidden="true"
-      />
-
       <div className="relative mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-8">
         {/* Floating 3D Elements at Outer Edges */}
         <div className="absolute left-2 top-[120px] hidden xl:block">

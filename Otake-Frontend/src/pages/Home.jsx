@@ -18,8 +18,8 @@ function Home() {
       <PowerfulSolutions />
       <Testimonials />
       <BlogArticles />
-      <FAQ />
       <GetStarted />
+      <FAQ />
     </>
   )
 }

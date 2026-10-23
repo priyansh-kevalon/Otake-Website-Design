@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 
 const HIGHLIGHTS = [
-  { key: 'innovation', title: 'INNOVATION' },
-  { key: 'cloud', title: 'CLOUD SECURE' },
-  { key: 'growth', title: 'GROWTH DRIVEN' },
+  { key: 'innovation', title: 'INNOVATION', image: '/images/footer-innovation.png' },
+  { key: 'cloud', title: 'CLOUD SECURE', image: '/images/footer-cloud-secure.png' },
+  { key: 'growth', title: 'GROWTH DRIVEN', image: '/images/footer-growth-driven.png' },
 ]
 
 const PAGE_LINKS = [
@@ -49,141 +49,6 @@ const SOCIAL_LINKS = [
     path: 'M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z',
   },
 ]
-
-function Innovation3DIcon() {
-  return (
-    <div className="relative flex h-20 w-20 items-center justify-center">
-      <span
-        aria-hidden="true"
-        className="absolute -bottom-3 h-5 w-16 rounded-full bg-orange-950/60 blur-md"
-      />
-      <svg
-        width="80"
-        height="80"
-        viewBox="0 0 64 64"
-        fill="none"
-        aria-hidden="true"
-        className="relative z-10"
-      >
-        <defs>
-          <radialGradient id="inno-sphere-1" cx="35%" cy="30%" r="65%">
-            <stop offset="0%" stopColor="#FFE082" />
-            <stop offset="35%" stopColor="#FF7043" />
-            <stop offset="100%" stopColor="#BF360C" />
-          </radialGradient>
-          <radialGradient id="inno-sphere-2" cx="30%" cy="30%" r="70%">
-            <stop offset="0%" stopColor="#FFD54F" />
-            <stop offset="40%" stopColor="#FF8A65" />
-            <stop offset="100%" stopColor="#D84315" />
-          </radialGradient>
-        </defs>
-
-        <circle cx="24" cy="38" r="9" fill="url(#inno-sphere-1)" />
-        <circle cx="40" cy="38" r="9" fill="url(#inno-sphere-1)" />
-        <circle cx="32" cy="42" r="8" fill="url(#inno-sphere-1)" />
-
-        <circle cx="18" cy="28" r="8.5" fill="url(#inno-sphere-2)" />
-        <circle cx="46" cy="28" r="8.5" fill="url(#inno-sphere-2)" />
-        <circle cx="25" cy="20" r="9" fill="url(#inno-sphere-1)" />
-        <circle cx="39" cy="20" r="9" fill="url(#inno-sphere-1)" />
-        <circle cx="32" cy="15" r="7.5" fill="url(#inno-sphere-2)" />
-
-        <circle cx="32" cy="28" r="11" fill="url(#inno-sphere-1)" />
-
-        <circle cx="30" cy="24" r="2.5" fill="#FFFFFF" opacity="0.65" />
-        <circle cx="23" cy="18" r="1.8" fill="#FFFFFF" opacity="0.5" />
-        <circle cx="38" cy="18" r="1.8" fill="#FFFFFF" opacity="0.5" />
-      </svg>
-    </div>
-  )
-}
-
-function CloudSecure3DIcon() {
-  return (
-    <div className="relative flex h-20 w-20 items-center justify-center">
-      <span
-        aria-hidden="true"
-        className="absolute -bottom-3 h-5 w-16 rounded-full bg-violet-950/70 blur-md"
-      />
-      <svg
-        width="80"
-        height="80"
-        viewBox="0 0 64 64"
-        fill="none"
-        aria-hidden="true"
-        className="relative z-10"
-      >
-        <defs>
-          <linearGradient id="cloud-pill-a" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#FFFFFF" />
-            <stop offset="55%" stopColor="#EDE9FE" />
-            <stop offset="100%" stopColor="#C4B5FD" />
-          </linearGradient>
-          <linearGradient id="cloud-pill-b" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#E0E7FF" />
-            <stop offset="100%" stopColor="#818CF8" />
-          </linearGradient>
-        </defs>
-
-        <path
-          d="M16 42c-4 0-8 3-8 7s4 7 8 7h32c4 0 8-3 8-7s-4-7-8-7H16Z"
-          fill="url(#cloud-pill-b)"
-          opacity="0.85"
-        />
-        <path
-          d="M14 34c-4.5 0-8 3.5-8 8s3.5 8 8 8h36c4.5 0 8-3.5 8-8s-3.5-8-8-8H14Z"
-          fill="url(#cloud-pill-a)"
-        />
-
-        <circle cx="25" cy="25" r="9" fill="url(#cloud-pill-a)" />
-        <circle cx="38" cy="23" r="11" fill="url(#cloud-pill-a)" />
-        <circle cx="48" cy="30" r="7.5" fill="url(#cloud-pill-a)" />
-
-        <ellipse cx="36" cy="18" rx="4.5" ry="2" fill="#FFFFFF" opacity="0.8" />
-      </svg>
-    </div>
-  )
-}
-
-function GrowthDriven3DIcon() {
-  return (
-    <div className="relative flex h-20 w-20 items-center justify-center">
-      <span
-        aria-hidden="true"
-        className="absolute -bottom-3 h-5 w-16 rounded-full bg-amber-950/60 blur-md"
-      />
-      <svg
-        width="80"
-        height="80"
-        viewBox="0 0 64 64"
-        fill="none"
-        aria-hidden="true"
-        className="relative z-10"
-      >
-        <defs>
-          <linearGradient id="growth-gold-1" x1="0.2" y1="0" x2="0.8" y2="1">
-            <stop offset="0%" stopColor="#FFF59D" />
-            <stop offset="45%" stopColor="#FFCA28" />
-            <stop offset="100%" stopColor="#E65100" />
-          </linearGradient>
-          <linearGradient id="growth-gold-2" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#FFE082" />
-            <stop offset="50%" stopColor="#FFB300" />
-            <stop offset="100%" stopColor="#EF6C00" />
-          </linearGradient>
-        </defs>
-
-        <rect x="18" y="28" width="10" height="22" rx="5" fill="url(#growth-gold-1)" />
-        <rect x="36" y="24" width="10" height="26" rx="5" fill="url(#growth-gold-1)" />
-        <rect x="27" y="14" width="11" height="36" rx="5.5" fill="url(#growth-gold-2)" />
-
-        <circle cx="32.5" cy="18" r="2.2" fill="#FFFFFF" opacity="0.75" />
-        <circle cx="23" cy="32" r="1.6" fill="#FFFFFF" opacity="0.6" />
-        <circle cx="41" cy="28" r="1.6" fill="#FFFFFF" opacity="0.6" />
-      </svg>
-    </div>
-  )
-}
 
 function OtakeLogoWhite() {
   return (
@@ -242,12 +107,13 @@ function PerspectiveWireframe() {
 
 function SectionDivider() {
   return (
-    <div className="relative my-8 flex items-center justify-center">
-      <div className="h-[1px] w-full bg-white/[0.08]" />
+    <div className="relative mx-auto my-8 flex w-full max-w-[1136px] items-center justify-center xl:my-14">
+      <div className="h-[1px] flex-1 bg-white/[0.08]" />
       <span
         aria-hidden="true"
         className="absolute h-2 w-2 rounded-full bg-neutral-600 ring-2 ring-[#0B0A0F]"
       />
+      <div className="h-[1px] flex-1 bg-white/[0.08]" />
     </div>
   )
 }
@@ -347,11 +213,11 @@ function Footer({ onNavigate }) {
     <footer id="contact" className="w-full scroll-mt-6 pb-3 pt-4 sm:pb-4">
       <h2 className="sr-only">Otake footer</h2>
 
-      <div className="otake-footer relative mx-auto w-[98%] rounded-[28px] border border-white/[0.08] px-6 py-10 sm:rounded-[36px] sm:px-10 sm:py-14 lg:px-16">
+      <div className="otake-footer relative mx-auto w-[98%] max-w-[1424px] rounded-[24px] border border-white/[0.08] px-6 py-10 sm:px-10 sm:py-14 lg:px-16 xl:h-[988px] xl:pb-8 xl:pt-[140px]">
         <PerspectiveWireframe />
 
         {/* ---------------- 1. TOP TIER: 3 Feature Highlights ---------------- */}
-        <div className="relative z-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <div className="relative z-10 mx-auto grid w-full max-w-[1136px] grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {HIGHLIGHTS.map((highlight, index) => (
             <div
               key={highlight.key}
@@ -359,9 +225,12 @@ function Footer({ onNavigate }) {
                 index === HIGHLIGHTS.length - 1 ? 'sm:col-span-2 lg:col-span-1' : ''
               }`}
             >
-              {highlight.key === 'innovation' && <Innovation3DIcon />}
-              {highlight.key === 'cloud' && <CloudSecure3DIcon />}
-              {highlight.key === 'growth' && <GrowthDriven3DIcon />}
+              <img
+                src={highlight.image}
+                alt=""
+                aria-hidden="true"
+                className="h-16 w-16 object-contain"
+              />
 
               <h3 className="mt-6 text-[17px] font-bold tracking-wider text-white">
                 {highlight.title}
@@ -376,7 +245,7 @@ function Footer({ onNavigate }) {
         <SectionDivider />
 
         {/* ---------------- 2. SECOND TIER: Newsletter & Free Trial ---------------- */}
-        <div className="relative z-10 flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
+        <div className="relative z-10 mx-auto flex w-full max-w-[944px] flex-col justify-between gap-8 lg:flex-row lg:items-center">
           <div className="max-w-[520px]">
             <p className="text-[19px] font-semibold text-white">
               Subscribe to our newsletter for updates:
@@ -386,7 +255,7 @@ function Footer({ onNavigate }) {
             </p>
           </div>
 
-          <div className="flex flex-col gap-2.5">
+          <div className="flex flex-col gap-2.5 lg:w-[360px]">
             <p className="text-[14.5px] font-medium text-[#B4B2BD]">
               30 Day Free Trial No Credit Card Required:
             </p>
@@ -427,8 +296,8 @@ function Footer({ onNavigate }) {
         <SectionDivider />
 
         {/* ---------------- 3. THIRD TIER: Navigation Columns ---------------- */}
-        <div className="relative z-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 lg:gap-8">
-          <div className="sm:col-span-2 lg:col-span-3">
+        <div className="relative z-10 mx-auto grid w-full max-w-[1136px] grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-8">
+          <div className="sm:col-span-2 lg:col-span-1">
             <OtakeLogoWhite />
 
             <div className="mt-6 flex items-center gap-2 text-[#8B8A93]">
@@ -448,7 +317,7 @@ function Footer({ onNavigate }) {
         </div>
 
         {/* ---------------- 4. BOTTOM TIER: Copyright & License ---------------- */}
-        <div className="relative z-10 mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 text-[13px] text-[#8B8A93] sm:flex-row">
+        <div className="relative z-10 mx-auto mt-10 flex w-full max-w-[1136px] flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 text-[13px] text-[#8B8A93] sm:flex-row">
           <p>
             © Otake Template | Build by <span className="text-white">Flowbase</span> - Powered by{' '}
             <span className="text-white">Webflow</span>
