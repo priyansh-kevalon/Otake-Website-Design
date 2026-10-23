@@ -17,13 +17,13 @@ function Logo({ onNavigate }) {
           onNavigate('home')
         }
       }}
-      className="flex h-11 items-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+      className="flex h-12 items-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
       aria-label="Otake home"
     >
       <img
         src="/images/otake-logo.png"
         alt="Otake"
-        className="h-5 w-auto"
+        className="h-7 w-auto"
       />
     </a>
   )

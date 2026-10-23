@@ -16,7 +16,7 @@ function UserIcon() {
       height="16"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="#FFFFFF"
       strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -37,7 +37,7 @@ function AnalyticsIcon() {
       height="16"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="#FFFFFF"
       strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -59,7 +59,7 @@ function IntegrationIcon() {
       height="16"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="#FFFFFF"
       strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -80,7 +80,7 @@ function SecurityIcon() {
       height="16"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="#FFFFFF"
       strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -102,7 +102,7 @@ const FEATURES = [
 ]
 
 const ICON_GRADIENT =
-  'bg-[linear-gradient(135deg,#d9b4fe_0%,#fbcfe8_25%,#fcd9c9_60%,#bfdbfe_100%)]'
+  'bg-[linear-gradient(315deg,#FCD799_0%,#F49BC4_32%,#D28EDE_62%,#9BB9F8_100%)]'
 
 function BusinessGrowth() {
   return (
