@@ -4,7 +4,7 @@ function CloudIllustration() {
       src="/images/business-growth-cloud.png"
       alt=""
       aria-hidden="true"
-      className="h-9 w-12 object-contain"
+      className="h-14 w-20 object-contain"
     />
   )
 }
@@ -107,40 +107,44 @@ const ICON_GRADIENT =
 function BusinessGrowth() {
   return (
     <section id="growth" className="otake-growth w-full scroll-mt-6">
-      <div className="mx-auto h-auto min-h-[408px] w-full max-w-[1136px] px-6 py-10 sm:px-8 lg:h-[408px] lg:py-12">
-        <div className="flex justify-center">
-          <CloudIllustration />
+      <div className="mx-auto flex h-auto min-h-[480px] w-full max-w-[1136px] flex-col px-6 py-10 sm:px-8 lg:h-[480px] lg:pt-14">
+        <div className="shrink-0">
+          <div className="flex justify-center">
+            <CloudIllustration />
+          </div>
+
+          <h2 className="mt-3 text-center text-[20px] font-bold leading-[1.2] tracking-tight text-neutral-900 sm:text-[22px]">
+            Grow your business to the next level.
+          </h2>
+
+          <p className="mx-auto mt-2 max-w-[400px] text-center text-[11px] leading-[1.45] text-neutral-600">
+            Lorem ipsum dolor sit amet, consectetur
+            <br />
+            adipiscing elit. Vivamus non enim lacus.
+          </p>
         </div>
 
-        <h2 className="mt-3 text-center text-[20px] font-bold leading-[1.2] tracking-tight text-neutral-900 sm:text-[22px]">
-          Grow your business to the next level.
-        </h2>
-
-        <p className="mx-auto mt-2 max-w-[400px] text-center text-[11px] leading-[1.45] text-neutral-600">
-          Lorem ipsum dolor sit amet, consectetur
-          <br />
-          adipiscing elit. Vivamus non enim lacus.
-        </p>
-
-        <div className="mt-11 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-          {FEATURES.map((feature) => (
-            <div key={feature.id} className="flex flex-col items-center text-center">
-              <span
-                className={`flex h-7 w-7 items-center justify-center rounded-[7px] text-white shadow-[0_5px_12px_rgba(124,58,237,0.2)] [&_svg]:h-4 [&_svg]:w-4 ${ICON_GRADIENT}`}
-                aria-hidden="true"
-              >
-                {feature.icon}
-              </span>
-              <h3 className="mt-3 text-[13px] font-semibold leading-snug text-neutral-900 lg:text-[14px]">
-                {feature.heading}
-              </h3>
-              <p className="mt-1.5 max-w-[220px] text-[9px] leading-[1.5] text-neutral-500">
-                Lorem ipsum dolor sit amet, consectetur
-                <br />
-                adipiscing elit. Vivamus non enim lacus.
-              </p>
-            </div>
-          ))}
+        <div className="mt-11 lg:mt-0 lg:flex lg:flex-1 lg:items-center">
+          <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+            {FEATURES.map((feature) => (
+              <div key={feature.id} className="flex flex-col items-center text-center">
+                <span
+                  className={`flex h-7 w-7 items-center justify-center rounded-[7px] text-white shadow-[0_5px_12px_rgba(124,58,237,0.2)] [&_svg]:h-4 [&_svg]:w-4 ${ICON_GRADIENT}`}
+                  aria-hidden="true"
+                >
+                  {feature.icon}
+                </span>
+                <h3 className="mt-3 text-[13px] font-semibold leading-snug text-neutral-900 lg:text-[14px]">
+                  {feature.heading}
+                </h3>
+                <p className="mt-1.5 max-w-[220px] text-[9px] leading-[1.5] text-neutral-500">
+                  Lorem ipsum dolor sit amet, consectetur
+                  <br />
+                  adipiscing elit. Vivamus non enim lacus.
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

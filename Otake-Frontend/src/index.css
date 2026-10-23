@@ -114,17 +114,17 @@
   background-image:
     radial-gradient(
       ellipse 55% 45% at 50% 0%,
-      rgba(146, 118, 255, 0.16) 0%,
+      rgba(146, 118, 255, 0.06) 0%,
       transparent 70%
     ),
     radial-gradient(
       ellipse 45% 40% at 50% 100%,
-      rgba(236, 100, 213, 0.1) 0%,
+      rgba(236, 100, 213, 0.035) 0%,
       transparent 72%
     ),
     radial-gradient(
       ellipse 30% 32% at 10% 52%,
-      rgba(102, 184, 255, 0.07) 0%,
+      rgba(102, 184, 255, 0.025) 0%,
       transparent 70%
     );
 }
@@ -137,7 +137,7 @@
   pointer-events: none;
   background-image: repeating-conic-gradient(
     from 0deg at 50% 38%,
-    rgba(255, 255, 255, 0.05) 0deg 0.22deg,
+    rgba(255, 255, 255, 0.035) 0deg 0.22deg,
     transparent 0.22deg 6deg
   );
   -webkit-mask-image: radial-gradient(circle at 50% 38%, #000 0%, transparent 72%);
@@ -148,33 +148,10 @@
   position: relative;
   overflow: hidden;
   background-color: #ffffff;
-  background-image:
-    radial-gradient(
-      ellipse 46% 34% at 50% 6%,
-      rgba(255, 205, 232, 0.92) 0%,
-      transparent 74%
-    ),
-    radial-gradient(
-      ellipse 40% 32% at 50% 56%,
-      rgba(214, 202, 255, 0.88) 0%,
-      transparent 76%
-    ),
-    radial-gradient(
-      ellipse 34% 26% at 16% 84%,
-      rgba(255, 218, 238, 0.8) 0%,
-      transparent 74%
-    ),
-    radial-gradient(
-      ellipse 34% 26% at 84% 84%,
-      rgba(205, 218, 255, 0.8) 0%,
-      transparent 74%
-    ),
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #faf4ff 45%,
-      #f0e8ff 100%
-    );
+  background-image: url('/images/blog-gradient.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: min(100%, 940px) auto;
 }
 
 .otake-solutions {
@@ -182,32 +159,21 @@
   overflow-x: clip;
   background-color: #ffffff;
   background-image:
-    radial-gradient(
-      ellipse 38% 30% at 82% 10%,
-      rgba(219, 205, 255, 0.85) 0%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 34% 26% at 14% 36%,
-      rgba(255, 214, 236, 0.8) 0%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 40% 30% at 56% 88%,
-      rgba(216, 226, 255, 0.78) 0%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 46% 34% at 50% 62%,
-      rgba(245, 233, 255, 0.6) 0%,
-      transparent 75%
-    ),
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #fdf6fd 42%,
-      #f5efff 100%
-    );
+    linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)),
+    url('/images/solutions-gradient.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.otake-solutions .otake-preview > .relative > .mx-auto {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+@media (min-width: 768px) {
+    .otake-solutions .otake-preview {
+      zoom: 0.9;
+    }
 }
 
 .otake-faq {
