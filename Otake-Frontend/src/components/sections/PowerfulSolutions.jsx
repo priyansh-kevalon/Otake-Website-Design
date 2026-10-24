@@ -1,4 +1,4 @@
-import OtakeProductPreview from '../ui/OtakeProductPreview.jsx'
+import BrowserShell from '../ui/BrowserShell.jsx'
 import OtakePerformancePreview from '../ui/OtakePerformancePreview.jsx'
 
 const BULLETS = [
@@ -86,7 +86,13 @@ function PowerfulSolutions() {
             <PreviewShell
               glowClass="bg-gradient-to-br from-pink-100/70 via-violet-100/50 to-sky-100/60"
             >
-              <OtakeProductPreview />
+              <BrowserShell>
+                <img
+                  src="/images/product-feature-preview.png"
+                  alt="Otake product preview highlighting user experience and customization features"
+                  className="block h-auto w-full rounded-[18px]"
+                />
+              </BrowserShell>
             </PreviewShell>
           </div>
         </div>
