@@ -187,14 +187,6 @@ function Pricing() {
 
           {/* ---------------- MAIN INTERACTIVE PRICING CARD ---------------- */}
           <div className="relative mx-auto mt-12 max-w-[840px]">
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute left-1/2 top-1/2 h-[1400px] w-screen -translate-x-1/2"
-              style={{
-                backgroundImage:
-                  'linear-gradient(to bottom, rgba(255,255,255,0) 0px, rgba(255,255,255,0.96) 120px, #ffffff 200px)',
-              }}
-            />
             <div className="relative z-10 overflow-hidden rounded-[28px] border border-neutral-200/80 bg-white shadow-[0_24px_60px_rgba(150,130,200,0.16)] sm:rounded-[36px]">
             {/* Dark Top Bar */}
             <div className="flex flex-col justify-between gap-6 bg-[#0D0C10] p-6 text-white sm:flex-row sm:items-center sm:p-8">

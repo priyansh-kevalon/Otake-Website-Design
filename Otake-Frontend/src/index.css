@@ -361,17 +361,30 @@
 }
 
 .otake-pricing-hero-color {
+  position: relative;
+  isolation: isolate;
+  background: #ffffff;
+}
+
+.otake-pricing-hero-color::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: 60%;
+  border-radius: 0 0 20px 20px;
   background-image:
+    repeating-conic-gradient(
+      from 0deg at 50% 28%,
+      rgba(174, 132, 205, 0.035) 0deg 0.35deg,
+      transparent 0.35deg 9deg
+    ),
     linear-gradient(
       to bottom,
-      #ffffff 0px,
-      #ffffff 300px,
-      rgba(255, 255, 255, 0.82) 380px,
-      rgba(255, 255, 255, 0.46) 470px,
-      rgba(255, 255, 255, 0.12) 560px,
-      rgba(255, 255, 255, 0) 640px
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.88) 28%,
+      rgba(255, 255, 255, 0.35) 68%,
+      rgba(255, 255, 255, 0.04) 100%
     ),
-    linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
     linear-gradient(
       100deg,
       #c3a4f3 0%,
@@ -381,6 +394,7 @@
       #fbe4d3 80%,
       #fdefc0 100%
     );
+  content: '';
 }
 
 .otake-soft-purple-strong {
