@@ -406,3 +406,19 @@
     #ffffff 100%
   );
 }
+
+.otake-pricing-product-overview {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(
+      ellipse 60% 72% at 69% 50%,
+      rgba(221, 205, 249, 0.58) 0%,
+      rgba(237, 224, 250, 0.36) 45%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 56% 66% at 46% 47%,
+      rgba(250, 224, 241, 0.52) 0%,
+      transparent 100%
+    );
+}

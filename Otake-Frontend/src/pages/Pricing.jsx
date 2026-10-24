@@ -478,13 +478,19 @@ function Pricing() {
       </section>
 
       {/* ---------------- 4. FEATURE SPOTLIGHT: Create a product ---------------- */}
-      <section className="w-full bg-[#FAFAFC] py-16 sm:py-24">
-        <div className="mx-auto max-w-[1040px] px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-14">
+      <section className="otake-pricing-product-overview flex w-full items-center py-16 sm:py-24 lg:min-h-[760px]">
+        <div className="mx-auto max-w-[944px] px-4 sm:px-6 lg:px-8">
+          <div className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-24">
+            <img
+              src="/images/solutions-cloud-decoration.png"
+              alt=""
+              aria-hidden="true"
+              className="pointer-events-none absolute left-[42%] top-[64%] z-10 hidden h-16 w-16 -translate-x-1/2 object-contain lg:block"
+            />
             {/* Left Column: Copy */}
             <div>
               <span className="inline-block rounded-full border border-neutral-300 px-3 py-[4px] text-[10.5px] font-medium text-neutral-600">
-                Product Overview
+                Product Features
               </span>
 
               <h2 className="mt-4 text-[28px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[36px]">
@@ -502,16 +508,24 @@ function Pricing() {
                 type="button"
                 className="mt-6 inline-flex rounded-lg bg-neutral-900 px-5 py-2.5 text-[12px] font-medium text-white transition-colors hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
               >
-                Find Out More
+                Contact Us
               </button>
 
               <ul className="mt-6 space-y-2.5 text-[13px] text-neutral-700">
                 <li className="flex items-center gap-2.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
+                  <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-neutral-900 text-white" aria-hidden="true">
+                    <svg width="9" height="9" viewBox="0 0 12 12" fill="none">
+                      <path d="m2.5 6 2.2 2.2L9.5 3.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
                   <span>Register users in seconds.</span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
+                  <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-neutral-900 text-white" aria-hidden="true">
+                    <svg width="9" height="9" viewBox="0 0 12 12" fill="none">
+                      <path d="m2.5 6 2.2 2.2L9.5 3.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
                   <span>Collect authorization via secure portals.</span>
                 </li>
               </ul>
@@ -519,7 +533,7 @@ function Pricing() {
 
             {/* Right Column: BrowserShell with OtakeProductPreview */}
             <div className="flex justify-center">
-              <div className="otake-soft-purple-strong w-full max-w-[392px] rounded-[26px] p-4 sm:p-5">
+              <div className="w-full max-w-[368px]">
                 <OtakeProductPreview />
               </div>
             </div>
