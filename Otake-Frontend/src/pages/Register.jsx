@@ -44,15 +44,15 @@ function GeometricLines() {
 function LeftDecor() {
   return (
     <div
-      className="pointer-events-none absolute left-4 top-1/2 hidden -translate-y-1/2 lg:left-16 xl:left-32 xl:block"
+      className="pointer-events-none absolute left-4 top-[70px] hidden md:left-16 md:block xl:left-32"
       aria-hidden="true"
     >
       <img
-        src="/images/66303513e76c9555d5583ac0_Element-05.png"
+        src="/images/register-decor-left.png"
         alt=""
-        width="80"
-        height="80"
-        className="h-[70px] w-[70px] xl:h-[80px] xl:w-[80px]"
+        width="56"
+        height="56"
+        className="h-12 w-12 xl:h-[80px] xl:w-[80px]"
       />
     </div>
   )
@@ -61,15 +61,15 @@ function LeftDecor() {
 function RightDecor() {
   return (
     <div
-      className="pointer-events-none absolute right-4 top-1/2 hidden -translate-y-1/2 lg:right-16 xl:right-32 xl:block"
+      className="pointer-events-none absolute right-4 top-[260px] hidden md:right-16 md:block xl:right-32"
       aria-hidden="true"
     >
       <img
-        src="/images/66303513e76c9555d5583aa1_Element-07.png"
+        src="/images/register-decor-right.png"
         alt=""
-        width="80"
-        height="80"
-        className="h-[70px] w-[70px] xl:h-[80px] xl:w-[80px]"
+        width="56"
+        height="56"
+        className="h-12 w-12 xl:h-[80px] xl:w-[80px]"
       />
     </div>
   )
@@ -120,10 +120,7 @@ function Register({ onNavigate }) {
     <div className="relative w-full py-10 sm:py-14">
       {/* Background gradients */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute inset-x-0 bottom-0 h-[440px] bg-[linear-gradient(to_top,#B99CF2_0%,#D9B3EC_16%,#F1B0DC_34%,#F7CDB4_52%,#FBE9A4_68%,#FDF7DC_82%,rgba(255,255,255,0)_100%)]" />
-        <div className="absolute -bottom-40 -left-40 h-[420px] w-[420px] rounded-full bg-gradient-to-tr from-pink-200/40 via-rose-100/30 to-transparent blur-3xl" />
-        <div className="absolute -bottom-32 left-1/4 h-[380px] w-[480px] rounded-full bg-gradient-to-tr from-purple-200/35 via-violet-100/25 to-transparent blur-3xl" />
-        <div className="absolute -bottom-36 right-0 h-[440px] w-[440px] rounded-full bg-gradient-to-bl from-orange-200/35 via-amber-100/25 to-transparent blur-3xl" />
+        <div className="otake-register-background absolute inset-0" />
         <GeometricLines />
       </div>
 
