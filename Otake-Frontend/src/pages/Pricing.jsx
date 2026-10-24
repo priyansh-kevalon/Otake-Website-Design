@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import OtakeProductPreview from '../components/ui/OtakeProductPreview.jsx'
+import BrowserShell from '../components/ui/BrowserShell.jsx'
 import GetStarted from '../components/sections/GetStarted.jsx'
 import FAQ from '../components/sections/FAQ.jsx'
 
@@ -531,10 +531,16 @@ function Pricing() {
               </ul>
             </div>
 
-            {/* Right Column: BrowserShell with OtakeProductPreview */}
+            {/* Right Column: Product preview */}
             <div className="flex justify-center">
               <div className="w-full max-w-[368px]">
-                <OtakeProductPreview />
+                <BrowserShell>
+                  <img
+                    src="/images/product-feature-preview.png"
+                    alt="Otake product preview highlighting user experience and customization features"
+                    className="mx-[-16px] block h-auto w-[calc(100%+32px)] max-w-none rounded-[18px]"
+                  />
+                </BrowserShell>
               </div>
             </div>
           </div>
