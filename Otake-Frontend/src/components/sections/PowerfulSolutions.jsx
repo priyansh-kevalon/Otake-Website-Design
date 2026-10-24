@@ -1,5 +1,4 @@
 import BrowserShell from '../ui/BrowserShell.jsx'
-import OtakePerformancePreview from '../ui/OtakePerformancePreview.jsx'
 
 const BULLETS = [
   'Register users in seconds.',
@@ -22,7 +21,7 @@ function FeatureCopy({ heading, muted }) {
         <span className="text-neutral-400">{muted}</span>
       </h2>
 
-      <p className="mt-3 max-w-[390px] text-[12px] leading-relaxed text-neutral-500">
+      <p className="mt-3 max-w-[320px] text-[12px] leading-relaxed text-neutral-500">
         {DESCRIPTION}
       </p>
 
@@ -55,9 +54,9 @@ function FeatureCopy({ heading, muted }) {
   )
 }
 
-function PreviewShell({ children, glowClass }) {
+function PreviewShell({ children, glowClass, sizeClass = 'max-w-[400px]' }) {
   return (
-    <div className="otake-preview relative w-full max-w-[320px]">
+    <div className={`otake-preview relative w-full ${sizeClass}`}>
       <div
         className={`pointer-events-none absolute -inset-4 rounded-[48px] blur-3xl sm:-inset-6 ${glowClass}`}
         aria-hidden="true"
@@ -102,7 +101,11 @@ function PowerfulSolutions() {
             <PreviewShell
               glowClass="bg-gradient-to-br from-sky-100/70 via-violet-100/50 to-orange-100/50"
             >
-              <OtakePerformancePreview />
+              <img
+                src="/images/otake-performance-preview.png"
+                alt="Otake Performance dashboard showing new users, top users, and purchases"
+                className="block h-auto w-full md:scale-[1.18]"
+              />
             </PreviewShell>
           </div>
 
