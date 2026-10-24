@@ -156,7 +156,7 @@ function Pricing() {
             </p>
 
             {/* Monthly / Yearly Billing Toggle */}
-            <div className="mt-8 inline-flex items-center rounded-full border border-neutral-200/90 bg-white/80 p-1 shadow-sm backdrop-blur-sm">
+            <div className="mt-8 inline-flex items-center rounded-full border border-neutral-200/90 bg-gradient-to-r from-pink-100/70 via-white/90 to-amber-100/70 p-1 shadow-sm backdrop-blur-sm">
               <button
                 type="button"
                 onClick={() => setBillingPeriod('monthly')}
