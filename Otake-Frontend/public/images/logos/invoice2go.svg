@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="202" height="32" viewBox="0 0 202 32" fill="none">
+  <path d="M25 4 2.7 13c-1 .4-.9 1.8.2 2.1l6.6 1.9 1.9 6.6c.3 1.1 1.7 1.2 2.1.2L25 4Z" fill="#8B8A93"/>
+  <path d="m25 4-14.4 12.6" stroke="#0D0C10" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="31" y="22" fill="#8B8A93" font-family="Bricolage Grotesque, Arial, Helvetica, sans-serif" font-size="20" font-weight="400" letter-spacing="-0.6">Invoice2go</text>
+</svg>

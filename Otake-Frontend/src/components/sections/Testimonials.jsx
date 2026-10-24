@@ -21,18 +21,6 @@ function Stars({ color, label }) {
   )
 }
 
-function PaperPlaneIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-      <path
-        d="M21.5 2.5L2.8 9.9c-.8.3-.8 1.4.1 1.6l5.5 1.6 1.6 5.5c.2.9 1.3.9 1.6.1L21.5 2.5Z"
-        fill="#8b8a93"
-      />
-      <path d="M21.5 2.5L9.4 13.1" stroke="#0d0c10" strokeWidth="1.6" strokeLinecap="round" />
-    </svg>
-  )
-}
-
 function ReviewCard({ starColor, starLabel, heading, logo }) {
   return (
     <article className="rounded-[20px] bg-[#18171D] p-[5px]">
@@ -89,39 +77,28 @@ function Testimonials() {
               starColor="#FFD84D"
               starLabel="Rated 5 out of 5"
               heading="Revolutionizing Transactions:"
-              logo={
-                <span className="text-[14px] font-semibold tracking-[0.2em] text-[#8B8A93]">PENG</span>
-              }
+              logo={<img src="/images/logos/xpeng.svg" alt="XPENG" className="h-4 w-[82px] object-contain object-left" />}
             />
 
             <ReviewCard
               starColor="#66B8FF"
               starLabel="Rated 5 out of 5"
               heading="Empowering growth:"
-              logo={
-                <span className="text-[13px] tracking-[0.02em] text-[#8B8A93]">veroxfloo.</span>
-              }
+              logo={<img src="/images/logos/veroxfloor.svg" alt="veroxfloor" className="h-5 w-[132px] object-contain object-left" />}
             />
 
             <ReviewCard
               starColor="#EC64D5"
               starLabel="Rated 5 out of 5"
               heading="Leverage analytics for growth:"
-              logo={
-                <span className="flex items-center gap-1.5 text-[14px] tracking-[0.01em] text-[#8B8A93]">
-                  <PaperPlaneIcon />
-                  Invoice2go
-                </span>
-              }
+              logo={<img src="/images/logos/invoice2go.svg" alt="Invoice2go" className="h-6 w-[152px] object-contain object-left" />}
             />
 
             <ReviewCard
               starColor="#9276FF"
               starLabel="Rated 5 out of 5"
               heading="Streamline workflows:"
-              logo={
-                <span className="text-[13px] font-semibold tracking-[0.22em] text-[#8B8A93]">RPUBLICA</span>
-              }
+              logo={<img src="/images/logos/rpublica.svg" alt="RPUBLICA" className="h-6 w-[142px] object-contain object-left" />}
             />
           </div>
         </div>
