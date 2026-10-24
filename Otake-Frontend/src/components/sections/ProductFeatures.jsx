@@ -38,13 +38,12 @@ function TaskDashboard() {
 function AnalyticsDashboard() {
   const bars = [
     { h: 35, tone: 'bg-[#c9c7d3]' },
-    { h: 50, tone: 'bg-[#c9c7d3]' },
-    { h: 39, tone: 'bg-[#c9c7d3]' },
-    { h: 63, tone: 'bg-neutral-900' },
-    { h: 52, tone: 'bg-[#c9c7d3]' },
+    { h: 54, tone: 'bg-[#c9c7d3]' },
+    { h: 32, tone: 'bg-[#c9c7d3]' },
+    { h: 68, tone: 'bg-neutral-900', highlighted: true },
+    { h: 42, tone: 'bg-[#c9c7d3]' },
     { h: 25, tone: 'bg-[#c9c7d3]' },
-    { h: 44, tone: 'bg-[#c9c7d3]' },
-    { h: 29, tone: 'bg-[#c9c7d3]' },
+    { h: 48, tone: 'bg-[#c9c7d3]' },
   ]
 
   return (
@@ -56,24 +55,40 @@ function AnalyticsDashboard() {
         </div>
         <div className="flex items-center gap-1.5">
           <span className="text-[10px] font-medium text-neutral-700">+3,2%</span>
-          <span className="flex h-4 w-4 items-center justify-center rounded-full bg-neutral-800 text-[9px] text-white" aria-hidden="true">
-            +
+          <span className="flex h-4 w-4 items-center justify-center rounded-full bg-neutral-800 text-white" aria-hidden="true">
+            <svg viewBox="0 0 12 12" className="h-2.5 w-2.5" fill="none">
+              <path d="M3 8 8 3M4 3h4v4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
           </span>
         </div>
       </div>
 
-      <div className="relative mt-4 flex min-h-[112px] flex-1 items-end justify-between gap-2 border-b border-dashed border-neutral-300 px-2 pb-2">
-        <span className="absolute left-1/2 top-0 z-10 -translate-x-1/2 rounded bg-neutral-900 px-2 py-1 text-[9px] font-medium text-white">
+      <div className="relative mx-auto mt-4 flex min-h-[112px] w-[90%] flex-1 items-end justify-between">
+        <span className="absolute left-1/2 top-0 z-10 -translate-x-1/2 rounded bg-neutral-900 px-2 py-1 text-[9px] font-medium leading-none text-white">
           $8,82.21
         </span>
+        <span
+          aria-hidden="true"
+          className="absolute left-1/2 top-[18px] -translate-x-1/2 border-l border-neutral-400"
+          style={{ bottom: `calc(68% + 5px)` }}
+        />
         {bars.map((bar, index) => (
           <span
             key={index}
-            className={`w-5 rounded-t-[3px] ${bar.tone}`}
-            style={{ height: `${bar.h}%` }}
-          />
+            className="relative h-full w-[6.5%]"
+            aria-hidden="true"
+          >
+            <span
+              className={`absolute bottom-[5px] left-0 w-full rounded-t-[2px] ${bar.tone}`}
+              style={{ height: `${bar.h}%` }}
+            >
+              {bar.highlighted && (
+                <span className="absolute left-1/2 top-[5px] h-1.5 w-1.5 -translate-x-1/2 border border-neutral-700 bg-white" />
+              )}
+            </span>
+            <span className="absolute bottom-0 left-1/2 w-1.5 -translate-x-1/2 border-b border-dashed border-neutral-300" />
+          </span>
         ))}
-        <span className="absolute bottom-1/2 left-1/2 z-10 h-3 w-3 -translate-x-1/2 rounded-sm border border-neutral-800 bg-white" />
       </div>
     </div>
   )
@@ -208,7 +223,7 @@ function ProductFeatures() {
           </p>
         </div>
 
-        <div className="mx-auto mt-14 grid w-full grid-cols-1 justify-items-center gap-4 md:grid-cols-2 xl:mt-8 xl:grid-cols-[repeat(3,368px)]">
+        <div className="mx-auto mt-14 grid w-full grid-cols-1 justify-items-center gap-4 md:grid-cols-3 xl:mt-8 xl:grid-cols-[repeat(3,368px)]">
           {FEATURES.map((feature) => (
             <article
               key={feature.key}
@@ -221,8 +236,8 @@ function ProductFeatures() {
                 {feature.icon}
               </span>
 
-              <div className="px-5 pb-4 pt-[72px] text-center">
-                <h3 className="text-[24px] font-bold leading-[1.35] text-neutral-900">
+              <div className="px-3 pb-4 pt-[72px] text-center xl:px-5">
+                <h3 className="text-[17px] font-bold leading-[1.3] text-neutral-900 sm:text-[18px] xl:text-[24px]">
                   {feature.heading}
                 </h3>
                 <p className="mt-3 text-[14px] leading-relaxed text-neutral-500">
