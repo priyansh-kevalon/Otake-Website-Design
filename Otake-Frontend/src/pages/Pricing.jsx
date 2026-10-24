@@ -111,7 +111,7 @@ function Pricing() {
   return (
     <div className="w-full">
       {/* ---------------- 1. PRICING HERO SECTION ---------------- */}
-      <section className="otake-about-hero otake-pricing-hero-color relative w-full pt-8 pb-16 sm:pt-12 sm:pb-20">
+      <section className="otake-about-hero otake-pricing-hero-color relative w-full pt-8 pb-16 sm:pt-24 sm:pb-20 lg:pt-32">
         <div className="relative mx-auto max-w-[1080px] px-4 sm:px-6 lg:px-8">
           <div className="relative mx-auto max-w-[680px] text-center">
             {/* Ambient decorative 3D accents */}
