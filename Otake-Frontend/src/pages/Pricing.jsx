@@ -77,9 +77,9 @@ function PastelShellIcon() {
 
 function BrandLogo({ name, icon }) {
   return (
-    <div className="flex items-center gap-2 text-neutral-800">
-      <span className="text-neutral-900">{icon}</span>
-      <span className="text-[17px] font-bold tracking-tight text-neutral-900">{name}</span>
+    <div className="flex items-center gap-2.5 text-neutral-800">
+      <span className="text-neutral-900 [&>svg]:h-[22px] [&>svg]:w-[22px]">{icon}</span>
+      <span className="text-[19px] font-bold tracking-[0.12em] text-neutral-900">{name}</span>
     </div>
   )
 }
@@ -413,7 +413,7 @@ function Pricing() {
               Trusted by technical teams at companies of all sizes
             </h2>
 
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-8 sm:gap-14">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-11 sm:gap-[88px]">
               <BrandLogo
                 name="Cyrus"
                 icon={

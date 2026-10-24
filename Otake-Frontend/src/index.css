@@ -262,14 +262,13 @@
 }
 
 .otake-soft-purple {
-  background-image: radial-gradient(
-    ellipse 60% 78% at 50% 50%,
-    #f4eafe 0%,
-    #f7f0fe 35%,
-    #fbf6ff 62%,
-    #fefcff 84%,
-    #ffffff 100%
-  );
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.38)),
+    url('/images/solutions-gradient.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, cover;
 }
 
 .otake-values {
