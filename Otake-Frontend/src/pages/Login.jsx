@@ -184,7 +184,7 @@ function Login({ onNavigate }) {
               <img
                 src="/images/hero-character.png"
                 alt="3D cartoon character with purple headphones jumping"
-                className="relative z-10 h-auto w-full object-contain drop-shadow-[0_40px_60px_rgba(30,8,25,0.9)]"
+                className="relative z-10 h-auto w-full object-contain drop-shadow-[0_18px_26px_rgba(30,8,25,0.16)]"
               />
 
               <img
