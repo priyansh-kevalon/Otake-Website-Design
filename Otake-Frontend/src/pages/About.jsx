@@ -92,7 +92,7 @@ function About() {
       <section className="w-full bg-white pt-14 pb-14 sm:pt-56 sm:pb-20">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
-            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[30px] md:text-[32px]">
+            <h2 className="pl-2 text-[24px] font-bold leading-tight tracking-tight text-neutral-900 sm:pl-4 sm:text-[30px] md:pl-6 md:text-[32px]">
               The growth of your
               <br />
               business is our priority, so
@@ -100,9 +100,13 @@ function About() {
               we are here to help.
             </h2>
             <p className="text-[13.5px] leading-relaxed text-[#8B8A93] sm:text-[14px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
-              Nullam congue blandit quam, sit amet scelerisque turpis pellentesque eu. Nulla
-              facilisi. In hac habitasse platea dictumst.
+              Euismod aliquet odio cursus lacus, ut sit
+              <br />
+              suspendisse ultrices. Etiam enim risus faucibus
+              <br />
+              feugiat ut enim in sed tincidunt. Eu in justo, eu
+              <br />
+              porttitor vivamus neque,.
             </p>
           </div>
 
