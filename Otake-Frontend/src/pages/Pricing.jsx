@@ -294,7 +294,7 @@ function Pricing() {
 
       {/* ---------------- 2. PRINCIPLES & TRUSTED BY ---------------- */}
       <section className="otake-soft-purple w-full py-16 sm:py-20">
-        <div className="mx-auto max-w-[1040px] px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1120px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
