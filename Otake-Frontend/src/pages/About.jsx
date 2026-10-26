@@ -134,7 +134,7 @@ function About() {
 
       {/* ---------------- 3. PRINCIPLES SECTION ---------------- */}
       <section className="otake-values w-full py-16 sm:py-24">
-        <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
+        <div className="mx-auto max-w-[1120px] px-6 sm:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
             <div>
               <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
@@ -159,55 +159,55 @@ function About() {
 
           {/* 3 Principles Cards */}
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
-            <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
+            <div className="min-h-[250px] rounded-[22px] border border-neutral-100 bg-white p-8 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg sm:p-9">
               <div className="flex justify-center">
                 <img
                   src="/images/value-client-focused.png"
                   alt=""
                   aria-hidden="true"
-                  className="h-12 w-12 object-contain"
+                  className="h-16 w-16 object-contain"
                 />
               </div>
-              <h3 className="mt-4 text-[16px] font-bold text-neutral-900">
+              <h3 className="mt-5 text-[18px] font-bold text-neutral-900">
                 Client Focused
               </h3>
-              <p className="mt-2.5 text-[12.5px] leading-relaxed text-black">
+              <p className="mt-3 text-[14px] leading-relaxed text-black">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam.
               </p>
             </div>
 
-            <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
+            <div className="min-h-[250px] rounded-[22px] border border-neutral-100 bg-white p-8 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg sm:p-9">
               <div className="flex justify-center">
                 <img
                   src="/images/value-innovate-optimize.png"
                   alt=""
                   aria-hidden="true"
-                  className="h-12 w-12 object-contain"
+                  className="h-16 w-16 object-contain"
                 />
               </div>
-              <h3 className="mt-4 text-[16px] font-bold text-neutral-900">
+              <h3 className="mt-5 text-[18px] font-bold text-neutral-900">
                 Innovate & Optimize
               </h3>
-              <p className="mt-2.5 text-[12.5px] leading-relaxed text-black">
+              <p className="mt-3 text-[14px] leading-relaxed text-black">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam.
               </p>
             </div>
 
-            <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
+            <div className="min-h-[250px] rounded-[22px] border border-neutral-100 bg-white p-8 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg sm:p-9">
               <div className="flex justify-center">
                 <img
                   src="/images/value-community-driven.png"
                   alt=""
                   aria-hidden="true"
-                  className="h-12 w-12 object-contain"
+                  className="h-16 w-16 object-contain"
                 />
               </div>
-              <h3 className="mt-4 text-[16px] font-bold text-neutral-900">
+              <h3 className="mt-5 text-[18px] font-bold text-neutral-900">
                 Community Driven
               </h3>
-              <p className="mt-2.5 text-[12.5px] leading-relaxed text-black">
+              <p className="mt-3 text-[14px] leading-relaxed text-black">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam.
               </p>
