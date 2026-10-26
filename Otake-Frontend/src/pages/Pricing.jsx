@@ -3,78 +3,6 @@ import BrowserShell from '../components/ui/BrowserShell.jsx'
 import GetStarted from '../components/sections/GetStarted.jsx'
 import FAQ from '../components/sections/FAQ.jsx'
 
-function PinkGemIcon() {
-  return (
-    <svg width="46" height="46" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="pr-gem-a" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#FED7AA" />
-          <stop offset="40%" stopColor="#FB7185" />
-          <stop offset="100%" stopColor="#E11D48" />
-        </linearGradient>
-        <linearGradient id="pr-gem-top" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#FFF1F2" />
-          <stop offset="100%" stopColor="#FECDD3" />
-        </linearGradient>
-      </defs>
-      <ellipse cx="32" cy="54" rx="16" ry="4" fill="#9F1239" opacity="0.15" />
-      <path d="M22 16h20l12 14-22 22-22-22 12-14Z" fill="url(#pr-gem-a)" />
-      <path d="M22 16l10 14 10-14H22Z" fill="url(#pr-gem-top)" />
-      <path d="M10 30l12-14 10 14-22 0Z" fill="#FDA4AF" opacity="0.6" />
-      <path d="M54 30l-12-14-10 14 22 0Z" fill="#F43F5E" opacity="0.7" />
-      <path d="M32 52L22 30h20L32 52Z" fill="#BE123C" opacity="0.8" />
-      <circle cx="28" cy="22" r="2" fill="#FFFFFF" opacity="0.8" />
-    </svg>
-  )
-}
-
-function CoralOrangeIcon() {
-  return (
-    <svg width="46" height="46" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <defs>
-        <radialGradient id="pr-co-grad" cx="35%" cy="30%" r="65%">
-          <stop offset="0%" stopColor="#FED7AA" />
-          <stop offset="40%" stopColor="#FB923C" />
-          <stop offset="100%" stopColor="#EA580C" />
-        </radialGradient>
-      </defs>
-      <ellipse cx="32" cy="54" rx="16" ry="4" fill="#7C2D12" opacity="0.16" />
-      <circle cx="25" cy="38" r="8" fill="url(#pr-co-grad)" />
-      <circle cx="39" cy="38" r="8" fill="url(#pr-co-grad)" />
-      <circle cx="20" cy="28" r="7.5" fill="url(#pr-co-grad)" />
-      <circle cx="44" cy="28" r="7.5" fill="url(#pr-co-grad)" />
-      <circle cx="26" cy="20" r="8" fill="url(#pr-co-grad)" />
-      <circle cx="38" cy="20" r="8" fill="url(#pr-co-grad)" />
-      <circle cx="32" cy="27" r="9.5" fill="url(#pr-co-grad)" />
-      <circle cx="30" cy="24" r="2.2" fill="#FFFFFF" opacity="0.7" />
-    </svg>
-  )
-}
-
-function PastelShellIcon() {
-  return (
-    <svg width="46" height="46" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="pr-shell-grad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#FDE68A" />
-          <stop offset="35%" stopColor="#F472B6" />
-          <stop offset="70%" stopColor="#C084FC" />
-          <stop offset="100%" stopColor="#60A5FA" />
-        </linearGradient>
-      </defs>
-      <ellipse cx="32" cy="54" rx="16" ry="4" fill="#4C1D95" opacity="0.14" />
-      <path
-        d="M20 44c-5-5-5-14 0-19 5-5 14-5 19 0l7 7c3 3 3 8 0 11-3 3-8 3-11 0l-4-4c-1-1-1-3 0-4 1-1 3-1 4 0l2 2"
-        stroke="url(#pr-shell-grad)"
-        strokeWidth="6"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <circle cx="30" cy="26" r="2.5" fill="#FFFFFF" opacity="0.8" />
-    </svg>
-  )
-}
-
 function BrandLogo({ name, icon }) {
   return (
     <div className="flex items-center gap-2.5 text-neutral-800">
@@ -370,9 +298,14 @@ function Pricing() {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
-                <PinkGemIcon />
+                <img
+                  src="/images/pricing-client-focused.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-14 w-14 object-contain"
+                />
               </div>
-              <h3 className="mt-4 text-[16px] font-bold text-neutral-900">
+              <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
                 Client Focussed
               </h3>
               <p className="mt-2.5 text-[12.5px] leading-relaxed text-[#8B8A93]">
@@ -383,9 +316,14 @@ function Pricing() {
 
             <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
-                <CoralOrangeIcon />
+                <img
+                  src="/images/pricing-innovate-optimize.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-14 w-14 object-contain"
+                />
               </div>
-              <h3 className="mt-4 text-[16px] font-bold text-neutral-900">
+              <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
                 Innovate & Optimize
               </h3>
               <p className="mt-2.5 text-[12.5px] leading-relaxed text-[#8B8A93]">
@@ -396,9 +334,14 @@ function Pricing() {
 
             <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
-                <PastelShellIcon />
+                <img
+                  src="/images/pricing-community-driven.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-14 w-14 object-contain"
+                />
               </div>
-              <h3 className="mt-4 text-[16px] font-bold text-neutral-900">
+              <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
                 Community Driven
               </h3>
               <p className="mt-2.5 text-[12.5px] leading-relaxed text-[#8B8A93]">
