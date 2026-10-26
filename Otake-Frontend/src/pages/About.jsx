@@ -103,7 +103,7 @@ function About() {
           </div>
 
           {/* 3 Metrics Box */}
-          <div className="mt-12 grid grid-cols-1 divide-y divide-neutral-100 rounded-2xl border border-neutral-100 bg-white p-6 shadow-[0_10px_35px_rgba(0,0,0,0.03)] sm:grid-cols-3 sm:divide-y-0 sm:divide-x sm:p-8">
+          <div className="mt-12 grid grid-cols-1 divide-y divide-neutral-200 rounded-2xl border border-neutral-200 bg-white p-6 sm:grid-cols-3 sm:divide-y-0 sm:divide-x sm:p-8">
             <div className="text-center py-3 sm:py-0">
               <p className="text-[10.5px] font-semibold uppercase tracking-wider text-[#A19FA8]">
                 TOTAL REVENUE
