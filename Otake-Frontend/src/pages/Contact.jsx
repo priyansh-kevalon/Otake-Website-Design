@@ -257,20 +257,20 @@ function Contact() {
         {/* Ambient floating 3D elements on sides */}
         <div className="pointer-events-none absolute left-6 top-1/3 hidden lg:block xl:left-24">
           <img
-            src="/images/66303513e76c9555d5583ac0_Element-05.png"
+            src="/images/contact-decoration-left.png"
             alt=""
             width="64"
             height="64"
-            className="h-16 w-16 opacity-80"
+            className="h-16 w-16 object-contain opacity-80"
           />
         </div>
         <div className="pointer-events-none absolute right-6 top-1/2 hidden lg:block xl:right-24">
           <img
-            src="/images/66303513e76c9555d5583aa1_Element-07.png"
+            src="/images/contact-decoration-right.png"
             alt=""
             width="64"
             height="64"
-            className="h-16 w-16 opacity-80"
+            className="h-16 w-16 object-contain opacity-80"
           />
         </div>
 
