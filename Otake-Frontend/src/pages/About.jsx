@@ -132,7 +132,7 @@ function About() {
       </section>
 
       {/* ---------------- 3. PRINCIPLES SECTION ---------------- */}
-      <section className="otake-values w-full py-16 sm:py-24">
+      <section className="w-full bg-white py-12 sm:py-16">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
             <div>
