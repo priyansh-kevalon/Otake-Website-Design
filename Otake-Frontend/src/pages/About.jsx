@@ -93,7 +93,11 @@ function About() {
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[30px] md:text-[32px]">
-              The growth of your business is our priority, as we are here to help.
+              The growth of your
+              <br />
+              business is our priority, so
+              <br />
+              we are here to help.
             </h2>
             <p className="text-[13.5px] leading-relaxed text-[#8B8A93] sm:text-[14px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
