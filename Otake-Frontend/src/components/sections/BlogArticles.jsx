@@ -29,14 +29,14 @@ function ArticleCard({ id, image, imageBg, categories, title, wideOnSm }) {
   return (
     <article
       id={id}
-      className={`flex min-h-[345px] flex-col scroll-mt-6 rounded-[18px] bg-white p-2.5 ${
+      className={`flex min-h-[440px] flex-col scroll-mt-6 rounded-[22px] bg-white p-3.5 ${
         wideOnSm
           ? 'sm:col-span-2 sm:mx-auto sm:w-full sm:max-w-[calc(50%-8px)] lg:col-span-1 lg:mx-0 lg:w-auto lg:max-w-none'
           : ''
       }`}
     >
       <div
-        className={`flex h-[142px] w-full items-center justify-center overflow-hidden rounded-[14px] ${imageBg}`}
+        className={`flex h-[210px] w-full items-center justify-center overflow-hidden rounded-[17px] ${imageBg}`}
       >
         <img
           src={image}
@@ -57,19 +57,19 @@ function ArticleCard({ id, image, imageBg, categories, title, wideOnSm }) {
         ))}
       </div>
 
-      <h3 className="mt-2.5 text-[17px] font-bold leading-[1.28] tracking-[-0.02em] text-[#25232A]">
+      <h3 className="mt-3 text-[18px] font-bold leading-[1.28] tracking-[-0.02em] text-[#25232A]">
         {title[0]}
         <br />
         {title[1]}
       </h3>
 
-      <p className="mt-2 line-clamp-2 text-[12.5px] leading-[1.55] text-[#8B8A93]">
+      <p className="mt-2.5 line-clamp-2 text-[13px] leading-[1.55] text-[#8B8A93]">
         {ARTICLE_DESCRIPTION}
       </p>
 
       <button
         type="button"
-        className="mt-auto flex h-9 w-full items-center justify-center rounded-[10px] border border-[#E8E6EF] bg-white text-[12px] font-medium text-[#25232A] transition-colors hover:border-[#D6D2E4] hover:bg-[#FAFAFC] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8E6EF]"
+        className="mt-auto flex h-10 w-full items-center justify-center rounded-[10px] border border-[#E8E6EF] bg-white text-[12px] font-medium text-[#25232A] transition-colors hover:border-[#D6D2E4] hover:bg-[#FAFAFC] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8E6EF]"
       >
         Learn More
       </button>
@@ -99,7 +99,7 @@ function BlogArticles() {
           </p>
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-[760px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {ARTICLES.map((article, index) => (
             <ArticleCard
               key={article.id}
