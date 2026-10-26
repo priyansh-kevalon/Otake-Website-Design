@@ -289,6 +289,52 @@
     );
 }
 
+.otake-soft-purple {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.38)),
+    url('/images/solutions-gradient.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, cover;
+}
+
+.otake-values {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+    url('/images/about-values-gradient.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.otake-journey {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(
+      ellipse 48% 78% at 62% 50%,
+      rgba(219, 199, 244, 0.46) 0%,
+      rgba(245, 222, 241, 0.3) 54%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 42% 60% at 48% 44%,
+      rgba(255, 231, 235, 0.48) 0%,
+      transparent 100%
+    );
+}
+
+.otake-product-features {
+    background-color: #ffffff;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+      url('/images/about-product-features-gradient.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .otake-about-hero-deep {
   position: relative;
   overflow: visible;
@@ -318,25 +364,7 @@
   background-size: 100% 100%;
 }
 
-.otake-soft-purple {
-  background-color: #ffffff;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.38)),
-    url('/images/solutions-gradient.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%, cover;
-}
 
-.otake-values {
-  background-color: #ffffff;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12)),
-    url('/images/about-values-gradient.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%, min(100%, 1080px) auto;
-}
 
 .otake-hero-color {
   background-image:

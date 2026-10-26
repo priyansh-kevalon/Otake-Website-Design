@@ -103,7 +103,7 @@ function FacetedMeshBackground() {
 
 function GetStarted() {
   return (
-    <section id="try-for-free" className="relative w-full scroll-mt-6 px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
+    <section id="try-for-free" className="relative w-full scroll-mt-6 bg-[#f7f3ff] px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
       <div className="relative mx-auto w-full max-w-[840px]">
         {/* Top Floating Otake Badge (half above card) */}
         <div className="absolute -top-7 left-1/2 z-20 -translate-x-1/2 sm:-top-8">

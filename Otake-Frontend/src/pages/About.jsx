@@ -89,42 +89,43 @@ function About() {
       </section>
 
       {/* ---------------- 2. MISSION & METRICS ---------------- */}
-      <section className="w-full pt-14 pb-14 sm:pt-56 sm:pb-20">
+      <section className="w-full bg-white pt-14 pb-14 sm:pt-56 sm:pb-20">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
-          <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-14">
-            <h2 className="max-w-[390px] text-[24px] font-bold leading-[1.25] tracking-tight text-neutral-900 sm:text-[30px] md:text-[32px]">
-              The growth of your business is our priority, so we are here to help.
+          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
+            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[30px] md:text-[32px]">
+              The growth of your business is our priority, as we are here to help.
             </h2>
-            <p className="max-w-[390px] text-[13.5px] leading-[1.55] text-[#8B8A93] sm:text-[14px]">
-              Eiusmod aliquot odio cursus lacus, ut sit suspendisse ultricies. Etiam enim risus
-              faucibus feugiat ut enim in sed tincidunt. Eu in justo, eu porttitor vivamus neque.
+            <p className="text-[13.5px] leading-relaxed text-[#8B8A93] sm:text-[14px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
+              Nullam congue blandit quam, sit amet scelerisque turpis pellentesque eu. Nulla
+              facilisi. In hac habitasse platea dictumst.
             </p>
           </div>
 
           {/* 3 Metrics Box */}
-          <div className="mt-10 grid grid-cols-1 divide-y divide-[#ECEAF1] rounded-xl border border-[#ECEAF1] bg-white px-5 py-4 sm:grid-cols-3 sm:divide-y-0 sm:divide-x sm:px-6 sm:py-5">
-            <div className="py-4 text-center sm:py-0">
-              <p className="mx-auto w-fit rounded-md bg-[#F4F3F7] px-2.5 py-1 text-[10px] font-medium leading-none text-[#55535E]">
-                CLIENT RETENTION
+          <div className="mt-12 grid grid-cols-1 divide-y divide-neutral-100 rounded-2xl border border-neutral-100 bg-white p-6 shadow-[0_10px_35px_rgba(0,0,0,0.03)] sm:grid-cols-3 sm:divide-y-0 sm:divide-x sm:p-8">
+            <div className="text-center py-3 sm:py-0">
+              <p className="text-[10.5px] font-semibold uppercase tracking-wider text-[#A19FA8]">
+                TOTAL REVENUE
               </p>
-              <p className="mt-2 text-[28px] font-bold leading-none tracking-tight text-neutral-900 sm:text-[30px]">
-                5.2M
+              <p className="mt-2 text-[32px] font-bold tracking-tight text-neutral-900 sm:text-[38px]">
+                8.5M
               </p>
             </div>
-            <div className="py-4 text-center sm:py-0">
-              <p className="mx-auto w-fit rounded-md bg-[#F4F3F7] px-2.5 py-1 text-[10px] font-medium leading-none text-[#55535E]">
-                EMAILS PER MONTH
+            <div className="text-center py-3 sm:py-0">
+              <p className="text-[10.5px] font-semibold uppercase tracking-wider text-[#A19FA8]">
+                ACTIVE USERS
               </p>
-              <p className="mt-2 text-[28px] font-bold leading-none tracking-tight text-neutral-900 sm:text-[30px]">
+              <p className="mt-2 text-[32px] font-bold tracking-tight text-neutral-900 sm:text-[38px]">
                 +330K
               </p>
             </div>
-            <div className="py-4 text-center sm:py-0">
-              <p className="mx-auto w-fit rounded-md bg-[#F4F3F7] px-2.5 py-1 text-[10px] font-medium leading-none text-[#55535E]">
-                MONTHLY CAMPAIGNS
+            <div className="text-center py-3 sm:py-0">
+              <p className="text-[10.5px] font-semibold uppercase tracking-wider text-[#A19FA8]">
+                POSITIVE REVIEWS
               </p>
-              <p className="mt-2 text-[28px] font-bold leading-none tracking-tight text-neutral-900 sm:text-[30px]">
-                +44,5K
+              <p className="mt-2 text-[32px] font-bold tracking-tight text-neutral-900 sm:text-[38px]">
+                +44.8K
               </p>
             </div>
           </div>
@@ -132,7 +133,7 @@ function About() {
       </section>
 
       {/* ---------------- 3. PRINCIPLES SECTION ---------------- */}
-      <section className="otake-values w-full py-12 sm:py-16">
+      <section className="otake-values w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
             <div>
@@ -216,7 +217,7 @@ function About() {
       </section>
 
       {/* ---------------- 4. GROWTH JOURNEY ---------------- */}
-      <section className="min-h-[680px] w-full px-6 py-12 pb-16 md:h-[680px] md:px-0 md:py-0">
+      <section className="otake-journey mx-auto min-h-[680px] w-full max-w-[848px] px-6 py-12 pb-16 md:h-[680px] md:px-0 md:py-0">
         <div className="mx-auto box-border h-full w-full max-w-[1040px] px-6 py-12 pb-16 sm:px-8 sm:pt-[64px] sm:pb-[70px] md:flex md:flex-col">
           <div className="text-center">
             <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-0.5 text-[10px] font-semibold text-neutral-800">
@@ -293,7 +294,7 @@ function About() {
       </section>
 
       {/* ---------------- 5. PRIMARY FEATURES ---------------- */}
-      <section className="w-full py-16 sm:py-24">
+      <section className="otake-product-features w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="text-center">
             <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
@@ -382,7 +383,7 @@ function About() {
       </section>
 
       {/* ---------------- 6. OUR STORY ---------------- */}
-      <section className="w-full py-16 sm:py-24">
+      <section className="w-full bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-[760px] px-6 text-center sm:px-8">
           <h2 className="text-[28px] font-bold tracking-tight text-neutral-900 sm:text-[34px]">
             Our story
