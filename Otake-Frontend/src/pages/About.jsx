@@ -91,41 +91,40 @@ function About() {
       {/* ---------------- 2. MISSION & METRICS ---------------- */}
       <section className="w-full bg-white pt-14 pb-14 sm:pt-56 sm:pb-20">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
-          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
-            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[30px] md:text-[32px]">
-              The growth of your business is our priority, as we are here to help.
+          <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-14">
+            <h2 className="max-w-[390px] text-[24px] font-bold leading-[1.25] tracking-tight text-neutral-900 sm:text-[30px] md:text-[32px]">
+              The growth of your business is our priority, so we are here to help.
             </h2>
-            <p className="text-[13.5px] leading-relaxed text-[#8B8A93] sm:text-[14px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
-              Nullam congue blandit quam, sit amet scelerisque turpis pellentesque eu. Nulla
-              facilisi. In hac habitasse platea dictumst.
+            <p className="max-w-[390px] text-[13.5px] leading-[1.55] text-[#8B8A93] sm:text-[14px]">
+              Eiusmod aliquot odio cursus lacus, ut sit suspendisse ultricies. Etiam enim risus
+              faucibus feugiat ut enim in sed tincidunt. Eu in justo, eu porttitor vivamus neque.
             </p>
           </div>
 
           {/* 3 Metrics Box */}
-          <div className="mt-12 grid grid-cols-1 divide-y divide-neutral-100 rounded-2xl border border-neutral-100 bg-white p-6 shadow-[0_10px_35px_rgba(0,0,0,0.03)] sm:grid-cols-3 sm:divide-y-0 sm:divide-x sm:p-8">
-            <div className="text-center py-3 sm:py-0">
-              <p className="text-[10.5px] font-semibold uppercase tracking-wider text-[#A19FA8]">
-                TOTAL REVENUE
+          <div className="mt-10 grid grid-cols-1 divide-y divide-[#ECEAF1] rounded-xl border border-[#ECEAF1] bg-white px-5 py-4 sm:grid-cols-3 sm:divide-y-0 sm:divide-x sm:px-6 sm:py-5">
+            <div className="py-4 text-center sm:py-0">
+              <p className="mx-auto w-fit rounded-md bg-[#F4F3F7] px-2.5 py-1 text-[10px] font-medium leading-none text-[#55535E]">
+                CLIENT RETENTION
               </p>
-              <p className="mt-2 text-[32px] font-bold tracking-tight text-neutral-900 sm:text-[38px]">
-                8.5M
+              <p className="mt-2 text-[28px] font-bold leading-none tracking-tight text-neutral-900 sm:text-[30px]">
+                5.2M
               </p>
             </div>
-            <div className="text-center py-3 sm:py-0">
-              <p className="text-[10.5px] font-semibold uppercase tracking-wider text-[#A19FA8]">
-                ACTIVE USERS
+            <div className="py-4 text-center sm:py-0">
+              <p className="mx-auto w-fit rounded-md bg-[#F4F3F7] px-2.5 py-1 text-[10px] font-medium leading-none text-[#55535E]">
+                EMAILS PER MONTH
               </p>
-              <p className="mt-2 text-[32px] font-bold tracking-tight text-neutral-900 sm:text-[38px]">
+              <p className="mt-2 text-[28px] font-bold leading-none tracking-tight text-neutral-900 sm:text-[30px]">
                 +330K
               </p>
             </div>
-            <div className="text-center py-3 sm:py-0">
-              <p className="text-[10.5px] font-semibold uppercase tracking-wider text-[#A19FA8]">
-                POSITIVE REVIEWS
+            <div className="py-4 text-center sm:py-0">
+              <p className="mx-auto w-fit rounded-md bg-[#F4F3F7] px-2.5 py-1 text-[10px] font-medium leading-none text-[#55535E]">
+                MONTHLY CAMPAIGNS
               </p>
-              <p className="mt-2 text-[32px] font-bold tracking-tight text-neutral-900 sm:text-[38px]">
-                +44.8K
+              <p className="mt-2 text-[28px] font-bold leading-none tracking-tight text-neutral-900 sm:text-[30px]">
+                +44,5K
               </p>
             </div>
           </div>
