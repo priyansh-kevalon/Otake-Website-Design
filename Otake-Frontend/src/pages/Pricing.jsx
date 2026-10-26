@@ -295,8 +295,8 @@ function Pricing() {
       {/* ---------------- 2. PRINCIPLES & TRUSTED BY ---------------- */}
       <section className="otake-soft-purple w-full py-16 sm:py-20">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
+          <div className="mx-auto grid max-w-[1152px] grid-cols-1 gap-6 sm:grid-cols-3">
+            <div className="h-[256.39px] w-full max-w-[368px] rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
                 <img
                   src="/images/pricing-client-focused.png"
@@ -310,11 +310,10 @@ function Pricing() {
               </h3>
               <p className="mt-2.5 text-[16px] leading-relaxed text-black">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
-                Nullam congue blandit quam.
               </p>
             </div>
 
-            <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
+            <div className="h-[256.39px] w-full max-w-[368px] rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
                 <img
                   src="/images/pricing-innovate-optimize.png"
@@ -328,11 +327,10 @@ function Pricing() {
               </h3>
               <p className="mt-2.5 text-[16px] leading-relaxed text-black">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
-                Nullam congue blandit quam.
               </p>
             </div>
 
-            <div className="rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
+            <div className="h-[256.39px] w-full max-w-[368px] rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
                 <img
                   src="/images/pricing-community-driven.png"
@@ -346,7 +344,6 @@ function Pricing() {
               </h3>
               <p className="mt-2.5 text-[16px] leading-relaxed text-black">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
-                Nullam congue blandit quam.
               </p>
             </div>
           </div>
