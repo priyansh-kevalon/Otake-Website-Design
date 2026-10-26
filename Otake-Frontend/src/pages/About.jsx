@@ -135,9 +135,9 @@ function About() {
       {/* ---------------- 3. PRINCIPLES SECTION ---------------- */}
       <section className="otake-values w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[1120px] px-6 sm:px-8">
-          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
-            <div>
-              <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
+          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-x-[120px] lg:gap-y-8">
+            <div className="pl-4 sm:pl-6 lg:pl-32">
+              <span className="inline-block rounded-md bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
                 Our Values
               </span>
               <h2 className="mt-4 text-[28px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[34px]">
@@ -168,10 +168,10 @@ function About() {
                   className="h-14 w-14 object-contain"
                 />
               </div>
-              <h3 className="mt-4 text-[20px] font-bold text-neutral-900">
+              <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
                 Client Focused
               </h3>
-              <p className="mt-2 text-[13px] leading-[1.5] text-[#28252D]">
+              <p className="mt-2 text-[16px] leading-[1.5] text-[#28252D]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam, sit amet scelerisque turpis pellentesque eu. Sed
                 rutrum orci felis, eget interdum.
@@ -187,10 +187,10 @@ function About() {
                   className="h-14 w-14 object-contain"
                 />
               </div>
-              <h3 className="mt-4 text-[20px] font-bold text-neutral-900">
+              <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
                 Innovate & Optimize
               </h3>
-              <p className="mt-2 text-[13px] leading-[1.5] text-[#28252D]">
+              <p className="mt-2 text-[16px] leading-[1.5] text-[#28252D]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam, sit amet scelerisque turpis pellentesque eu. Sed
                 rutrum orci felis, eget interdum.
@@ -206,10 +206,10 @@ function About() {
                   className="h-14 w-14 object-contain"
                 />
               </div>
-              <h3 className="mt-4 text-[20px] font-bold text-neutral-900">
+              <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
                 Community Driven
               </h3>
-              <p className="mt-2 text-[13px] leading-[1.5] text-[#28252D]">
+              <p className="mt-2 text-[16px] leading-[1.5] text-[#28252D]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam, sit amet scelerisque turpis pellentesque eu. Sed
                 rutrum orci felis, eget interdum.
@@ -223,7 +223,7 @@ function About() {
       <section className="otake-journey mx-auto min-h-[760px] w-full max-w-[1040px] px-6 py-12 pb-16 md:min-h-[780px] md:px-0 md:py-0">
         <div className="mx-auto box-border min-h-full w-full max-w-[1120px] px-6 py-12 pb-16 sm:px-8 sm:pt-[72px] sm:pb-[80px] md:flex md:flex-col">
           <div className="text-center">
-            <span className="inline-block rounded-full bg-[#FFE36A] px-4 py-1 text-[11px] font-semibold text-neutral-800">
+            <span className="inline-block rounded-md bg-[#FFE36A] px-4 py-1 text-[11px] font-semibold text-neutral-800">
               Our Story
             </span>
             <h2 className="mt-4 text-[36px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[40px]">
@@ -301,7 +301,7 @@ function About() {
       <section className="w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="text-center">
-            <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
+            <span className="inline-block rounded-md bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
               Product Features
             </span>
             <h2 className="mt-4 text-[30px] font-bold tracking-tight text-neutral-900 sm:text-[38px]">
