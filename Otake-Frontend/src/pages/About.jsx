@@ -146,10 +146,10 @@ function About() {
                 our principles!
               </h2>
             </div>
-            <div className="space-y-3 text-[13.5px] leading-relaxed text-black">
+            <div className="space-y-3 text-[13.5px] leading-relaxed text-[#3F3B45]">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
-                Nullam congue blandit quam, sit amet scelerisque turpis.
+                Nullam congue blandit quam, sit amet scelerisque.
               </p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -158,58 +158,61 @@ function About() {
           </div>
 
           {/* 3 Principles Cards */}
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
-            <div className="min-h-[250px] rounded-[22px] border border-neutral-100 bg-white p-8 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg sm:p-9">
+          <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <div className="min-h-[236px] rounded-[20px] border border-neutral-100 bg-white p-6 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
                 <img
                   src="/images/value-client-focused.png"
                   alt=""
                   aria-hidden="true"
-                  className="h-16 w-16 object-contain"
+                  className="h-14 w-14 object-contain"
                 />
               </div>
-              <h3 className="mt-5 text-[18px] font-bold text-neutral-900">
+              <h3 className="mt-4 text-[20px] font-bold text-neutral-900">
                 Client Focused
               </h3>
-              <p className="mt-3 text-[14px] leading-relaxed text-black">
+              <p className="mt-2 text-[13px] leading-[1.5] text-[#28252D]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
-                Nullam congue blandit quam.
+                Nullam congue blandit quam, sit amet scelerisque turpis pellentesque eu. Sed
+                rutrum orci felis, eget interdum.
               </p>
             </div>
 
-            <div className="min-h-[250px] rounded-[22px] border border-neutral-100 bg-white p-8 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg sm:p-9">
+            <div className="min-h-[236px] rounded-[20px] border border-neutral-100 bg-white p-6 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
                 <img
                   src="/images/value-innovate-optimize.png"
                   alt=""
                   aria-hidden="true"
-                  className="h-16 w-16 object-contain"
+                  className="h-14 w-14 object-contain"
                 />
               </div>
-              <h3 className="mt-5 text-[18px] font-bold text-neutral-900">
+              <h3 className="mt-4 text-[20px] font-bold text-neutral-900">
                 Innovate & Optimize
               </h3>
-              <p className="mt-3 text-[14px] leading-relaxed text-black">
+              <p className="mt-2 text-[13px] leading-[1.5] text-[#28252D]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
-                Nullam congue blandit quam.
+                Nullam congue blandit quam, sit amet scelerisque turpis pellentesque eu. Sed
+                rutrum orci felis, eget interdum.
               </p>
             </div>
 
-            <div className="min-h-[250px] rounded-[22px] border border-neutral-100 bg-white p-8 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg sm:p-9">
+            <div className="min-h-[236px] rounded-[20px] border border-neutral-100 bg-white p-6 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
               <div className="flex justify-center">
                 <img
                   src="/images/value-community-driven.png"
                   alt=""
                   aria-hidden="true"
-                  className="h-16 w-16 object-contain"
+                  className="h-14 w-14 object-contain"
                 />
               </div>
-              <h3 className="mt-5 text-[18px] font-bold text-neutral-900">
+              <h3 className="mt-4 text-[20px] font-bold text-neutral-900">
                 Community Driven
               </h3>
-              <p className="mt-3 text-[14px] leading-relaxed text-black">
+              <p className="mt-2 text-[13px] leading-[1.5] text-[#28252D]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
-                Nullam congue blandit quam.
+                Nullam congue blandit quam, sit amet scelerisque turpis pellentesque eu. Sed
+                rutrum orci felis, eget interdum.
               </p>
             </div>
           </div>

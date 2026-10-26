@@ -199,14 +199,21 @@
   background-size: 100% 100%, 100% auto;
 }
 
-.otake-testimonials-faq .otake-faq {
-  width: calc(100% - 2rem);
-  max-width: 1140px;
-  margin-inline: auto;
-  border: 1px solid rgba(205, 200, 216, 0.95);
-  border-radius: 18px;
+.otake-faq {
+  width: 100%;
+  background-color: #f7f3ff;
+  background-image:
+    linear-gradient(rgba(247, 243, 255, 0.56), rgba(247, 243, 255, 0.56)),
+    url('/images/faq-gradient.png');
+  background-position: center, center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% auto;
   box-shadow: none;
   padding-bottom: 5rem;
+}
+
+.otake-testimonials-faq .otake-faq {
+  background: transparent;
 }
 
 .otake-blog {
