@@ -308,7 +308,7 @@ function Pricing() {
               <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
                 Client Focussed
               </h3>
-              <p className="mt-2.5 text-[12.5px] leading-relaxed text-[#8B8A93]">
+              <p className="mt-2.5 text-[16px] leading-relaxed text-black">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam.
               </p>
@@ -326,7 +326,7 @@ function Pricing() {
               <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
                 Innovate & Optimize
               </h3>
-              <p className="mt-2.5 text-[12.5px] leading-relaxed text-[#8B8A93]">
+              <p className="mt-2.5 text-[16px] leading-relaxed text-black">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam.
               </p>
@@ -344,7 +344,7 @@ function Pricing() {
               <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
                 Community Driven
               </h3>
-              <p className="mt-2.5 text-[12.5px] leading-relaxed text-[#8B8A93]">
+              <p className="mt-2.5 text-[16px] leading-relaxed text-black">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam.
               </p>
