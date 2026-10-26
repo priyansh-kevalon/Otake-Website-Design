@@ -106,12 +106,11 @@ function App() {
         {currentPage === 'register' && <Register onNavigate={handleNavigate} />}
         {currentPage === 'home' && <Home />}
       </main>
-      <Footer onNavigate={handleNavigate} />
+      <Footer onNavigate={handleNavigate} isAboutPage={currentPage === 'about'} />
       <BackToTopButton />
     </div>
   )
 }
 
 export default App
-
 

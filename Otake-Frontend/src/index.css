@@ -189,6 +189,20 @@
   mask-image: radial-gradient(circle at 50% 38%, #000 0%, transparent 72%);
 }
 
+.otake-testimonials-faq {
+  background-color: #f7f3ff;
+  background-image:
+    linear-gradient(rgba(247, 243, 255, 0.56), rgba(247, 243, 255, 0.56)),
+    url('/images/faq-gradient.png');
+  background-position: center, center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% auto;
+}
+
+.otake-testimonials-faq .otake-faq {
+  padding-bottom: 5rem;
+}
+
 .otake-blog {
   position: relative;
   overflow: hidden;
@@ -225,13 +239,6 @@
 
 .otake-faq {
   position: relative;
-  background-color: #f7f3ff;
-  background-image:
-    linear-gradient(rgba(247, 243, 255, 0.56), rgba(247, 243, 255, 0.56)),
-    url('/images/faq-gradient.png');
-  background-position: center, center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%, 100% auto;
 }
 
 .otake-footer {

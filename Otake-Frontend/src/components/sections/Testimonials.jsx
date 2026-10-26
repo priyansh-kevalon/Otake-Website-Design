@@ -44,7 +44,7 @@ function ReviewCard({ starColor, starLabel, heading, logo }) {
 
 function Testimonials() {
   return (
-    <section id="customer-reviews" className="w-full scroll-mt-6 px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+    <section id="customer-reviews" className="w-full scroll-mt-6 px-4 pt-6 sm:px-6 sm:pt-8 lg:px-8">
       <div className="otake-testimonials relative overflow-hidden rounded-[20px] border border-[#27252D]">
         <div className="relative mx-auto max-w-[1040px] px-6 py-16 sm:px-8 lg:py-24">
           <div className="relative flex flex-col items-center text-center">

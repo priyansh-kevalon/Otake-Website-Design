@@ -400,11 +400,13 @@ function About() {
       </section>
       </div>
 
+      <div className="otake-testimonials-faq">
       {/* ---------------- 7. TESTIMONIALS ---------------- */}
       <Testimonials />
 
       {/* ---------------- 8. FAQ ---------------- */}
       <FAQ />
+      </div>
     </div>
   )
 }

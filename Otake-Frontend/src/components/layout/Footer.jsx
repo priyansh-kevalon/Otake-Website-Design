@@ -188,7 +188,7 @@ function LinkColumn({ title, links, label, onNavigate }) {
   )
 }
 
-function Footer({ onNavigate }) {
+function Footer({ onNavigate, isAboutPage = false }) {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('')
   const resetTimer = useRef(null)
@@ -210,7 +210,12 @@ function Footer({ onNavigate }) {
   }
 
   return (
-    <footer id="contact" className="w-full scroll-mt-6 pb-3 pt-12 sm:pb-4 sm:pt-16">
+    <footer
+      id="contact"
+      className={`w-full scroll-mt-6 pb-3 sm:pb-4 ${
+        isAboutPage ? 'pt-0' : 'pt-12 sm:pt-16'
+      }`}
+    >
       <h2 className="sr-only">Otake footer</h2>
 
       <div className="otake-footer relative mx-auto w-[98%] rounded-[24px] border border-white/[0.08] px-6 py-10 sm:px-10 sm:py-14 lg:px-16 xl:h-[988px] xl:pb-8 xl:pt-[140px]">
