@@ -217,55 +217,55 @@ function About() {
       </section>
 
       {/* ---------------- 4. GROWTH JOURNEY ---------------- */}
-      <section className="otake-journey mx-auto min-h-[680px] w-full max-w-[848px] px-6 py-12 pb-16 md:h-[680px] md:px-0 md:py-0">
-        <div className="mx-auto box-border h-full w-full max-w-[1040px] px-6 py-12 pb-16 sm:px-8 sm:pt-[64px] sm:pb-[70px] md:flex md:flex-col">
+      <section className="otake-journey mx-auto min-h-[760px] w-full max-w-[1040px] px-6 py-12 pb-16 md:min-h-[780px] md:px-0 md:py-0">
+        <div className="mx-auto box-border min-h-full w-full max-w-[1120px] px-6 py-12 pb-16 sm:px-8 sm:pt-[72px] sm:pb-[80px] md:flex md:flex-col">
           <div className="text-center">
-            <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-0.5 text-[10px] font-semibold text-neutral-800">
+            <span className="inline-block rounded-full bg-[#FFE36A] px-4 py-1 text-[11px] font-semibold text-neutral-800">
               Our Story
             </span>
-            <h2 className="mt-3 text-[32px] font-bold leading-tight tracking-tight text-neutral-900">
+            <h2 className="mt-4 text-[36px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[40px]">
               Our growth journey.
             </h2>
-            <p className="mx-auto mt-2 max-w-[500px] text-[14px] leading-relaxed text-neutral-900">
+            <p className="mx-auto mt-3 max-w-[600px] text-[15px] leading-relaxed text-neutral-900 sm:text-[16px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus. Nullam
               congue blandit quam, sit amet scelerisque turpis.
             </p>
           </div>
 
-          <div className="mx-auto mt-8 grid max-w-[700px] grid-cols-1 items-center gap-10 md:mt-10 md:flex-1 md:grid-cols-[320px_300px] md:gap-[80px]">
+          <div className="mx-auto mt-10 grid max-w-[860px] grid-cols-1 items-center gap-12 md:mt-12 md:flex-1 md:grid-cols-[380px_360px] md:gap-[80px]">
             {/* Left Column: Milestones */}
-            <div className="space-y-6 md:-translate-y-[17px] md:space-y-8">
+            <div className="space-y-8 md:-translate-y-[17px] md:space-y-10">
               <div>
-                <p className="text-[24px] font-bold leading-tight tracking-tight text-neutral-900">
+                <p className="text-[28px] font-bold leading-tight tracking-tight text-neutral-900">
                   +100,000
                 </p>
-                <p className="mt-2 max-w-[300px] text-[14px] leading-[1.4] text-[#6F6C78]">
+                <p className="mt-2.5 max-w-[360px] text-[15px] leading-[1.5] text-[#6F6C78]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue blandit quam.
                 </p>
               </div>
 
               <div>
-                <p className="text-[24px] font-bold leading-tight tracking-tight text-neutral-900">
+                <p className="text-[28px] font-bold leading-tight tracking-tight text-neutral-900">
                   5 Minutes
                 </p>
-                <p className="mt-2 max-w-[300px] text-[14px] leading-[1.4] text-[#6F6C78]">
+                <p className="mt-2.5 max-w-[360px] text-[15px] leading-[1.5] text-[#6F6C78]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue blandit quam.
                 </p>
               </div>
 
               <div>
-                <p className="text-[24px] font-bold leading-tight tracking-tight text-neutral-900">
+                <p className="text-[28px] font-bold leading-tight tracking-tight text-neutral-900">
                   20 Years
                 </p>
-                <p className="mt-2 max-w-[300px] text-[14px] leading-[1.4] text-[#6F6C78]">
+                <p className="mt-2.5 max-w-[360px] text-[15px] leading-[1.5] text-[#6F6C78]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue blandit quam.
                 </p>
               </div>
             </div>
 
             {/* Right Column: 3D Character Card with Floating Badge */}
-            <div className="relative mx-auto flex w-full max-w-[300px] -translate-y-4 items-center justify-center rounded-[24px] border-[7px] border-white bg-[#EFECFF] p-2.5 shadow-[0_20px_50px_rgba(180,170,220,0.28)] md:-translate-y-[21px]">
-              <div className="relative h-[350px] w-full">
+            <div className="relative mx-auto flex w-full max-w-[360px] -translate-y-4 items-center justify-center rounded-[28px] border-[8px] border-white bg-[#EFECFF] p-3 shadow-[0_22px_55px_rgba(180,170,220,0.28)] md:-translate-y-[21px]">
+              <div className="relative h-[420px] w-full">
                 <img
                   src="/images/about-journey-character.png"
                   alt="Growth journey visual"
@@ -274,18 +274,18 @@ function About() {
               </div>
 
               {/* Floating Glass Pill Badge */}
-              <div className="absolute bottom-10 -left-[62px] z-20 flex items-center gap-3 rounded-[18px] border border-white bg-white px-4 py-3.5 shadow-[0_14px_30px_rgba(44,33,76,0.16)]">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#FFF0F5]">
+              <div className="absolute bottom-12 -left-[72px] z-20 flex items-center gap-3.5 rounded-[20px] border border-white bg-white px-5 py-4 shadow-[0_16px_34px_rgba(44,33,76,0.16)]">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#FFF0F5]">
                   <img
                     src="/images/value-innovate-optimize.png"
                     alt=""
                     aria-hidden="true"
-                    className="h-8 w-8 object-contain"
+                    className="h-9 w-9 object-contain"
                   />
                 </span>
                 <span>
-                  <span className="block text-[18px] font-bold leading-tight text-neutral-900">+416k</span>
-                  <span className="mt-1 block text-[11px] leading-tight text-[#6F6C78]">Happy Customer</span>
+                  <span className="block text-[20px] font-bold leading-tight text-neutral-900">+416k</span>
+                  <span className="mt-1 block text-[12px] leading-tight text-[#6F6C78]">Happy Customer</span>
                 </span>
               </div>
             </div>
@@ -293,8 +293,9 @@ function About() {
         </div>
       </section>
 
+      <div className="otake-product-story">
       {/* ---------------- 5. PRIMARY FEATURES ---------------- */}
-      <section className="otake-product-features w-full py-16 sm:py-24">
+      <section className="w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="text-center">
             <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
@@ -383,7 +384,7 @@ function About() {
       </section>
 
       {/* ---------------- 6. OUR STORY ---------------- */}
-      <section className="w-full bg-white py-16 sm:py-24">
+      <section className="w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[760px] px-6 text-center sm:px-8">
           <h2 className="text-[28px] font-bold tracking-tight text-neutral-900 sm:text-[34px]">
             Our story
@@ -397,6 +398,7 @@ function About() {
           </p>
         </div>
       </section>
+      </div>
 
       {/* ---------------- 7. TESTIMONIALS ---------------- */}
       <Testimonials />

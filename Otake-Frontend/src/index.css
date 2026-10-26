@@ -325,14 +325,14 @@
     );
 }
 
-.otake-product-features {
-    background-color: #ffffff;
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-      url('/images/about-product-features-gradient.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.otake-product-story {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url('/images/about-product-features-gradient.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, cover;
 }
 
 .otake-about-hero-deep {
