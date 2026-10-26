@@ -302,7 +302,7 @@ function Pricing() {
                   src="/images/pricing-client-focused.png"
                   alt=""
                   aria-hidden="true"
-                  className="h-14 w-14 object-contain"
+                  className="h-[72px] w-[72px] object-contain"
                 />
               </div>
               <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
@@ -320,7 +320,7 @@ function Pricing() {
                   src="/images/pricing-innovate-optimize.png"
                   alt=""
                   aria-hidden="true"
-                  className="h-14 w-14 object-contain"
+                  className="h-[72px] w-[72px] object-contain"
                 />
               </div>
               <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
@@ -338,7 +338,7 @@ function Pricing() {
                   src="/images/pricing-community-driven.png"
                   alt=""
                   aria-hidden="true"
-                  className="h-14 w-14 object-contain"
+                  className="h-[72px] w-[72px] object-contain"
                 />
               </div>
               <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
