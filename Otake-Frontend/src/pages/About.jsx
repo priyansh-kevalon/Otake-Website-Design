@@ -89,7 +89,7 @@ function About() {
       </section>
 
       {/* ---------------- 2. MISSION & METRICS ---------------- */}
-      <section className="w-full bg-white pt-14 pb-14 sm:pt-56 sm:pb-20">
+      <section className="w-full pt-14 pb-14 sm:pt-56 sm:pb-20">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-14">
             <h2 className="max-w-[390px] text-[24px] font-bold leading-[1.25] tracking-tight text-neutral-900 sm:text-[30px] md:text-[32px]">
@@ -132,7 +132,7 @@ function About() {
       </section>
 
       {/* ---------------- 3. PRINCIPLES SECTION ---------------- */}
-      <section className="w-full bg-white py-12 sm:py-16">
+      <section className="otake-values w-full py-12 sm:py-16">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
             <div>
@@ -216,7 +216,7 @@ function About() {
       </section>
 
       {/* ---------------- 4. GROWTH JOURNEY ---------------- */}
-      <section className="otake-journey mx-auto min-h-[680px] w-full max-w-[848px] px-6 py-12 pb-16 md:h-[680px] md:px-0 md:py-0">
+      <section className="min-h-[680px] w-full px-6 py-12 pb-16 md:h-[680px] md:px-0 md:py-0">
         <div className="mx-auto box-border h-full w-full max-w-[1040px] px-6 py-12 pb-16 sm:px-8 sm:pt-[64px] sm:pb-[70px] md:flex md:flex-col">
           <div className="text-center">
             <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-0.5 text-[10px] font-semibold text-neutral-800">
@@ -293,7 +293,7 @@ function About() {
       </section>
 
       {/* ---------------- 5. PRIMARY FEATURES ---------------- */}
-      <section className="otake-product-features w-full py-16 sm:py-24">
+      <section className="w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[1040px] px-6 sm:px-8">
           <div className="text-center">
             <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
@@ -382,7 +382,7 @@ function About() {
       </section>
 
       {/* ---------------- 6. OUR STORY ---------------- */}
-      <section className="w-full bg-white py-16 sm:py-24">
+      <section className="w-full py-16 sm:py-24">
         <div className="mx-auto max-w-[760px] px-6 text-center sm:px-8">
           <h2 className="text-[28px] font-bold tracking-tight text-neutral-900 sm:text-[34px]">
             Our story
