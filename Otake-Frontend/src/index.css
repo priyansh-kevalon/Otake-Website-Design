@@ -190,17 +190,21 @@
 }
 
 .otake-testimonials-faq {
-  background-color: #f7f3ff;
-  background-image:
-    linear-gradient(rgba(247, 243, 255, 0.56), rgba(247, 243, 255, 0.56)),
-    url('/images/faq-gradient.png');
-  background-position: center, center bottom;
-  background-repeat: no-repeat;
-  background-size: 100% 100%, 100% auto;
+  background: transparent;
 }
 
 .otake-faq {
   width: 100%;
+  isolation: isolate;
+  padding-bottom: 5rem;
+}
+
+.otake-faq::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background-color: #f7f3ff;
   background-image:
     linear-gradient(rgba(247, 243, 255, 0.56), rgba(247, 243, 255, 0.56)),
@@ -208,12 +212,20 @@
   background-position: center, center bottom;
   background-repeat: no-repeat;
   background-size: 100% 100%, 100% auto;
-  box-shadow: none;
-  padding-bottom: 5rem;
-}
-
-.otake-testimonials-faq .otake-faq {
-  background: transparent;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 20%,
+    #000 80%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 20%,
+    #000 80%,
+    transparent 100%
+  );
 }
 
 .otake-blog {
