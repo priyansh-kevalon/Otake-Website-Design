@@ -436,13 +436,13 @@ function Pricing() {
                 Product Features
               </span>
 
-              <h2 className="mt-4 text-[32px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[42px] lg:text-[48px]">
-                Create a product.
+              <h2 className="mt-4 text-[32px] font-bold leading-tight tracking-tight text-neutral-400 sm:text-[42px] lg:text-[48px]">
+                <span className="text-neutral-900">Create a product.</span>
                 <br />
-                <span className="text-neutral-900">It&apos;s easy with Otake.</span>
+                <span className="text-neutral-900">It&apos;s</span> easy with Otake.
               </h2>
 
-              <p className="mt-4 max-w-[460px] text-[13.5px] leading-relaxed text-[#8B8A93]">
+              <p className="mt-4 max-w-[500px] text-[15px] leading-relaxed text-neutral-900">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
                 Nullam congue blandit quam, sit amet scelerisque turpis pellentesque eu.
               </p>
