@@ -163,7 +163,7 @@ function Contact() {
               Contact Our Team
             </h1>
 
-            <p className="mx-auto mt-4 max-w-[480px] text-[13.5px] leading-relaxed text-[#8B8A93] sm:text-[14.5px]">
+            <p className="mx-auto mt-4 max-w-[480px] text-[13.5px] leading-relaxed text-neutral-900 sm:text-[14.5px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
             </p>
 
@@ -171,15 +171,15 @@ function Contact() {
             <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[12.5px] text-neutral-600 sm:text-[13px]">
               <span className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
-                Register users in seconds.
+                <span>Register users in seconds.</span>
               </span>
               <span className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
-                Collect authorization via secure.
+                <span>Collect authorization via secure.</span>
               </span>
               <span className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
-                Custom security controls.
+                <span>Custom security controls.</span>
               </span>
             </div>
           </div>
