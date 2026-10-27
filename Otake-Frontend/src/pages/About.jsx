@@ -10,27 +10,27 @@ function About() {
           <div className="relative mx-auto max-w-[680px] text-center">
             {/* Floating 3D accents around heading */}
             <span
-              className="pointer-events-none absolute -left-2 top-1 hidden select-none sm:block lg:-left-20"
+              className="pointer-events-none absolute -left-12 top-16 hidden select-none sm:block lg:-left-40 lg:top-22"
               aria-hidden="true"
             >
               <img
                 src="/images/6d78f5c25e29d1b3c3efb378a0895ab50206643b.png"
                 alt=""
-                width="80"
-                height="80"
-                className="h-[80px] w-[80px] object-contain"
+                width="92"
+                height="92"
+                className="h-[92px] w-[92px] object-contain"
               />
             </span>
             <span
-              className="pointer-events-none absolute -right-2 top-12 hidden select-none sm:block lg:-right-20"
+              className="pointer-events-none absolute -right-12 top-36 hidden select-none sm:block lg:-right-40 lg:top-40"
               aria-hidden="true"
             >
               <img
                 src="/images/73d9b74f1e858692091fb4e1a35f610182e1e25f.png"
                 alt=""
-                width="76"
-                height="76"
-                className="h-[76px] w-[76px] object-contain"
+                width="88"
+                height="88"
+                className="h-[88px] w-[88px] object-contain"
               />
             </span>
 
