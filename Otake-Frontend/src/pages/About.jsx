@@ -10,27 +10,27 @@ function About() {
           <div className="relative mx-auto max-w-[680px] text-center">
             {/* Floating 3D accents around heading */}
             <span
-              className="pointer-events-none absolute -left-2 top-1 hidden select-none sm:block lg:-left-10"
+              className="pointer-events-none absolute -left-2 top-1 hidden select-none sm:block lg:-left-14"
               aria-hidden="true"
             >
               <img
                 src="/images/6d78f5c25e29d1b3c3efb378a0895ab50206643b.png"
                 alt=""
-                width="52"
-                height="52"
-                className="h-[52px] w-[52px] object-contain"
+                width="64"
+                height="64"
+                className="h-[64px] w-[64px] object-contain"
               />
             </span>
             <span
-              className="pointer-events-none absolute -right-2 top-12 hidden select-none sm:block lg:-right-10"
+              className="pointer-events-none absolute -right-2 top-12 hidden select-none sm:block lg:-right-14"
               aria-hidden="true"
             >
               <img
                 src="/images/73d9b74f1e858692091fb4e1a35f610182e1e25f.png"
                 alt=""
-                width="48"
-                height="48"
-                className="h-[48px] w-[48px] object-contain"
+                width="60"
+                height="60"
+                className="h-[60px] w-[60px] object-contain"
               />
             </span>
 
@@ -44,14 +44,14 @@ function About() {
               Large And Small
             </h1>
 
-            <p className="mx-auto mt-3 max-w-[480px] text-[13.5px] leading-relaxed text-[#8B8A93] sm:text-[14.5px]">
+            <p className="mx-auto mt-4 max-w-[480px] text-[13.5px] leading-relaxed text-[#8B8A93] sm:text-[14.5px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <br className="hidden sm:inline" /> Vivamus non enim lacus.
             </p>
           </div>
 
           {/* 3 Character Persona Cards */}
-          <div className="mt-5 grid grid-cols-1 gap-6 sm:-mb-[52px] sm:grid-cols-3 lg:gap-8">
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:-mb-[52px] sm:grid-cols-3 lg:gap-8">
             {/* Card 1: Curly hair with headphones & orange jacket */}
             <div className="group relative flex aspect-square flex-col items-center justify-end overflow-hidden rounded-[20px] border-2 border-white/80 bg-[#E8F4FC] p-2 shadow-[0_16px_36px_rgba(180,210,240,0.35)] transition-transform duration-300 hover:-translate-y-1">
               <div className="relative flex h-full w-full items-end justify-center">
