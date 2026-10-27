@@ -115,9 +115,9 @@ function Pricing() {
 
           {/* ---------------- MAIN INTERACTIVE PRICING CARD ---------------- */}
           <div className="relative mx-auto mt-12 w-full max-w-[944px]">
-            <div className="relative z-10 flex overflow-hidden rounded-[28px] border border-neutral-200/80 bg-white shadow-[0_24px_60px_rgba(150,130,200,0.16)] sm:rounded-[36px] md:min-h-[725.59px] md:flex-col">
+            <div className="relative z-10 flex rounded-[28px] border border-neutral-200/80 bg-white shadow-[0_24px_60px_rgba(150,130,200,0.16)] sm:rounded-[36px] md:min-h-[725.59px] md:flex-col">
             {/* Dark Top Bar */}
-            <div className="flex flex-col justify-between gap-6 bg-[#0D0C10] p-6 text-white sm:flex-row sm:items-center sm:p-8">
+            <div className="m-2 flex flex-col justify-between gap-6 rounded-[18px] bg-[#0D0C10] p-5 text-white sm:m-3 sm:flex-row sm:items-center sm:rounded-[24px] sm:p-7">
               <div>
                 <p className="text-[14px] font-semibold uppercase tracking-wider text-neutral-400 sm:text-[15px]">
                   Starter Plan
@@ -200,23 +200,23 @@ function Pricing() {
               </div>
 
               {/* Right Column: Checkout / Signup Form */}
-              <div className="bg-[#FAFAFC] p-6 sm:p-8">
+              <div className="rounded-[24px] bg-[#FAFAFC] p-5 sm:p-6 md:rounded-l-[24px] md:rounded-r-[36px]">
                 <div className="flex items-center gap-2">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-orange-100 text-orange-600">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-md bg-orange-100 text-orange-600">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                       <circle cx="12" cy="7" r="4" />
                     </svg>
                   </span>
                   <div>
-                    <p className="text-[13px] font-bold text-neutral-900">Get Started</p>
-                    <p className="text-[11px] text-neutral-500">Fill the details to begin your free trial</p>
+                    <p className="text-[12px] font-bold text-neutral-900">Get Started</p>
+                    <p className="text-[10px] text-neutral-500">Fill the details to begin your free trial</p>
                   </div>
                 </div>
 
-                <form onSubmit={handleSubmit} className="mt-5 space-y-3">
+                <form onSubmit={handleSubmit} className="mt-4 space-y-2.5">
                   <div>
-                    <label htmlFor="pricing-name" className="text-[11px] font-medium text-neutral-600">
+                    <label htmlFor="pricing-name" className="text-[10px] font-medium text-neutral-600">
                       Full Name
                     </label>
                     <input
@@ -227,12 +227,12 @@ function Pricing() {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="mt-1 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-[12.5px] text-neutral-900 placeholder-neutral-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200"
+                      className="mt-1 h-9 w-full rounded-lg border border-neutral-200 bg-white px-2.5 text-[11.5px] text-neutral-900 placeholder-neutral-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="pricing-email" className="text-[11px] font-medium text-neutral-600">
+                    <label htmlFor="pricing-email" className="text-[10px] font-medium text-neutral-600">
                       Email Address
                     </label>
                     <input
@@ -243,12 +243,12 @@ function Pricing() {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="mt-1 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-[12.5px] text-neutral-900 placeholder-neutral-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200"
+                      className="mt-1 h-9 w-full rounded-lg border border-neutral-200 bg-white px-2.5 text-[11.5px] text-neutral-900 placeholder-neutral-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="pricing-company" className="text-[11px] font-medium text-neutral-600">
+                    <label htmlFor="pricing-company" className="text-[10px] font-medium text-neutral-600">
                       Company Name
                     </label>
                     <input
@@ -258,12 +258,12 @@ function Pricing() {
                       placeholder="e.g. Acme Corp"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="mt-1 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-[12.5px] text-neutral-900 placeholder-neutral-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200"
+                      className="mt-1 h-9 w-full rounded-lg border border-neutral-200 bg-white px-2.5 text-[11.5px] text-neutral-900 placeholder-neutral-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="pricing-phone" className="text-[11px] font-medium text-neutral-600">
+                    <label htmlFor="pricing-phone" className="text-[10px] font-medium text-neutral-600">
                       Phone Number
                     </label>
                     <input
@@ -273,13 +273,13 @@ function Pricing() {
                       placeholder="e.g. +1 (555) 000-0000"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="mt-1 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-[12.5px] text-neutral-900 placeholder-neutral-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200"
+                      className="mt-1 h-9 w-full rounded-lg border border-neutral-200 bg-white px-2.5 text-[11.5px] text-neutral-900 placeholder-neutral-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="mt-4 flex h-11 w-full items-center justify-center rounded-xl bg-neutral-900 text-[13px] font-medium text-white transition-colors hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+                    className="mt-3 flex h-10 w-full items-center justify-center rounded-lg bg-neutral-900 text-[12px] font-medium text-white transition-colors hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
                   >
                     {submitted ? 'Starting Trial...' : 'Continue'}
                   </button>
