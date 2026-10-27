@@ -9,37 +9,12 @@ function Message3DIcon() {
         aria-hidden="true"
         className="absolute -bottom-2 h-4 w-12 rounded-full bg-indigo-950/20 blur-md"
       />
-      <svg
-        width="52"
-        height="52"
-        viewBox="0 0 64 64"
-        fill="none"
+      <img
+        src="/images/contact-message-illustration.png"
+        alt=""
         aria-hidden="true"
-        className="relative z-10"
-      >
-        <defs>
-          <linearGradient id="msg-plane-a" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#C4B5FD" />
-            <stop offset="50%" stopColor="#818CF8" />
-            <stop offset="100%" stopColor="#4F46E5" />
-          </linearGradient>
-          <linearGradient id="msg-plane-b" x1="0" y1="0" x2="1" y2="0.8">
-            <stop offset="0%" stopColor="#FFFFFF" />
-            <stop offset="100%" stopColor="#DDD6FE" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M52 14L14 31c-2 .9-1.9 3.8.2 4.4l11 3.2 4.8 11.4c.9 2.1 3.8 2.2 4.8.2L52 14Z"
-          fill="url(#msg-plane-a)"
-        />
-        <path
-          d="M52 14L25.2 38.6l10.8 3.4L52 14Z"
-          fill="url(#msg-plane-b)"
-          opacity="0.9"
-        />
-        <circle cx="20" cy="46" r="3" fill="#F472B6" />
-        <circle cx="48" cy="38" r="2" fill="#FDE047" />
-      </svg>
+        className="relative z-10 h-14 w-14 object-contain"
+      />
     </div>
   )
 }
@@ -51,28 +26,12 @@ function Phone3DIcon() {
         aria-hidden="true"
         className="absolute -bottom-2 h-4 w-12 rounded-full bg-rose-950/20 blur-md"
       />
-      <svg
-        width="52"
-        height="52"
-        viewBox="0 0 64 64"
-        fill="none"
+      <img
+        src="/images/contact-phone-illustration.png"
+        alt=""
         aria-hidden="true"
-        className="relative z-10"
-      >
-        <defs>
-          <linearGradient id="phone-grad-a" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#FED7AA" />
-            <stop offset="45%" stopColor="#FB7185" />
-            <stop offset="100%" stopColor="#E11D48" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M20 18c-3 3-5 8-5 13 0 11 9 20 20 20 5 0 10-2 13-5l-5-7-6 2c-3-2-6-5-8-8l2-6-11-9Z"
-          fill="url(#phone-grad-a)"
-        />
-        <ellipse cx="28" cy="24" rx="3.5" ry="2" fill="#FFFFFF" opacity="0.75" />
-        <circle cx="44" cy="40" r="3" fill="#FFFFFF" opacity="0.7" />
-      </svg>
+        className="relative z-10 h-14 w-14 object-contain"
+      />
     </div>
   )
 }
@@ -84,26 +43,12 @@ function Pin3DIcon() {
         aria-hidden="true"
         className="absolute -bottom-2 h-4 w-12 rounded-full bg-amber-950/20 blur-md"
       />
-      <svg
-        width="52"
-        height="52"
-        viewBox="0 0 64 64"
-        fill="none"
+      <img
+        src="/images/contact-location-illustration.png"
+        alt=""
         aria-hidden="true"
-        className="relative z-10"
-      >
-        <defs>
-          <radialGradient id="pin-sphere-a" cx="35%" cy="30%" r="65%">
-            <stop offset="0%" stopColor="#FFE082" />
-            <stop offset="40%" stopColor="#FB923C" />
-            <stop offset="100%" stopColor="#EA580C" />
-          </radialGradient>
-        </defs>
-        <circle cx="32" cy="26" r="14" fill="url(#pin-sphere-a)" />
-        <path d="M22 34l10 18 10-18H22Z" fill="#C2410C" />
-        <circle cx="32" cy="26" r="5" fill="#FFFFFF" opacity="0.9" />
-        <circle cx="28" cy="21" r="2" fill="#FFFFFF" opacity="0.8" />
-      </svg>
+        className="relative z-10 h-14 w-14 object-contain"
+      />
     </div>
   )
 }
@@ -152,8 +97,8 @@ function Contact() {
   return (
     <div className="w-full">
       {/* ---------------- 1. CONTACT HERO & CHANNEL CARDS ---------------- */}
-      <section className="otake-about-hero otake-hero-color relative w-full pt-8 pb-16 sm:pt-12 sm:pb-24">
-        <div className="relative mx-auto max-w-[1080px] px-4 sm:px-6 lg:px-8">
+      <section className="otake-contact-hero-gradient relative w-full pt-8 pb-16 sm:pt-12 sm:pb-24">
+        <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div className="relative mx-auto max-w-[680px] text-center">
             <span className="inline-block rounded-[4px] bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
               Contact Us
@@ -197,11 +142,11 @@ function Contact() {
           </div>
 
           {/* 3 Contact Channel Cards */}
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="mx-auto mt-12 grid w-full max-w-[1152px] grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
             {/* Card 1: Message Us */}
-            <div className="rounded-[24px] border border-white/80 bg-white p-7 shadow-[0_16px_36px_rgba(150,130,200,0.08)] transition-all hover:-translate-y-1 hover:shadow-xl">
+            <div className="h-[302.39px] w-full max-w-[368px] rounded-[24px] border border-white/80 bg-white p-6 shadow-[0_16px_36px_rgba(150,130,200,0.08)] transition-all hover:-translate-y-1 hover:shadow-xl sm:p-7">
               <Message3DIcon />
-              <h3 className="mt-5 text-[17px] font-bold text-neutral-900">
+              <h3 className="mt-5 text-[28px] font-bold text-neutral-900">
                 Message Us
               </h3>
               <p className="mt-2 text-[12.5px] leading-relaxed text-[#8B8A93]">
@@ -212,8 +157,11 @@ function Contact() {
                   href={`mailto:${supportEmail}`}
                   className="inline-flex min-h-[44px] items-center gap-2 py-1 text-[12.5px] font-semibold text-neutral-900 transition-colors hover:text-purple-600"
                 >
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-100">
-                    ✉
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center text-[#9B83FF]">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                      <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" strokeWidth="2" />
+                      <path d="m4 7 8 6 8-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                   </span>
                   {supportEmail}
                 </a>
@@ -221,9 +169,9 @@ function Contact() {
             </div>
 
             {/* Card 2: Call Us */}
-            <div className="rounded-[24px] border border-white/80 bg-white p-7 shadow-[0_16px_36px_rgba(150,130,200,0.08)] transition-all hover:-translate-y-1 hover:shadow-xl">
+            <div className="h-[302.39px] w-full max-w-[368px] rounded-[24px] border border-white/80 bg-white p-6 shadow-[0_16px_36px_rgba(150,130,200,0.08)] transition-all hover:-translate-y-1 hover:shadow-xl sm:p-7">
               <Phone3DIcon />
-              <h3 className="mt-5 text-[17px] font-bold text-neutral-900">
+              <h3 className="mt-5 text-[28px] font-bold text-neutral-900">
                 Call Us
               </h3>
               <p className="mt-2 text-[12.5px] leading-relaxed text-[#8B8A93]">
@@ -234,8 +182,10 @@ function Contact() {
                   href={supportPhoneHref}
                   className="inline-flex min-h-[44px] items-center gap-2 py-1 text-[12.5px] font-semibold text-neutral-900 transition-colors hover:text-purple-600"
                 >
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-100">
-                    ☎
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center text-[#9B83FF]">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                      <path d="M7.2 3.8 9.5 3a1.7 1.7 0 0 1 2.1 1l1 2.5a1.7 1.7 0 0 1-.5 1.9l-1.4 1.1a14 14 0 0 0 4 4l1.1-1.4a1.7 1.7 0 0 1 1.9-.5l2.5 1a1.7 1.7 0 0 1 1 2.1l-.8 2.3a2.2 2.2 0 0 1-2.2 1.5C10.8 18.8 5.2 13.2 5.5 5.9a2.2 2.2 0 0 1 1.7-2.1Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                   </span>
                   {supportPhone}
                 </a>
@@ -243,9 +193,9 @@ function Contact() {
             </div>
 
             {/* Card 3: Address */}
-            <div className="rounded-[24px] border border-white/80 bg-white p-7 shadow-[0_16px_36px_rgba(150,130,200,0.08)] transition-all hover:-translate-y-1 hover:shadow-xl">
+            <div className="h-[302.39px] w-full max-w-[368px] rounded-[24px] border border-white/80 bg-white p-6 shadow-[0_16px_36px_rgba(150,130,200,0.08)] transition-all hover:-translate-y-1 hover:shadow-xl sm:p-7">
               <Pin3DIcon />
-              <h3 className="mt-5 text-[17px] font-bold text-neutral-900">
+              <h3 className="mt-5 text-[28px] font-bold text-neutral-900">
                 Address
               </h3>
               <p className="mt-2 text-[12.5px] leading-relaxed text-[#8B8A93]">
@@ -253,8 +203,11 @@ function Contact() {
               </p>
               <div className="mt-6">
                 <span className="inline-flex items-center gap-2 text-[12.5px] font-semibold text-neutral-900">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-100">
-                    📍
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center text-[#9B83FF]">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                      <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <circle cx="12" cy="10" r="2.3" stroke="currentColor" strokeWidth="2" />
+                    </svg>
                   </span>
                   Sydney, Australia 2000
                 </span>
