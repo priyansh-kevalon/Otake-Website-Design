@@ -51,7 +51,7 @@ function About() {
           </div>
 
           {/* 3 Character Persona Cards */}
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:-mb-[52px] sm:grid-cols-3 lg:gap-8">
+          <div className="mt-14 grid grid-cols-1 gap-6 sm:-mb-[52px] sm:grid-cols-3 lg:gap-8">
             {/* Card 1: Curly hair with headphones & orange jacket */}
             <div className="group relative flex aspect-square flex-col items-center justify-end overflow-hidden rounded-[20px] border-2 border-white/80 bg-[#E8F4FC] p-2 shadow-[0_16px_36px_rgba(180,210,240,0.35)] transition-transform duration-300 hover:-translate-y-1">
               <div className="relative flex h-full w-full items-end justify-center">
