@@ -168,7 +168,7 @@ function Contact() {
             </p>
 
             {/* Checklist bullets */}
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[12.5px] text-neutral-600 sm:text-[13px]">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[12.5px] text-neutral-900 sm:text-[13px]">
               <span className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
                 <span>Register users in seconds.</span>
