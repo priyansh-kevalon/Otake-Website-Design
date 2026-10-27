@@ -206,58 +206,58 @@ const FEATURES = [
 function ProductFeatures() {
   return (
     <section id="features" className="otake-features w-full scroll-mt-6">
-      <div className="mx-auto w-full max-w-[1240px] px-6 py-16 sm:px-8 lg:py-20 xl:px-0 xl:py-24">
-        <div className="mx-auto max-w-[640px] text-center">
+      <div className="mx-auto w-full max-w-[1320px] px-6 py-16 sm:px-8 lg:py-24 xl:px-0 xl:py-28">
+        <div className="mx-auto max-w-[680px] text-center">
           <span className="inline-block rounded-full bg-yellow-300 px-3 py-1 text-[12px] font-semibold text-neutral-800 sm:text-[11px]">
             Product Features
           </span>
-          <h2 className="mt-5 text-[28px] font-bold leading-[1.12] tracking-tight text-neutral-900 sm:text-[34px] lg:text-[38px]">
+          <h2 className="mt-5 text-[30px] font-bold leading-[1.12] tracking-tight text-neutral-900 sm:text-[38px] lg:text-[44px]">
             Streamline tasks with
             <br />
             optimized workflows
           </h2>
-          <p className="mt-4 text-[14px] leading-relaxed text-neutral-500">
+          <p className="mt-4 text-[15px] leading-relaxed text-neutral-500">
             Lorem ipsum dolor sit amet, consectetur
             <br />
             Vivamus non enim lacus.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid w-full grid-cols-1 justify-items-center gap-6 md:grid-cols-3 xl:mt-12 xl:grid-cols-[repeat(3,420px)]">
+        <div className="mx-auto mt-24 grid w-full grid-cols-1 justify-items-center gap-8 md:grid-cols-3 xl:mt-20 xl:grid-cols-[repeat(3,440px)]">
           {FEATURES.map((feature) => (
             <article
               key={feature.key}
-              className="relative flex h-[620px] w-full max-w-[420px] flex-col overflow-visible rounded-[16px] bg-white shadow-[0_12px_30px_rgba(150,130,200,0.13)]"
+              className="relative flex h-[660px] w-full max-w-[440px] flex-col overflow-visible rounded-[16px] bg-white shadow-[0_12px_30px_rgba(150,130,200,0.13)]"
             >
               <span
-                className="pointer-events-none absolute -top-10 left-1/2 z-10 -translate-x-1/2"
+                className="pointer-events-none absolute -top-16 left-1/2 z-10 -translate-x-1/2"
                 aria-hidden="true"
               >
                 <img
                   src={feature.key === 'project' ? '/images/product-feature-cloud.png' : feature.key === 'analytics' ? '/images/product-feature-analytics.png' : '/images/product-feature-sales.png'}
                   alt=""
-                  className="h-[88px] w-[88px] object-contain"
+                  className="h-[108px] w-[108px] object-contain"
                 />
               </span>
 
-              <div className="px-4 pb-4 pt-[90px] text-center xl:px-6">
-                <h3 className="text-[20px] font-bold leading-[1.25] text-neutral-900 sm:text-[22px] xl:text-[26px]">
+              <div className="px-5 pb-4 pt-[120px] text-center xl:px-7">
+                <h3 className="text-[22px] font-bold leading-[1.25] text-neutral-900 sm:text-[24px] xl:text-[28px]">
                   {feature.heading}
                 </h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-neutral-500">
+                <p className="mt-4 text-[16px] leading-relaxed text-neutral-500">
                   Lorem ipsum dolor sit amet, consectetur
                   <br />
                   adipiscing elit.
                 </p>
                 <button
                   type="button"
-                  className="mt-5 w-full rounded-md border border-neutral-200 px-3 py-3 text-[13px] font-medium text-neutral-800 transition-colors hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+                  className="mt-7 w-full rounded-md border border-neutral-200 px-3 py-3.5 text-[14px] font-medium text-neutral-800 transition-colors hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
                 >
                   Learn More
                 </button>
               </div>
 
-              <div className="flex min-h-0 flex-1 flex-col px-3 pb-4">
+              <div className="mt-2 flex min-h-0 flex-1 flex-col px-4 pb-5">
                 {feature.dashboard}
               </div>
             </article>

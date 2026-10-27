@@ -428,7 +428,7 @@ function Pricing() {
               src="/images/solutions-cloud-decoration.png"
               alt=""
               aria-hidden="true"
-              className="pointer-events-none absolute left-[42%] top-[64%] z-10 hidden h-16 w-16 -translate-x-1/2 object-contain lg:block"
+              className="pointer-events-none absolute left-[42%] top-[64%] z-10 hidden h-20 w-20 -translate-x-1/2 object-contain lg:block"
             />
             {/* Left Column: Copy */}
             <div>
