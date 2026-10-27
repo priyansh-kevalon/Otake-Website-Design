@@ -436,10 +436,10 @@ function Pricing() {
                 Product Features
               </span>
 
-              <h2 className="mt-4 text-[28px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[36px]">
+              <h2 className="mt-4 text-[32px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[42px] lg:text-[48px]">
                 Create a product.
                 <br />
-                <span className="text-neutral-400">It&apos;s easy with Otake.</span>
+                <span className="text-neutral-900">It&apos;s easy with Otake.</span>
               </h2>
 
               <p className="mt-4 max-w-[460px] text-[13.5px] leading-relaxed text-[#8B8A93]">
@@ -476,12 +476,12 @@ function Pricing() {
 
             {/* Right Column: Product preview */}
             <div className="flex justify-center">
-              <div className="w-full max-w-[368px]">
+              <div className="w-full max-w-[420px]">
                 <BrowserShell>
                   <img
                     src="/images/product-feature-preview.png"
                     alt="Otake product preview highlighting user experience and customization features"
-                    className="mx-[-16px] block h-auto w-[calc(100%+32px)] max-w-none rounded-[18px]"
+                    className="mx-[-18px] block h-auto w-[calc(100%+36px)] max-w-none rounded-[18px]"
                   />
                 </BrowserShell>
               </div>
