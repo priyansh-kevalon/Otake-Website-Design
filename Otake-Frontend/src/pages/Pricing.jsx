@@ -44,41 +44,41 @@ function Pricing() {
           <div className="relative mx-auto max-w-[680px] text-center">
             {/* Ambient decorative 3D accents */}
             <span
-              className="pointer-events-none absolute -left-2 top-1 hidden select-none sm:block lg:-left-16"
+              className="pointer-events-none absolute -left-10 top-16 hidden select-none sm:block lg:-left-40"
               aria-hidden="true"
             >
               <img
                 src="/images/6d78f5c25e29d1b3c3efb378a0895ab50206643b.png"
                 alt=""
-                width="72"
-                height="72"
-                className="h-[72px] w-[72px] object-contain"
+                width="84"
+                height="84"
+                className="h-[84px] w-[84px] object-contain"
               />
             </span>
             <span
-              className="pointer-events-none absolute -right-2 top-12 hidden select-none sm:block lg:-right-16"
+              className="pointer-events-none absolute -right-10 top-28 hidden select-none sm:block lg:-right-40"
               aria-hidden="true"
             >
               <img
                 src="/images/73d9b74f1e858692091fb4e1a35f610182e1e25f.png"
                 alt=""
-                width="68"
-                height="68"
-                className="h-[68px] w-[68px] object-contain"
+                width="80"
+                height="80"
+                className="h-[80px] w-[80px] object-contain"
               />
             </span>
 
-            <span className="inline-block rounded-[4px] bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
+            <span className="inline-block rounded-[4px] bg-[#FFE36A] px-4 py-1.5 text-[13px] font-semibold text-neutral-800">
               Pricing Plan
             </span>
 
-            <h1 className="mt-5 text-[32px] font-bold leading-[1.15] tracking-tight text-neutral-900 sm:text-[42px] md:text-[48px]">
+            <h1 className="mt-5 text-[38px] font-bold leading-[1.12] tracking-tight text-neutral-900 sm:text-[50px] md:text-[58px]">
               Pricing To Suit All
               <br />
               Business Sizes
             </h1>
 
-            <p className="mx-auto mt-4 max-w-[480px] text-[13.5px] leading-relaxed text-neutral-900 sm:text-[14.5px]">
+            <p className="mx-auto mt-4 max-w-[540px] text-[16px] leading-relaxed text-neutral-900 sm:text-[18px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <br className="hidden sm:inline" /> Vivamus non enim lacus.
             </p>
@@ -114,40 +114,43 @@ function Pricing() {
           </div>
 
           {/* ---------------- MAIN INTERACTIVE PRICING CARD ---------------- */}
-          <div className="relative mx-auto mt-12 max-w-[840px]">
-            <div className="relative z-10 overflow-hidden rounded-[28px] border border-neutral-200/80 bg-white shadow-[0_24px_60px_rgba(150,130,200,0.16)] sm:rounded-[36px]">
+          <div className="relative mx-auto mt-12 w-full max-w-[944px]">
+            <div className="relative z-10 flex overflow-hidden rounded-[28px] border border-neutral-200/80 bg-white shadow-[0_24px_60px_rgba(150,130,200,0.16)] sm:rounded-[36px] md:min-h-[725.59px] md:flex-col">
             {/* Dark Top Bar */}
             <div className="flex flex-col justify-between gap-6 bg-[#0D0C10] p-6 text-white sm:flex-row sm:items-center sm:p-8">
               <div>
-                <p className="text-[11.5px] font-semibold uppercase tracking-wider text-neutral-400">
+                <p className="text-[14px] font-semibold uppercase tracking-wider text-neutral-400 sm:text-[15px]">
                   Starter Plan
                 </p>
                 <div className="mt-1.5 flex items-baseline gap-1.5">
-                  <span className="text-[36px] font-bold tracking-tight text-white sm:text-[42px]">
-                    {price}
+                  <span className="text-[44px] font-bold tracking-tight text-white sm:text-[50px]">
+                    <span className="relative -top-3 mr-0.5 text-[20px] font-medium text-neutral-300 sm:text-[22px]">$</span>
+                    {price.slice(1)}
                   </span>
-                  <span className="text-[15px] font-medium text-neutral-400">/mo</span>
+                  <span className="text-[44px] font-medium text-white sm:text-[50px]">/mo</span>
                 </div>
-                <p className="mt-1 text-[12px] text-neutral-400">
+                <p className="mt-1 text-[14px] text-neutral-400">
                   {savings}
                 </p>
               </div>
 
-              <div className="sm:max-w-[280px]">
-                <p className="text-[13px] leading-relaxed text-neutral-300">
+              <div className="sm:max-w-[320px]">
+                <p className="text-[15px] leading-relaxed text-neutral-300 sm:text-[16px]">
                   For small teams and growing businesses who need powerful automation tools.
                 </p>
               </div>
 
               <div className="shrink-0">
-                <span className="inline-block rounded-full border border-neutral-700 bg-neutral-800/90 px-3.5 py-1 text-[11px] font-semibold text-neutral-200">
-                  Popular Plan
+                <span className="inline-flex items-center gap-2 rounded-md bg-[#211f27] px-4 py-2 text-[12px] font-medium text-neutral-200 sm:text-[13px]">
+                  <span>Discount</span>
+                  <span className="text-neutral-400" aria-hidden="true">~</span>
+                  <span className="text-neutral-400 line-through">$18</span>
                 </span>
               </div>
             </div>
 
             {/* Card Body: 2 Columns */}
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid flex-1 grid-cols-1 md:grid-cols-2">
               {/* Left Column: Feature Checkpoints & Testimonial */}
               <div className="flex flex-col justify-between border-b border-neutral-100 p-6 pt-12 sm:p-8 sm:pt-16 md:border-b-0 md:border-r">
                 <div>
