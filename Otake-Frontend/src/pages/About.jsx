@@ -145,22 +145,27 @@ function About() {
         <div className="mx-auto max-w-[1120px] px-6 sm:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-x-[120px] lg:gap-y-8">
             <div className="pl-4 sm:pl-6 lg:pl-32">
-              <span className="inline-block rounded-md bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
+              <span className="inline-block rounded-[4px] bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
                 Our Values
               </span>
-              <h2 className="mt-4 text-[28px] font-bold leading-tight tracking-tight text-neutral-900 sm:text-[34px]">
+              <h2 className="mt-5 text-[34px] font-bold leading-[1.12] tracking-tight text-neutral-900 sm:text-[40px] lg:text-[44px]">
                 And these are
                 <br />
                 our principles!
               </h2>
             </div>
-            <div className="space-y-3 text-[13.5px] leading-relaxed text-[#3F3B45]">
+            <div className="space-y-3 pt-2 text-[15px] leading-relaxed text-[#3F3B45] lg:pt-10">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
+                Lorem ipsum dolor sit amet, consectetur
+                <br />
+                adipiscing elit. Vivamus non enim lacus.
+                <br />
                 Nullam congue blandit quam, sit amet scelerisque.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Lorem ipsum dolor sit amet, consectetur
+                <br />
+                adipiscing elit.
               </p>
             </div>
           </div>
