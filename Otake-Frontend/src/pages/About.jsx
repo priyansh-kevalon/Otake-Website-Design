@@ -34,7 +34,7 @@ function About() {
               />
             </span>
 
-            <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
+            <span className="inline-block rounded-[4px] bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
               About Us
             </span>
 
