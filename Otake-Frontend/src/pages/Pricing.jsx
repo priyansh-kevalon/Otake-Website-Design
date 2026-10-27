@@ -149,12 +149,12 @@ function Pricing() {
             {/* Card Body: 2 Columns */}
             <div className="grid grid-cols-1 md:grid-cols-2">
               {/* Left Column: Feature Checkpoints & Testimonial */}
-              <div className="flex flex-col justify-between border-b border-neutral-100 p-6 sm:p-8 md:border-b-0 md:border-r">
+              <div className="flex flex-col justify-between border-b border-neutral-100 p-6 pt-12 sm:p-8 sm:pt-16 md:border-b-0 md:border-r">
                 <div>
                   <p className="text-[14px] font-bold text-neutral-900">
                     What&apos;s included:
                   </p>
-                  <ul className="mt-4 space-y-3.5 text-[13px] text-neutral-700">
+                  <ul className="mt-6 space-y-3.5 text-[13px] text-neutral-700">
                     {[
                       'Unlimited active projects',
                       '24/7 dedicated customer support',
@@ -418,7 +418,7 @@ function Pricing() {
       </section>
 
       {/* ---------------- 4. FEATURE SPOTLIGHT: Create a product ---------------- */}
-      <section className="otake-pricing-product-overview flex w-full items-center py-16 sm:py-24 lg:min-h-[760px]">
+      <section className="otake-pricing-product-overview flex w-full items-center pt-48 pb-16 sm:pt-56 sm:pb-24 lg:min-h-[760px]">
         <div className="mx-auto max-w-[944px] px-4 sm:px-6 lg:px-8">
           <div className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-24">
             <img
