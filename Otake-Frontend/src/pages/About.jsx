@@ -99,7 +99,7 @@ function About() {
               <br />
               we are here to help.
             </h2>
-            <p className="text-[13.5px] leading-relaxed text-[#8B8A93] sm:text-[14px]">
+            <p className="text-[15px] leading-relaxed text-[#8B8A93] sm:text-[16px]">
               Euismod aliquet odio cursus lacus, ut sit
               <br />
               suspendisse ultrices. Etiam enim risus faucibus
