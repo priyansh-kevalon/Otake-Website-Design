@@ -44,7 +44,7 @@ function About() {
               Large And Small
             </h1>
 
-            <p className="mx-auto mt-4 max-w-[480px] text-[13.5px] leading-relaxed text-[#8B8A93] sm:text-[14.5px]">
+            <p className="mx-auto mt-4 max-w-[480px] text-[13.5px] leading-relaxed text-neutral-900 sm:text-[14.5px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <br className="hidden sm:inline" /> Vivamus non enim lacus.
             </p>
