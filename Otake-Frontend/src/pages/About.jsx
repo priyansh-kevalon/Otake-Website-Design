@@ -52,19 +52,19 @@ function About() {
 
           {/* 3 Character Persona Cards */}
           <div className="mt-14 grid grid-cols-1 gap-6 sm:-mb-[52px] sm:grid-cols-3 lg:gap-8">
-            {/* Card 1: Curly hair with headphones & orange jacket */}
-            <div className="group relative flex aspect-square flex-col items-center justify-end overflow-hidden rounded-[20px] border-2 border-white/80 bg-[#E8F4FC] p-2 shadow-[0_16px_36px_rgba(180,210,240,0.35)] transition-transform duration-300 hover:-translate-y-1">
+            {/* Card 1: Red hair with headphones */}
+            <div className="group relative flex aspect-square flex-col items-center justify-end overflow-hidden rounded-[20px] border-2 border-white bg-[#FCEEF2] p-2 shadow-[0_16px_36px_rgba(245,180,200,0.35)] transition-transform duration-300 hover:-translate-y-1">
               <div className="relative flex h-full w-full items-end justify-center">
                 <img
-                  src="/images/2786fe25f4b989d98d13e7610dce4df13eaeb6da.png"
-                  alt="Creative team member with headphones"
+                  src="/images/c2c6e128aaea5e42ab32d4a6f02c0d8981c2454d.png"
+                  alt="Support specialist"
                   className="relative z-10 h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </div>
 
             {/* Card 2: Creative explosion / glasses character */}
-            <div className="group relative flex aspect-square flex-col items-center justify-end overflow-hidden rounded-[20px] border-2 border-white/80 bg-[#F1ECFE] p-2 shadow-[0_16px_36px_rgba(200,180,245,0.35)] transition-transform duration-300 hover:-translate-y-1">
+            <div className="group relative flex aspect-square flex-col items-center justify-end overflow-hidden rounded-[20px] border-2 border-white bg-[#F1ECFE] p-2 shadow-[0_16px_36px_rgba(200,180,245,0.35)] transition-transform duration-300 hover:-translate-y-1">
               <div className="relative flex h-full w-full items-end justify-center">
                 <img
                   src="/images/a785e06d39ad27b7b523a3d4f8c3b1f40cd7971b.png"
@@ -74,12 +74,12 @@ function About() {
               </div>
             </div>
 
-            {/* Card 3: Red hair with headphones */}
-            <div className="group relative flex aspect-square flex-col items-center justify-end overflow-hidden rounded-[20px] border-2 border-white/80 bg-[#FCEEF2] p-2 shadow-[0_16px_36px_rgba(245,180,200,0.35)] transition-transform duration-300 hover:-translate-y-1">
+            {/* Card 3: Curly hair with headphones & orange jacket */}
+            <div className="group relative flex aspect-square flex-col items-center justify-end overflow-hidden rounded-[20px] border-2 border-white bg-[#E8F4FC] p-2 shadow-[0_16px_36px_rgba(180,210,240,0.35)] transition-transform duration-300 hover:-translate-y-1">
               <div className="relative flex h-full w-full items-end justify-center">
                 <img
-                  src="/images/c2c6e128aaea5e42ab32d4a6f02c0d8981c2454d.png"
-                  alt="Support specialist"
+                  src="/images/2786fe25f4b989d98d13e7610dce4df13eaeb6da.png"
+                  alt="Creative team member with headphones"
                   className="relative z-10 h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
