@@ -288,15 +288,15 @@ function Contact() {
 
         <div className="relative mx-auto max-w-[640px] px-4 sm:px-6">
           <div className="text-center">
-            <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
+            <span className="inline-block rounded-[4px] bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
               Contact Us
             </span>
 
-            <h2 className="mt-4 text-[28px] font-bold tracking-tight text-neutral-900 sm:text-[36px]">
+            <h2 className="mt-4 text-[32px] font-bold tracking-tight text-neutral-900 sm:text-[40px]">
               Leave our team a message.
             </h2>
 
-            <p className="mx-auto mt-3 max-w-[480px] text-[13px] leading-relaxed text-[#8B8A93] sm:text-[14px]">
+            <p className="mx-auto mt-3 max-w-[480px] text-[13px] leading-relaxed text-neutral-900 sm:text-[14px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
               Nullam congue blandit quam, sit amet scelerisque.
             </p>
