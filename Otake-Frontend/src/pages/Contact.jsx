@@ -155,7 +155,7 @@ function Contact() {
       <section className="otake-about-hero otake-hero-color relative w-full pt-8 pb-16 sm:pt-12 sm:pb-24">
         <div className="relative mx-auto max-w-[1080px] px-4 sm:px-6 lg:px-8">
           <div className="relative mx-auto max-w-[680px] text-center">
-            <span className="inline-block rounded-full bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
+            <span className="inline-block rounded-[4px] bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">
               Contact Us
             </span>
 
@@ -170,15 +170,27 @@ function Contact() {
             {/* Checklist bullets */}
             <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[12.5px] text-neutral-900 sm:text-[13px]">
               <span className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-neutral-900 text-white">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
                 <span>Register users in seconds.</span>
               </span>
               <span className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-neutral-900 text-white">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
                 <span>Collect authorization via secure.</span>
               </span>
               <span className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-neutral-900 text-white">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
                 <span>Custom security controls.</span>
               </span>
             </div>
