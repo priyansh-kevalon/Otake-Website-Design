@@ -248,7 +248,7 @@ function About() {
             </p>
           </div>
 
-          <div className="mx-auto mt-10 grid max-w-[860px] grid-cols-1 items-center gap-12 md:mt-12 md:flex-1 md:grid-cols-[380px_360px] md:gap-[80px]">
+          <div className="mx-auto mt-10 grid max-w-[860px] grid-cols-1 items-center gap-12 md:mt-12 md:flex-1 md:grid-cols-[380px_360px] md:gap-[120px]">
             {/* Left Column: Milestones */}
             <div className="space-y-8 md:-translate-y-[17px] md:space-y-10">
               <div>

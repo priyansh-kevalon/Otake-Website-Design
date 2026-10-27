@@ -181,7 +181,7 @@ function FAQ() {
   }
 
   return (
-    <section id="faq" className="otake-faq relative w-full scroll-mt-6 overflow-hidden py-16 sm:py-24">
+    <section id="faq" className="otake-faq relative w-full scroll-mt-6 overflow-hidden pt-16 pb-24 sm:pt-24 sm:pb-32">
       <div className="relative mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-8">
         {/* Floating 3D Elements at Outer Edges */}
         <div className="absolute left-2 top-[120px] hidden xl:block">
