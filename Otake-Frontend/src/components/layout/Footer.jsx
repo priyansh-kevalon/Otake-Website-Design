@@ -218,7 +218,7 @@ function Footer({ onNavigate, isAboutPage = false }) {
     >
       <h2 className="sr-only">Otake footer</h2>
 
-      <div className="otake-footer relative mx-auto w-[98%] rounded-[24px] border border-white/[0.08] px-6 py-10 sm:px-10 sm:py-14 lg:px-16 xl:h-[988px] xl:pb-8 xl:pt-[140px]">
+      <div className="otake-footer relative mx-auto w-[98%] rounded-[24px] border border-white/[0.08] px-6 py-10 sm:px-10 sm:py-14 lg:px-16 xl:min-h-[988px] xl:pb-8 xl:pt-[140px]">
         <PerspectiveWireframe />
 
         {/* ---------------- 1. TOP TIER: 3 Feature Highlights ---------------- */}
