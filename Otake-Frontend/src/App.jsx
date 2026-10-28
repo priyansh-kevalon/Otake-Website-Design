@@ -66,22 +66,22 @@ function App() {
       const hash = window.location.hash.toLowerCase()
       if (hash === '#about') {
         setCurrentPage('about')
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
       } else if (hash === '#pricing') {
         setCurrentPage('pricing')
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
       } else if (hash === '#contact') {
         setCurrentPage('contact')
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
       } else if (hash === '#login' || hash === '#signin') {
         setCurrentPage('login')
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
       } else if (hash === '#register' || hash === '#signup' || hash === '#try-for-free') {
         setCurrentPage('register')
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
       } else if (hash === '#home' || hash === '#top' || !hash) {
         setCurrentPage('home')
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
       }
     }
 
@@ -92,7 +92,9 @@ function App() {
   const handleNavigate = (page) => {
     setCurrentPage(page)
     window.location.hash = page === 'home' ? '#home' : `#${page}`
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    }, 0)
   }
 
   return (
