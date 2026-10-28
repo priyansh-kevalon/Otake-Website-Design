@@ -97,7 +97,7 @@ function Contact() {
   return (
     <div className="w-full">
       {/* ---------------- 1. CONTACT HERO & CHANNEL CARDS ---------------- */}
-      <section className="otake-contact-hero-gradient relative w-full pt-20 pb-16 sm:pt-32 sm:pb-24">
+      <section className="otake-contact-hero-gradient relative w-full pt-6 pb-12 sm:pt-16 sm:pb-20 lg:pt-24">
         <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div className="relative mx-auto max-w-[680px] text-center">
             <span className="inline-block rounded-[4px] bg-[#FFE36A] px-3.5 py-1 text-[11px] font-semibold text-neutral-800">

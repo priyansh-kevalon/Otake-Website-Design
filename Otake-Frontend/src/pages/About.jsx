@@ -5,46 +5,46 @@ function About() {
   return (
     <div className="w-full">
       {/* ---------------- 1. HERO SECTION ---------------- */}
-      <section className="otake-about-hero otake-about-hero-deep relative z-10 w-full pt-6 pb-12 sm:pt-24 sm:pb-0">
-        <div className="relative mx-auto flow-root w-[98%] max-w-[1380px] px-6 sm:px-8">
+      <section className="otake-about-hero otake-about-hero-deep relative z-10 w-full pt-6 pb-8 sm:pt-16 sm:pb-0 lg:pt-24">
+        <div className="relative mx-auto flow-root w-[98%] max-w-[1380px] px-4 sm:px-6 lg:px-8">
           <div className="relative mx-auto max-w-[680px] text-center">
             {/* Floating 3D accents around heading */}
             <span
-              className="pointer-events-none absolute -left-12 top-16 hidden select-none sm:block lg:-left-40 lg:top-22"
+              className="pointer-events-none absolute -left-6 top-10 hidden select-none sm:block lg:-left-32 lg:top-16"
               aria-hidden="true"
             >
               <img
                 src="/images/6d78f5c25e29d1b3c3efb378a0895ab50206643b.png"
                 alt=""
-                width="92"
-                height="92"
-                className="h-[92px] w-[92px] object-contain"
+                width="80"
+                height="80"
+                className="h-[70px] w-[70px] object-contain lg:h-[92px] lg:w-[92px]"
               />
             </span>
             <span
-              className="pointer-events-none absolute -right-12 top-36 hidden select-none sm:block lg:-right-40 lg:top-40"
+              className="pointer-events-none absolute -right-6 top-24 hidden select-none sm:block lg:-right-32 lg:top-28"
               aria-hidden="true"
             >
               <img
                 src="/images/73d9b74f1e858692091fb4e1a35f610182e1e25f.png"
                 alt=""
-                width="88"
-                height="88"
-                className="h-[88px] w-[88px] object-contain"
+                width="76"
+                height="76"
+                className="h-[66px] w-[66px] object-contain lg:h-[88px] lg:w-[88px]"
               />
             </span>
 
-            <span className="inline-block rounded-[4px] bg-[#FFE36A] px-3.5 py-1 text-[12px] font-semibold text-neutral-800">
+            <span className="inline-block rounded-[4px] bg-[#FFE36A] px-3 py-1 text-[11px] font-semibold text-neutral-800 sm:px-3.5 sm:text-[12px]">
               About Us
             </span>
 
-            <h1 className="mt-4 text-[38px] font-bold leading-[1.15] tracking-tight text-neutral-900 sm:text-[48px] md:text-[56px] lg:text-[62px]">
+            <h1 className="mt-3 text-[30px] font-bold leading-[1.15] tracking-tight text-neutral-900 sm:mt-4 sm:text-[42px] md:text-[52px] lg:text-[62px]">
               Empowering Businesses
               <br />
               Large And Small
             </h1>
 
-            <p className="mx-auto mt-4 max-w-[520px] text-[15px] leading-relaxed text-neutral-900 sm:text-[16px]">
+            <p className="mx-auto mt-3 max-w-[520px] text-[13px] leading-relaxed text-neutral-900 sm:mt-4 sm:text-[14px] md:text-[15px] lg:text-[16px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <br className="hidden sm:inline" /> Vivamus non enim lacus.
             </p>
