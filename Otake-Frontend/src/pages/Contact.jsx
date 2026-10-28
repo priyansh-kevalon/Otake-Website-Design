@@ -220,7 +220,7 @@ function Contact() {
       {/* ---------------- 2. MESSAGE FORM SECTION ---------------- */}
       <section className="relative w-full bg-white py-16 sm:py-24">
         {/* Ambient floating 3D elements on sides */}
-        <div className="pointer-events-none absolute left-[calc(50%-440px)] top-1/3 hidden translate-y-16 xl:block">
+        <div className="pointer-events-none absolute left-[calc(50%-440px)] top-1/3 z-10 hidden translate-y-16 xl:block">
           <img
             src="/images/contact-form-box.png"
             alt=""
@@ -229,7 +229,7 @@ function Contact() {
             className="h-20 w-20 object-contain"
           />
         </div>
-        <div className="pointer-events-none absolute right-[calc(50%-440px)] top-1/2 hidden translate-y-16 xl:block">
+        <div className="pointer-events-none absolute right-[calc(50%-440px)] top-1/2 z-10 hidden translate-y-16 xl:block">
           <img
             src="/images/contact-form-vr-headset.png"
             alt=""
