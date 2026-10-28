@@ -77,21 +77,41 @@ function Contact() {
   const supportPhone = import.meta.env.VITE_SUPPORT_PHONE || '+1 (555) 000-1234'
   const supportPhoneHref = `tel:${supportPhone.replace(/[^\d+]/g, '')}`
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        service: 'Online Shopping Assistant',
-        message: '',
-        agreed: false,
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+        }),
       })
-    }, 4000)
+      if (response.ok) {
+        setSubmitted(true)
+        setTimeout(() => {
+          setSubmitted(false)
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            service: 'Online Shopping Assistant',
+            message: '',
+            agreed: false,
+          })
+        }, 4000)
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+    }
   }
 
   return (

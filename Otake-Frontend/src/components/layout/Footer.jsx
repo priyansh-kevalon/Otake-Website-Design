@@ -199,12 +199,28 @@ function Footer({ onNavigate, isAboutPage = false }) {
     }
   }, [])
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     const value = email.trim()
     if (!value) return
-    setStatus(`Thanks! We'll send your free trial details to ${value}.`)
-    setEmail('')
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: value }),
+      })
+      if (response.ok) {
+        setStatus(`Thanks! We'll send your free trial details to ${value}.`)
+        setEmail('')
+      } else {
+        const data = await response.json()
+        setStatus(data.message || 'Error subscribing')
+      }
+    } catch (error) {
+      setStatus('Error subscribing')
+    }
     if (resetTimer.current) clearTimeout(resetTimer.current)
     resetTimer.current = setTimeout(() => setStatus(''), 4000)
   }
