@@ -50,3 +50,8 @@ export const loginUser = async (req, res) => {
     throw new Error("Invalid email or password");
   }
 };
+
+export const getUsers = async (req, res) => {
+  const users = await User.find({}).select("-password").sort({ createdAt: -1 });
+  res.json(users);
+};

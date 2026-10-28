@@ -23,3 +23,8 @@ export const subscribeNewsletter = async (req, res) => {
     subscriber,
   });
 };
+
+export const getSubscribers = async (req, res) => {
+  const subscribers = await Newsletter.find({}).sort({ createdAt: -1 });
+  res.json(subscribers);
+};

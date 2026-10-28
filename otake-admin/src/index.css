@@ -1,0 +1,71 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+    @apply text-neutral-900;
+  }
+}
+
+.otake-admin-bg {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(
+      ellipse at 88% 12%,
+      rgba(255, 205, 230, 0.5) 0%,
+      transparent 46%
+    ),
+    radial-gradient(
+      ellipse at 92% 90%,
+      rgba(206, 195, 255, 0.5) 0%,
+      transparent 44%
+    ),
+    radial-gradient(
+      ellipse at 58% 50%,
+      rgba(255, 220, 222, 0.3) 0%,
+      transparent 45%
+    ),
+    linear-gradient(
+      100deg,
+      #ffffff 0%,
+      #fffdfb 38%,
+      #fff7f8 62%,
+      #fdf6ff 100%
+    );
+}
+
+.otake-admin-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(255, 205, 225, 0.1) 0deg 0.25deg,
+    transparent 0.25deg 6deg
+  );
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 0%, transparent 70%);
+  mask-image: radial-gradient(circle at 50% 50%, #000 0%, transparent 70%);
+}
+
+.otake-admin-panel {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(
+      ellipse at 85% 10%,
+      rgba(255, 215, 235, 0.4) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 90% 95%,
+      rgba(225, 215, 255, 0.4) 0%,
+      transparent 48%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #fffdfb 40%, #fdf6ff 100%);
+}
