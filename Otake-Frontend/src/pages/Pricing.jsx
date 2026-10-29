@@ -114,34 +114,34 @@ function Pricing() {
           </div>
 
           {/* ---------------- MAIN INTERACTIVE PRICING CARD ---------------- */}
-          <div className="relative mx-auto mt-12 w-full max-w-[944px]">
-            <div className="relative z-10 flex rounded-[28px] border border-neutral-200/80 bg-white shadow-[0_24px_60px_rgba(150,130,200,0.16)] sm:rounded-[36px] md:min-h-[725.59px] md:flex-col">
+          <div className="relative mx-auto mt-12 w-full max-w-[944px] overflow-x-hidden px-2 sm:px-0">
+            <div className="relative z-10 flex flex-col rounded-[20px] border border-neutral-200/80 bg-white shadow-[0_24px_60px_rgba(150,130,200,0.16)] sm:rounded-[28px] md:min-h-[725.59px] md:rounded-[36px]">
             {/* Dark Top Bar */}
-            <div className="m-2 flex flex-col justify-between gap-6 rounded-[18px] bg-[#0D0C10] p-5 text-white sm:m-3 sm:flex-row sm:items-center sm:rounded-[24px] sm:p-7">
+            <div className="m-2 flex flex-col justify-between gap-4 rounded-[16px] bg-[#0D0C10] p-4 text-white sm:m-3 sm:flex-row sm:items-center sm:gap-6 sm:rounded-[18px] sm:p-5 md:rounded-[24px] md:p-7">
               <div>
                 <p className="text-[14px] font-semibold uppercase tracking-wider text-neutral-400 sm:text-[15px]">
                   Starter Plan
                 </p>
                 <div className="mt-1.5 flex items-baseline gap-1.5">
-                  <span className="text-[44px] font-bold tracking-tight text-white sm:text-[50px]">
-                    <span className="relative -top-3 mr-0.5 text-[20px] font-medium text-neutral-300 sm:text-[22px]">$</span>
+                  <span className="text-[36px] font-bold tracking-tight text-white sm:text-[44px] md:text-[50px]">
+                    <span className="relative -top-2 mr-0.5 text-[18px] font-medium text-neutral-300 sm:-top-3 sm:text-[20px] md:text-[22px]">$</span>
                     {price.slice(1)}
                   </span>
-                  <span className="text-[44px] font-medium text-white sm:text-[50px]">/mo</span>
+                  <span className="text-[36px] font-medium text-white sm:text-[44px] md:text-[50px]">/mo</span>
                 </div>
                 <p className="mt-1 text-[14px] text-neutral-400">
                   {savings}
                 </p>
               </div>
 
-              <div className="sm:max-w-[320px]">
-                <p className="text-[15px] leading-relaxed text-neutral-300 sm:text-[16px]">
+              <div className="w-full sm:max-w-[320px]">
+                <p className="text-[13px] leading-relaxed text-neutral-300 sm:text-[15px] md:text-[16px]">
                   For small teams and growing businesses who need powerful automation tools.
                 </p>
               </div>
 
               <div className="shrink-0">
-                <span className="inline-flex items-center gap-2 rounded-md bg-[#211f27] px-4 py-2 text-[12px] font-medium text-neutral-200 sm:text-[13px]">
+                <span className="inline-flex items-center gap-2 rounded-md bg-[#211f27] px-3 py-1.5 text-[11px] font-medium text-neutral-200 sm:px-4 sm:py-2 sm:text-[12px] md:text-[13px]">
                   <span>Discount</span>
                   <span className="text-neutral-400" aria-hidden="true">~</span>
                   <span className="text-neutral-400 line-through">$18</span>
@@ -152,7 +152,7 @@ function Pricing() {
             {/* Card Body: 2 Columns */}
             <div className="grid flex-1 grid-cols-1 md:grid-cols-2">
               {/* Left Column: Feature Checkpoints & Testimonial */}
-              <div className="flex flex-col justify-between border-b border-neutral-100 p-6 pt-12 sm:p-8 sm:pt-16 md:border-b-0 md:border-r">
+              <div className="flex flex-col justify-between border-b border-neutral-100 p-4 pt-8 sm:p-6 sm:pt-12 md:border-b-0 md:border-r md:p-8 md:pt-16">
                 <div>
                   <p className="text-[14px] font-bold text-neutral-900">
                     What&apos;s included:
@@ -200,7 +200,7 @@ function Pricing() {
               </div>
 
               {/* Right Column: Checkout / Signup Form */}
-              <div className="rounded-[24px] bg-[#FAFAFC] p-5 sm:p-6 md:rounded-l-[24px] md:rounded-r-[36px]">
+              <div className="rounded-[18px] bg-[#FAFAFC] p-4 sm:rounded-[24px] sm:p-5 md:rounded-l-[24px] md:rounded-r-[36px] md:p-6">
                 <div className="flex items-center gap-2">
                   <span className="flex h-5 w-5 items-center justify-center rounded-md bg-orange-100 text-orange-600">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
