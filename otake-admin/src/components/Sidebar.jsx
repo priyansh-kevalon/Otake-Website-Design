@@ -1,5 +1,5 @@
 ﻿import { NavLink } from "react-router-dom";
-import { LayoutDashboard, Users, Mail, Newspaper, LogOut } from "lucide-react";
+import { LayoutDashboard, Users, Mail, Newspaper, FileText, LogOut } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
 const links = [
@@ -7,6 +7,7 @@ const links = [
   { to: "/users", label: "Users", icon: Users },
   { to: "/contacts", label: "Contacts", icon: Mail },
   { to: "/newsletter", label: "Newsletter", icon: Newspaper },
+  { to: "/template-applications", label: "Template Applications", icon: FileText },
 ];
 
 const Sidebar = () => {

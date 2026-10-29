@@ -4,7 +4,7 @@ function Hero() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     const value = email.trim()
     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
@@ -17,7 +17,24 @@ function Hero() {
       setMessage('Please enter a valid email address.')
       return
     }
-    setMessage(`Thanks! We'll send your free trial details to ${value}.`)
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: value }),
+      })
+      if (response.ok) {
+        setMessage(`Thanks! We'll send your free trial details to ${value}.`)
+        setEmail('')
+      } else {
+        const data = await response.json()
+        setMessage(data.message || 'Error subscribing')
+      }
+    } catch (error) {
+      setMessage('Error subscribing')
+    }
   }
 
   return (

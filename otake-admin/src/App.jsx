@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import Contacts from "./pages/Contacts";
 import Newsletter from "./pages/Newsletter";
+import TemplateApplications from "./pages/TemplateApplications";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/users" element={<Users />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/newsletter" element={<Newsletter />} />
+              <Route path="/template-applications" element={<TemplateApplications />} />
             </Route>
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />

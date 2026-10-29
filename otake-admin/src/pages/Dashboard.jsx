@@ -1,6 +1,6 @@
 ﻿import { useEffect, useState } from "react";
 import api from "../utils/axios";
-import { Users, Mail, Newspaper } from "lucide-react";
+import { Users, Mail, Newspaper, FileText } from "lucide-react";
 
 const Card = ({ title, value, icon: Icon }) => (
   <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-white/60 shadow-[0_10px_40px_rgba(30,8,25,0.04)] p-6 flex items-center justify-between">
@@ -15,21 +15,23 @@ const Card = ({ title, value, icon: Icon }) => (
 );
 
 const Dashboard = () => {
-  const [stats, setStats] = useState({ users: 0, contacts: 0, newsletter: 0 });
+  const [stats, setStats] = useState({ users: 0, contacts: 0, newsletter: 0, applications: 0 });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const [usersRes, contactsRes, newsRes] = await Promise.allSettled([
+        const [usersRes, contactsRes, newsRes, appsRes] = await Promise.allSettled([
           api.get("/auth/users").catch(() => ({ data: [] })),
           api.get("/contact").catch(() => ({ data: [] })),
           api.get("/newsletter").catch(() => ({ data: [] })),
+          api.get("/template-applications").catch(() => ({ data: [] })),
         ]);
         setStats({
           users: usersRes.value?.data?.length || 0,
           contacts: contactsRes.value?.data?.length || 0,
           newsletter: newsRes.value?.data?.length || 0,
+          applications: appsRes.value?.data?.length || 0,
         });
       } catch (error) {
         console.error(error);
@@ -57,10 +59,11 @@ const Dashboard = () => {
         <h1 className="mt-3 text-xl font-semibold text-neutral-900">Dashboard</h1>
         <p className="text-neutral-500 text-sm mt-1">Overview of your website activity</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <Card title="Total Users" value={stats.users} icon={Users} />
         <Card title="Contact Messages" value={stats.contacts} icon={Mail} />
         <Card title="Newsletter Subscribers" value={stats.newsletter} icon={Newspaper} />
+        <Card title="Template Applications" value={stats.applications} icon={FileText} />
       </div>
     </div>
   );

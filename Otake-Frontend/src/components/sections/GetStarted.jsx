@@ -101,54 +101,230 @@ function FacetedMeshBackground() {
   )
 }
 
+import { useState } from 'react'
+
 function GetStarted() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    companyName: '',
+    website: '',
+    role: '',
+    message: '',
+  })
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/template-applications', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      if (response.ok) {
+        setSubmitted(true)
+        setTimeout(() => {
+          setSubmitted(false)
+          setIsOpen(false)
+          setFormData({
+            fullName: '',
+            email: '',
+            phone: '',
+            companyName: '',
+            website: '',
+            role: '',
+            message: '',
+          })
+        }, 3000)
+      }
+    } catch (error) {
+      console.error('Error submitting application:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
-    <section id="try-for-free" className="relative w-full scroll-mt-6 bg-white px-4 pb-20 pt-20 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
-      <div className="relative mx-auto w-full max-w-[840px]">
-        {/* Top Floating Otake Badge (half above card) */}
-        <div className="absolute -top-7 left-1/2 z-20 -translate-x-1/2 sm:-top-8">
-          <OtakeIconBadge />
-        </div>
+    <>
+      <section id="try-for-free" className="relative w-full scroll-mt-6 bg-white px-4 pb-20 pt-20 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
+        <div className="relative mx-auto w-full max-w-[840px]">
+          {/* Top Floating Otake Badge (half above card) */}
+          <div className="absolute -top-7 left-1/2 z-20 -translate-x-1/2 sm:-top-8">
+            <OtakeIconBadge />
+          </div>
 
-        {/* Main Dark Card Container */}
-        <div className="relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-[#0B0A0E] px-6 pb-12 pt-16 text-center shadow-[0_24px_60px_-15px_rgba(0,0,0,0.5)] sm:rounded-[36px] sm:px-12 sm:pb-16 sm:pt-20">
-          {/* Faceted Mesh Background */}
-          <FacetedMeshBackground />
+          {/* Main Dark Card Container */}
+          <div className="relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-[#0B0A0E] px-6 pb-12 pt-16 text-center shadow-[0_24px_60px_-15px_rgba(0,0,0,0.5)] sm:rounded-[36px] sm:px-12 sm:pb-16 sm:pt-20">
+            {/* Faceted Mesh Background */}
+            <FacetedMeshBackground />
 
-          {/* Card Content */}
-          <div className="relative z-10 mx-auto max-w-[620px]">
-            <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-white sm:text-[38px] md:text-[42px]">
-              Get Started With Otake.
-            </h2>
+            {/* Card Content */}
+            <div className="relative z-10 mx-auto max-w-[620px]">
+              <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-white sm:text-[38px] md:text-[42px]">
+                Get Started With Otake.
+              </h2>
 
-            <p className="mx-auto mt-3 max-w-[500px] text-[12.5px] leading-relaxed text-[#8B8A93] sm:mt-4 sm:text-[14px]">
-              Explore a new realm of efficiency and success with our cutting-edge SaaS.
-            </p>
+              <p className="mx-auto mt-3 max-w-[500px] text-[12.5px] leading-relaxed text-[#8B8A93] sm:mt-4 sm:text-[14px]">
+                Explore a new realm of efficiency and success with our cutting-edge SaaS.
+              </p>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1.5 text-[13px] font-semibold text-white sm:mt-7 sm:gap-x-3 sm:text-[14px]">
-              <span>120 Employes</span>
-              <span className="text-neutral-500" aria-hidden="true">
-                •
-              </span>
-              <span>$31.5M Raised</span>
-              <span className="text-neutral-500" aria-hidden="true">
-                •
-              </span>
-              <span>7 Years old</span>
-            </div>
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1.5 text-[13px] font-semibold text-white sm:mt-7 sm:gap-x-3 sm:text-[14px]">
+                <span>120 Employes</span>
+                <span className="text-neutral-500" aria-hidden="true">
+                  •
+                </span>
+                <span>$31.5M Raised</span>
+                <span className="text-neutral-500" aria-hidden="true">
+                  •
+                </span>
+                <span>7 Years old</span>
+              </div>
 
-            <div className="mt-7 sm:mt-8">
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-lg bg-white px-5 py-2.5 text-[12px] font-medium tracking-tight text-[#111015] transition-all hover:bg-neutral-100 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
-              >
-                Apply Now ~ Otake Template
-              </a>
+              <div className="mt-7 sm:mt-8">
+                <button
+                  onClick={() => setIsOpen(true)}
+                  className="inline-flex items-center justify-center rounded-lg bg-white px-5 py-2.5 text-[12px] font-medium tracking-tight text-[#111015] transition-all hover:bg-neutral-100 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+                >
+                  Apply Now ~ Otake Template
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {isOpen && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
+          <div className="absolute inset-0 bg-black/60" onClick={() => !loading && setIsOpen(false)} />
+          <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-200">
+              <h3 className="text-lg font-semibold text-neutral-900">Apply for Otake Template</h3>
+              <button
+                onClick={() => !loading && setIsOpen(false)}
+                className="text-neutral-500 hover:text-neutral-900"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </button>
+            </div>
+            {submitted ? (
+              <div className="px-6 py-10 text-center">
+                <div className="mx-auto w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-green-600">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-neutral-900 mb-2">Application Submitted!</h4>
+                <p className="text-sm text-neutral-600">We'll get back to you soon.</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="px-6 py-5 space-y-4">
+                <div>
+                  <label className="text-sm font-medium text-neutral-700">Full Name *</label>
+                  <input
+                    type="text"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    required
+                    className="mt-1 w-full h-10 px-3 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-purple-100 focus:border-purple-400"
+                  />
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <label className="text-sm font-medium text-neutral-700">Email *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="mt-1 w-full h-10 px-3 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-purple-100 focus:border-purple-400"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium text-neutral-700">Phone *</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                      className="mt-1 w-full h-10 px-3 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-purple-100 focus:border-purple-400"
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <label className="text-sm font-medium text-neutral-700">Company Name</label>
+                    <input
+                      type="text"
+                      name="companyName"
+                      value={formData.companyName}
+                      onChange={handleChange}
+                      className="mt-1 w-full h-10 px-3 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-purple-100 focus:border-purple-400"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium text-neutral-700">Website</label>
+                    <input
+                      type="url"
+                      name="website"
+                      value={formData.website}
+                      onChange={handleChange}
+                      placeholder="https://"
+                      className="mt-1 w-full h-10 px-3 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-purple-100 focus:border-purple-400"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-neutral-700">Role/Designation</label>
+                  <input
+                    type="text"
+                    name="role"
+                    value={formData.role}
+                    onChange={handleChange}
+                    className="mt-1 w-full h-10 px-3 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-purple-100 focus:border-purple-400"
+                  />
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-neutral-700">Message *</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows="4"
+                    className="mt-1 w-full px-3 py-2 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-purple-100 focus:border-purple-400"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full h-10 bg-neutral-900 text-white rounded-lg text-sm font-medium hover:bg-neutral-800 disabled:opacity-50"
+                >
+                  {loading ? 'Submitting...' : 'Submit Application'}
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 

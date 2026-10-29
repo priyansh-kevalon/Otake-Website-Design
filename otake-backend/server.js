@@ -5,6 +5,7 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
 import newsletterRoutes from "./routes/newsletterRoutes.js";
+import templateApplicationRoutes from "./routes/templateApplicationRoutes.js";
 import { errorHandler, notFound } from "./middlewares/errorHandler.js";
 
 dotenv.config();
@@ -28,6 +29,7 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/newsletter", newsletterRoutes);
+app.use("/api/template-applications", templateApplicationRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
