@@ -7,6 +7,11 @@ import Pricing from './pages/Pricing.jsx'
 import Contact from './pages/Contact.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
+import StartupSupport from './pages/StartupSupport.jsx'
+import GrowthAI from './pages/GrowthAI.jsx'
+import BusinessSupport from './pages/BusinessSupport.jsx'
+import Shipping from './pages/Shipping.jsx'
+import Blog from './pages/Blog.jsx'
 
 function BackToTopButton() {
   const [visible, setVisible] = useState(false)
@@ -58,6 +63,11 @@ function App() {
     if (hash === '#contact') return 'contact'
     if (hash === '#login' || hash === '#signin') return 'login'
     if (hash === '#register' || hash === '#signup' || hash === '#try-for-free') return 'register'
+    if (hash === '#startup-support') return 'startup-support'
+    if (hash === '#growth-ai') return 'growth-ai'
+    if (hash === '#business-support') return 'business-support'
+    if (hash === '#shipping') return 'shipping'
+    if (hash === '#blog') return 'blog'
     return 'home'
   })
 
@@ -78,6 +88,21 @@ function App() {
         setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
       } else if (hash === '#register' || hash === '#signup' || hash === '#try-for-free') {
         setCurrentPage('register')
+        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
+      } else if (hash === '#startup-support') {
+        setCurrentPage('startup-support')
+        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
+      } else if (hash === '#growth-ai') {
+        setCurrentPage('growth-ai')
+        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
+      } else if (hash === '#business-support') {
+        setCurrentPage('business-support')
+        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
+      } else if (hash === '#shipping') {
+        setCurrentPage('shipping')
+        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
+      } else if (hash === '#blog') {
+        setCurrentPage('blog')
         setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
       } else if (hash === '#home' || hash === '#top' || !hash) {
         setCurrentPage('home')
@@ -106,6 +131,11 @@ function App() {
         {currentPage === 'contact' && <Contact />}
         {currentPage === 'login' && <Login onNavigate={handleNavigate} />}
         {currentPage === 'register' && <Register onNavigate={handleNavigate} />}
+        {currentPage === 'startup-support' && <StartupSupport onNavigate={handleNavigate} />}
+        {currentPage === 'growth-ai' && <GrowthAI onNavigate={handleNavigate} />}
+        {currentPage === 'business-support' && <BusinessSupport onNavigate={handleNavigate} />}
+        {currentPage === 'shipping' && <Shipping onNavigate={handleNavigate} />}
+        {currentPage === 'blog' && <Blog onNavigate={handleNavigate} />}
         {currentPage === 'home' && <Home />}
       </main>
       <Footer onNavigate={handleNavigate} isAboutPage={currentPage === 'about'} />

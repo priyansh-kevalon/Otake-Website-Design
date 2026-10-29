@@ -15,14 +15,14 @@ const PAGE_LINKS = [
 ]
 
 const SOLUTION_LINKS = [
-  { label: 'Startup Support', href: '#solutions' },
-  { label: 'Growth AI', href: '#growth', badge: true },
-  { label: 'Business Support', href: '#features' },
-  { label: 'Shipping', href: '#shipping' },
+  { label: 'Startup Support', href: '#startup-support', page: 'startup-support' },
+  { label: 'Growth AI', href: '#growth-ai', page: 'growth-ai', badge: true },
+  { label: 'Business Support', href: '#business-support', page: 'business-support' },
+  { label: 'Shipping', href: '#shipping', page: 'shipping' },
 ]
 
 const RESOURCE_LINKS = [
-  { label: 'Blog', href: '#blog' },
+  { label: 'Blog', href: '#blog', page: 'blog' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Get Started', href: '#try-for-free' },
   { label: 'Contact', href: '#contact', badge: true },
