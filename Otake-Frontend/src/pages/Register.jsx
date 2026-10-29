@@ -83,7 +83,7 @@ function Register({ onNavigate }) {
   const [rememberMe, setRememberMe] = useState(false)
   const [error, setError] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setError('')
 
@@ -107,8 +107,30 @@ function Register({ onNavigate }) {
       setError('Passwords do not match.')
       return
     }
-    // No actual auth implementation - just validation per requirements
-    setError('Registration functionality is not configured in this environment.')
+
+    try {
+      const nameParts = name.trim().split(' ')
+      const firstName = nameParts[0] || name
+      const lastName = nameParts.slice(1).join(' ') || ''
+      const response = await fetch('http://127.0.0.1:5000/api/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ firstName, lastName, email, password }),
+      })
+      const data = await response.json()
+      if (response.ok) {
+        setError('Registration successful! You can now login.')
+        setTimeout(() => {
+          if (onNavigate) onNavigate('login')
+        }, 1500)
+      } else {
+        setError(data.message || 'Registration failed')
+      }
+    } catch (error) {
+      setError('Error connecting to server')
+    }
   }
 
   const handleGoogleSignIn = () => {

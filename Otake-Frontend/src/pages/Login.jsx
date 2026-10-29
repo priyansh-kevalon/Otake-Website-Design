@@ -37,12 +37,31 @@ function Login({ onNavigate }) {
   const [rememberMe, setRememberMe] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setSubmitted(true)
-    setTimeout(() => {
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      })
+      const data = await response.json()
+      if (response.ok) {
+        localStorage.setItem('otake_token', data.token)
+        localStorage.setItem('otake_user', JSON.stringify(data))
+        setSubmitted(false)
+        if (onNavigate) onNavigate('home')
+      } else {
+        setSubmitted(false)
+        alert(data.message || 'Login failed')
+      }
+    } catch (error) {
       setSubmitted(false)
-    }, 4000)
+      alert('Error connecting to server')
+    }
   }
 
   return (
