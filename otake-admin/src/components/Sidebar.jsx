@@ -1,5 +1,5 @@
 ﻿import { NavLink } from "react-router-dom";
-import { LayoutDashboard, Users, Mail, Newspaper, FileText, LogOut, X } from "lucide-react";
+import { LayoutDashboard, Users, Mail, Newspaper, FileText, LogOut, X, Globe } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
 const links = [
@@ -67,7 +67,17 @@ const Sidebar = ({ isOpen, onClose }) => {
             );
           })}
         </nav>
-        <div className="p-3 border-t border-white/10">
+        <div className="p-3 border-t border-white/10 space-y-1">
+          <button
+            onClick={() => {
+              onClose?.();
+              window.location.href = "http://localhost:5173";
+            }}
+            className="flex items-center gap-3 w-full px-3 py-2 rounded-lg text-sm font-medium text-white/60 hover:bg-white/[0.05] hover:text-white transition"
+          >
+            <Globe size={18} />
+            Back to Website
+          </button>
           <button
             onClick={handleLogout}
             className="flex items-center gap-3 w-full px-3 py-2 rounded-lg text-sm font-medium text-white/60 hover:bg-red-500/10 hover:text-red-400 transition"
