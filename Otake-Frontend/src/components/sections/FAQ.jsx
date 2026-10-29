@@ -245,7 +245,12 @@ function FAQ() {
             {currentCategory.questions.map((item, idx) => {
               const isOpen = !!openIndexes[idx]
               return (
-                <div key={idx} className="py-4 first:pt-0 last:pb-0">
+                <div
+                  key={idx}
+                  className="py-4 first:pt-0 last:pb-0"
+                  onMouseEnter={() => setOpenIndexes((prev) => ({ ...prev, [idx]: true }))}
+                  onMouseLeave={() => setOpenIndexes((prev) => ({ ...prev, [idx]: false }))}
+                >
                   <button
                     type="button"
                     onClick={() => toggleAccordion(idx)}
