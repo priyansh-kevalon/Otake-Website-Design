@@ -223,7 +223,7 @@ function ProductFeatures() {
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid w-full grid-cols-1 justify-items-center gap-6 sm:mt-20 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:mt-20 xl:grid-cols-[repeat(3,440px)]">
+        <div className="mx-auto mt-16 grid w-full grid-cols-1 justify-items-center gap-6 sm:mt-20 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:mt-20 xl:grid-cols-[repeat(3,minmax(0,440px))]">
           {FEATURES.map((feature) => (
             <article
               key={feature.key}

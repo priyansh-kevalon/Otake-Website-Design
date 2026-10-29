@@ -98,9 +98,9 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <Header currentPage={currentPage} onNavigate={handleNavigate} />
-      <main id="main-content">
+      <main id="main-content" className="overflow-x-hidden">
         {currentPage === 'about' && <About />}
         {currentPage === 'pricing' && <Pricing />}
         {currentPage === 'contact' && <Contact />}

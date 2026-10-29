@@ -229,7 +229,7 @@ function Footer({ onNavigate, isAboutPage = false }) {
   return (
     <footer
       id="contact"
-      className={`w-full scroll-mt-6 pb-3 sm:pb-4 ${
+      className={`w-full scroll-mt-6 overflow-x-hidden pb-3 sm:pb-4 ${
         isAboutPage ? 'pt-0' : 'pt-12 sm:pt-16'
       }`}
     >

@@ -39,7 +39,7 @@ function Hero() {
   }
 
   return (
-    <section id="top" className="mt-4 w-full scroll-mt-6 overflow-hidden sm:mt-6">
+    <section id="top" className="mt-4 w-full scroll-mt-6 overflow-x-hidden overflow-y-hidden sm:mt-6">
       <div className="otake-hero relative w-full">
         <div className="mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 xl:max-w-[1360px]">
           <div className="relative grid grid-cols-1 items-center gap-8 lg:grid-cols-[45%_55%] lg:gap-0 xl:grid-cols-[45%_calc(55%_-_4rem)] xl:gap-x-16">
