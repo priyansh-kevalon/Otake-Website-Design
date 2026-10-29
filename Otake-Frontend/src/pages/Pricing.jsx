@@ -298,54 +298,54 @@ function Pricing() {
       {/* ---------------- 2. PRINCIPLES & TRUSTED BY ---------------- */}
       <section className="otake-soft-purple w-full py-16 sm:py-20">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-[1152px] grid-cols-1 gap-6 sm:grid-cols-3">
-            <div className="h-[256.39px] w-full max-w-[368px] rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
+          <div className="mx-auto grid max-w-[1152px] grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+            <div className="w-full rounded-[18px] border border-neutral-100 bg-white p-5 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg sm:h-[256.39px] sm:rounded-[22px] sm:p-7">
               <div className="flex justify-center">
                 <img
                   src="/images/pricing-client-focused.png"
                   alt=""
                   aria-hidden="true"
-                  className="h-[72px] w-[72px] object-contain"
+                  className="h-[64px] w-[64px] object-contain sm:h-[72px] sm:w-[72px]"
                 />
               </div>
-              <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
+              <h3 className="mt-3 text-[22px] font-bold text-neutral-900 sm:mt-4 sm:text-[26px] md:text-[28px]">
                 Client Focussed
               </h3>
-              <p className="mt-2.5 text-[16px] leading-relaxed text-black">
+              <p className="mt-2 text-[13px] leading-relaxed text-black sm:mt-2.5 sm:text-[15px] md:text-[16px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
               </p>
             </div>
 
-            <div className="h-[256.39px] w-full max-w-[368px] rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
+            <div className="w-full rounded-[18px] border border-neutral-100 bg-white p-5 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg sm:h-[256.39px] sm:rounded-[22px] sm:p-7">
               <div className="flex justify-center">
                 <img
                   src="/images/pricing-innovate-optimize.png"
                   alt=""
                   aria-hidden="true"
-                  className="h-[72px] w-[72px] object-contain"
+                  className="h-[64px] w-[64px] object-contain sm:h-[72px] sm:w-[72px]"
                 />
               </div>
-              <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
+              <h3 className="mt-3 text-[22px] font-bold text-neutral-900 sm:mt-4 sm:text-[26px] md:text-[28px]">
                 Innovate & Optimize
               </h3>
-              <p className="mt-2.5 text-[16px] leading-relaxed text-black">
+              <p className="mt-2 text-[13px] leading-relaxed text-black sm:mt-2.5 sm:text-[15px] md:text-[16px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
               </p>
             </div>
 
-            <div className="h-[256.39px] w-full max-w-[368px] rounded-[22px] border border-neutral-100 bg-white p-7 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg">
+            <div className="w-full rounded-[18px] border border-neutral-100 bg-white p-5 text-center shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-shadow hover:shadow-lg sm:col-span-2 sm:h-[256.39px] sm:justify-self-center sm:rounded-[22px] sm:p-7 lg:col-span-1">
               <div className="flex justify-center">
                 <img
                   src="/images/pricing-community-driven.png"
                   alt=""
                   aria-hidden="true"
-                  className="h-[72px] w-[72px] object-contain"
+                  className="h-[64px] w-[64px] object-contain sm:h-[72px] sm:w-[72px]"
                 />
               </div>
-              <h3 className="mt-4 text-[28px] font-bold text-neutral-900">
+              <h3 className="mt-3 text-[22px] font-bold text-neutral-900 sm:mt-4 sm:text-[26px] md:text-[28px]">
                 Community Driven
               </h3>
-              <p className="mt-2.5 text-[16px] leading-relaxed text-black">
+              <p className="mt-2 text-[13px] leading-relaxed text-black sm:mt-2.5 sm:text-[15px] md:text-[16px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non enim lacus.
               </p>
             </div>
