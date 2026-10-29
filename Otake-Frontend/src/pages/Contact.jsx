@@ -285,7 +285,12 @@ function Contact() {
                   'radial-gradient(ellipse 48% 62% at 50% 50%, rgba(229,210,254,0.95) 0%, rgba(238,223,254,0.8) 40%, rgba(247,240,255,0.42) 68%, rgba(255,255,255,0) 100%)',
               }}
             />
-            <form onSubmit={handleSubmit} className="relative space-y-4">
+            {submitted && (
+            <div className="relative mb-6 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-xl text-sm text-center">
+              Message sent successfully! We'll get back to you soon.
+            </div>
+          )}
+          <form onSubmit={handleSubmit} className="relative space-y-4">
             {/* First and Last Name */}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
