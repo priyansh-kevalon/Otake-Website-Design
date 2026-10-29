@@ -28,54 +28,55 @@ const Login = () => {
     <div className="otake-admin-bg min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-md relative z-10">
         <div className="text-center mb-8">
-          <span className="inline-block w-fit rounded-full bg-yellow-300 px-3 py-1 text-[11px] font-semibold text-neutral-800 sm:px-3.5 sm:py-1.5 sm:text-[12px]">
+          <span className="inline-block w-fit rounded-full bg-gradient-to-r from-pink-400 to-purple-400 px-3 py-1 text-[11px] font-semibold text-white sm:px-3.5 sm:py-1.5 sm:text-[12px] shadow-[0_0_30px_rgba(168,85,247,0.4)]">
             Admin Access
           </span>
-          <h1 className="mt-4 text-[30px] font-bold leading-[1.15] tracking-tight text-neutral-900 sm:text-[36px]">
+          <h1 className="mt-4 text-[30px] font-bold leading-[1.15] tracking-tight text-white sm:text-[36px]">
             Otake Admin Panel
           </h1>
-          <p className="mt-2 text-[13px] text-neutral-600 sm:text-[14px]">
+          <p className="mt-2 text-[13px] text-white/60 sm:text-[14px]">
             Sign in to manage your website dashboard
           </p>
         </div>
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-white/60 shadow-[0_20px_60px_rgba(30,8,25,0.08)] p-8">
+        <div className="relative bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-xl rounded-2xl border border-white/10 shadow-[0_40px_80px_rgba(146,118,255,0.15)] p-8">
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-400/50 to-transparent" />
           <form onSubmit={handleSubmit} className="space-y-4">
             {error && (
-              <div className="bg-red-50 text-red-600 text-sm px-4 py-2 rounded-lg">
+              <div className="bg-red-500/10 border border-red-500/30 text-red-400 text-sm px-4 py-2 rounded-lg">
                 {error}
               </div>
             )}
             <div>
-              <label className="text-sm font-medium text-neutral-800">Email</label>
+              <label className="text-sm font-medium text-white/90">Email</label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 w-full h-11 px-4 rounded-lg border border-neutral-200 bg-white text-[13px] text-neutral-800 placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+                className="mt-1 w-full h-11 px-4 rounded-lg border border-white/10 bg-white/[0.05] text-[13px] text-white placeholder:text-white/30 focus:border-purple-400/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400/20"
                 placeholder="Enter your email"
                 required
               />
             </div>
             <div>
-              <label className="text-sm font-medium text-neutral-800">Password</label>
+              <label className="text-sm font-medium text-white/90">Password</label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="mt-1 w-full h-11 px-4 rounded-lg border border-neutral-200 bg-white text-[13px] text-neutral-800 placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+                className="mt-1 w-full h-11 px-4 rounded-lg border border-white/10 bg-white/[0.05] text-[13px] text-white placeholder:text-white/30 focus:border-purple-400/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400/20"
                 placeholder="Enter your password"
                 required
               />
             </div>
             <button
               disabled={loading}
-              className="w-full h-11 bg-neutral-900 text-white rounded-lg text-[13px] font-medium hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 disabled:opacity-50 transition-colors"
+              className="w-full h-11 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-lg text-[13px] font-medium hover:from-pink-600 hover:to-purple-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 disabled:opacity-50 transition-all shadow-[0_10px_40px_rgba(168,85,247,0.3)]"
             >
               {loading ? "Signing in..." : "Sign in"}
             </button>
           </form>
         </div>
-        <p className="text-center text-[11px] text-neutral-500 mt-6">
+        <p className="text-center text-[11px] text-white/40 mt-6">
           © {new Date().getFullYear()} Otake. All rights reserved.
         </p>
       </div>

@@ -36,32 +36,33 @@ const TemplateApplications = () => {
         <h1 className="mt-3 text-xl font-semibold text-neutral-900">Template Applications</h1>
         <p className="text-neutral-500 text-sm mt-1">Applications from "Apply Now" form</p>
       </div>
-      <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-white/60 shadow-[0_10px_40px_rgba(30,8,25,0.04)] overflow-hidden">
+      <div className="relative bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-400/50 to-transparent" />
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-gradient-to-r from-pink-50/40 to-purple-50/40">
+            <thead className="bg-white/[0.03]">
               <tr>
-                <th className="text-left text-xs font-medium text-neutral-500 px-6 py-3">Full Name</th>
-                <th className="text-left text-xs font-medium text-neutral-500 px-6 py-3">Email</th>
-                <th className="text-left text-xs font-medium text-neutral-500 px-6 py-3">Phone</th>
-                <th className="text-left text-xs font-medium text-neutral-500 px-6 py-3">Company</th>
-                <th className="text-left text-xs font-medium text-neutral-500 px-6 py-3">Website</th>
-                <th className="text-left text-xs font-medium text-neutral-500 px-6 py-3">Role</th>
-                <th className="text-left text-xs font-medium text-neutral-500 px-6 py-3">Message</th>
-                <th className="text-left text-xs font-medium text-neutral-500 px-6 py-3">Date</th>
+                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Full Name</th>
+                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Email</th>
+                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Phone</th>
+                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Company</th>
+                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Website</th>
+                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Role</th>
+                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Message</th>
+                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Date</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-neutral-100">
+            <tbody className="divide-y divide-white/5">
               {applications.map((app) => (
-                <tr key={app._id} className="hover:bg-pink-50/30 transition-colors">
-                  <td className="px-6 py-4 text-sm text-neutral-900">{app.fullName}</td>
-                  <td className="px-6 py-4 text-sm text-neutral-600">{app.email}</td>
-                  <td className="px-6 py-4 text-sm text-neutral-600">{app.phone}</td>
-                  <td className="px-6 py-4 text-sm text-neutral-600">{app.companyName || "-"}</td>
-                  <td className="px-6 py-4 text-sm text-neutral-600">{app.website || "-"}</td>
-                  <td className="px-6 py-4 text-sm text-neutral-600">{app.role || "-"}</td>
-                  <td className="px-6 py-4 text-sm text-neutral-600 max-w-xs truncate">{app.message}</td>
-                  <td className="px-6 py-4 text-sm text-neutral-500">
+                <tr key={app._id} className="hover:bg-white/[0.02] transition-colors">
+                  <td className="px-6 py-4 text-sm text-white">{app.fullName}</td>
+                  <td className="px-6 py-4 text-sm text-white/70">{app.email}</td>
+                  <td className="px-6 py-4 text-sm text-white/70">{app.phone}</td>
+                  <td className="px-6 py-4 text-sm text-white/70">{app.companyName || "-"}</td>
+                  <td className="px-6 py-4 text-sm text-white/70">{app.website || "-"}</td>
+                  <td className="px-6 py-4 text-sm text-white/70">{app.role || "-"}</td>
+                  <td className="px-6 py-4 text-sm text-white/70 max-w-xs truncate">{app.message}</td>
+                  <td className="px-6 py-4 text-sm text-white/50">
                     {new Date(app.createdAt).toLocaleDateString()}
                   </td>
                 </tr>
@@ -70,7 +71,7 @@ const TemplateApplications = () => {
           </table>
         </div>
         {applications.length === 0 && (
-          <div className="text-center py-10 text-neutral-500 text-sm">No applications found</div>
+          <div className="text-center py-10 text-white/40 text-sm">No applications found</div>
         )}
       </div>
     </div>

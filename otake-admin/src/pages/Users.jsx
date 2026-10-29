@@ -33,21 +33,22 @@ const Users = () => {
         <h1 className="text-xl font-semibold">Users</h1>
         <p className="text-gray-500 text-sm mt-1">Registered users</p>
       </div>
-      <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-white/60 shadow-[0_10px_40px_rgba(30,8,25,0.04)] overflow-hidden">
+      <div className="relative bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-400/50 to-transparent" />
         <table className="w-full">
-          <thead className="bg-gradient-to-r from-pink-50/40 to-purple-50/40">
+          <thead className="bg-white/[0.03]">
             <tr>
-              <th className="text-left text-xs font-medium text-neutral-500 px-6 py-3">Name</th>
-              <th className="text-left text-xs font-medium text-neutral-500 px-6 py-3">Email</th>
-              <th className="text-left text-xs font-medium text-neutral-500 px-6 py-3">Joined</th>
+              <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Name</th>
+              <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Email</th>
+              <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Joined</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-neutral-100">
+          <tbody className="divide-y divide-white/5">
             {users.map((user) => (
-              <tr key={user._id} className="hover:bg-pink-50/30 transition-colors">
-                <td className="px-6 py-4 text-sm text-neutral-900">{user.firstName} {user.lastName}</td>
-                <td className="px-6 py-4 text-sm text-neutral-600">{user.email}</td>
-                <td className="px-6 py-4 text-sm text-neutral-500">
+              <tr key={user._id} className="hover:bg-white/[0.02] transition-colors">
+                <td className="px-6 py-4 text-sm text-white">{user.firstName} {user.lastName}</td>
+                <td className="px-6 py-4 text-sm text-white/70">{user.email}</td>
+                <td className="px-6 py-4 text-sm text-white/50">
                   {new Date(user.createdAt).toLocaleDateString()}
                 </td>
               </tr>
@@ -55,7 +56,7 @@ const Users = () => {
           </tbody>
         </table>
         {users.length === 0 && (
-          <div className="text-center py-10 text-neutral-500 text-sm">No users found</div>
+          <div className="text-center py-10 text-white/40 text-sm">No users found</div>
         )}
       </div>
     </div>
