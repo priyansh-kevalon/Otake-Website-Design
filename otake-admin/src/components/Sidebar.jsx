@@ -71,7 +71,7 @@ const Sidebar = ({ isOpen, onClose }) => {
           <button
             onClick={() => {
               onClose?.();
-              window.location.href = "http://localhost:5173";
+              window.location.href = "http://localhost:5174";
             }}
             className="flex items-center gap-3 w-full px-3 py-2 rounded-lg text-sm font-medium text-white/60 hover:bg-white/[0.05] hover:text-white transition"
           >

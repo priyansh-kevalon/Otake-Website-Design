@@ -1,0 +1,9 @@
+{
+  "name": "otake-website-design",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd otake-backend && npm install && npm run build",
+    "start": "cd otake-backend && npm start"
+  }
+}

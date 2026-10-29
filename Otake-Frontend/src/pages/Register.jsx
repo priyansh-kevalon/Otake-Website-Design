@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { getApiUrl } from '../config/api'
 
 function GoogleIcon() {
   return (
@@ -112,7 +113,7 @@ function Register({ onNavigate }) {
       const nameParts = name.trim().split(' ')
       const firstName = nameParts[0] || name
       const lastName = nameParts.slice(1).join(' ') || ''
-      const response = await fetch('http://127.0.0.1:5000/api/auth/register', {
+      const response = await fetch(getApiUrl('/api/auth/register'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

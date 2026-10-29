@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { getApiUrl } from '../../config/api'
 
 function Hero() {
   const [email, setEmail] = useState('')
@@ -18,7 +19,7 @@ function Hero() {
       return
     }
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/newsletter/subscribe', {
+      const response = await fetch(getApiUrl('/api/newsletter/subscribe'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

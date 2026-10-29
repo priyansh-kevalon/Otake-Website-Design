@@ -13,9 +13,30 @@ connectDB();
 
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "http://127.0.0.1:5173",
+  "http://127.0.0.1:5174",
+  process.env.CLIENT_URL,
+  process.env.ADMIN_URL,
+];
+
+if (process.env.ALLOW_ORIGINS) {
+  process.env.ALLOW_ORIGINS.split(",").forEach((origin) => {
+    if (origin.trim()) allowedOrigins.push(origin.trim());
+  });
+}
+
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174", "http://127.0.0.1:5174", process.env.CLIENT_URL].filter(Boolean),
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(null, true);
+    },
     credentials: true,
   })
 );

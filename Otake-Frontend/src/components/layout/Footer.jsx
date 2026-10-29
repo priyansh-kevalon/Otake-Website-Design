@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { getApiUrl } from '../../config/api'
 
 const HIGHLIGHTS = [
   { key: 'innovation', title: 'INNOVATION', image: '/images/footer-innovation.png' },
@@ -204,7 +205,7 @@ function Footer({ onNavigate, isAboutPage = false }) {
     const value = email.trim()
     if (!value) return
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/newsletter/subscribe', {
+      const response = await fetch(getApiUrl('/api/newsletter/subscribe'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

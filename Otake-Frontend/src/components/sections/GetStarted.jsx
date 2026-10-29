@@ -102,6 +102,7 @@ function FacetedMeshBackground() {
 }
 
 import { useState } from 'react'
+import { getApiUrl } from '../../config/api'
 
 function GetStarted() {
   const [isOpen, setIsOpen] = useState(false)
@@ -126,7 +127,7 @@ function GetStarted() {
     e.preventDefault()
     setLoading(true)
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/template-applications', {
+      const response = await fetch(getApiUrl('/api/template-applications'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

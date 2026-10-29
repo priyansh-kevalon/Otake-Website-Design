@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { getApiUrl } from '../config/api'
 
 function GoogleIcon() {
   return (
@@ -41,7 +42,7 @@ function Login({ onNavigate }) {
     e.preventDefault()
     setSubmitted(true)
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/auth/login', {
+      const response = await fetch(getApiUrl('/api/auth/login'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
