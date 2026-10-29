@@ -35,18 +35,18 @@ const Newsletter = () => {
       </div>
       <div className="relative bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-400/50 to-transparent" />
-        <table className="w-full">
+        <table className="w-full min-w-[500px]">
           <thead className="bg-white/[0.03]">
             <tr>
-              <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Email</th>
-              <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Subscribed On</th>
+              <th className="text-left text-xs font-medium text-white/60 px-4 sm:px-6 py-3">Email</th>
+              <th className="text-left text-xs font-medium text-white/60 px-4 sm:px-6 py-3">Subscribed On</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-white/5">
             {subscribers.map((sub) => (
               <tr key={sub._id} className="hover:bg-white/[0.02] transition-colors">
-                <td className="px-6 py-4 text-sm text-white">{sub.email}</td>
-                <td className="px-6 py-4 text-sm text-white/50">
+                <td className="px-4 sm:px-6 py-4 text-sm text-white">{sub.email}</td>
+                <td className="px-4 sm:px-6 py-4 text-sm text-white/50">
                   {new Date(sub.createdAt).toLocaleDateString()}
                 </td>
               </tr>

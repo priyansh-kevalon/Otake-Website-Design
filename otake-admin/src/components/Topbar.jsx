@@ -1,16 +1,23 @@
 ﻿import { useAuth } from "../context/AuthContext";
+import { Menu } from "lucide-react";
 
-const Topbar = () => {
+const Topbar = ({ onMenuClick }) => {
   const { user } = useAuth();
 
   return (
-    <header className="fixed top-0 left-64 right-0 h-16 bg-gradient-to-r from-white/[0.08] to-white/[0.02] backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-6 shadow-[0_10px_40px_rgba(146,118,255,0.08)]">
+    <header className="fixed top-0 left-0 lg:left-64 right-0 h-16 bg-gradient-to-r from-white/[0.08] to-white/[0.02] backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-4 sm:px-6 shadow-[0_10px_40px_rgba(146,118,255,0.08)] z-30">
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-purple-400/30 to-transparent" />
-      <div>
-        <h2 className="text-sm font-medium text-white/80">Dashboard Overview</h2>
+      <div className="flex items-center gap-3">
+        <button
+          onClick={onMenuClick}
+          className="lg:hidden text-white/70 hover:text-white"
+        >
+          <Menu size={22} />
+        </button>
+        <h2 className="text-sm font-medium text-white/80 hidden sm:block">Dashboard Overview</h2>
       </div>
       <div className="flex items-center gap-3">
-        <div className="text-right">
+        <div className="text-right hidden sm:block">
           <p className="text-sm font-medium text-white">{user?.firstName} {user?.lastName}</p>
           <p className="text-xs text-white/40">{user?.email}</p>
         </div>

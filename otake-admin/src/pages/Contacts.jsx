@@ -36,26 +36,26 @@ const Contacts = () => {
       <div className="relative bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-400/50 to-transparent" />
         <div className="overflow-x-auto">
-          <table className="w-full">
+          <table className="w-full min-w-[900px]">
             <thead className="bg-white/[0.03]">
               <tr>
-                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Name</th>
-                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Email</th>
-                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Phone</th>
-                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Service</th>
-                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Message</th>
-                <th className="text-left text-xs font-medium text-white/60 px-6 py-3">Date</th>
+                <th className="text-left text-xs font-medium text-white/60 px-4 sm:px-6 py-3">Name</th>
+                <th className="text-left text-xs font-medium text-white/60 px-4 sm:px-6 py-3">Email</th>
+                <th className="text-left text-xs font-medium text-white/60 px-4 sm:px-6 py-3">Phone</th>
+                <th className="text-left text-xs font-medium text-white/60 px-4 sm:px-6 py-3">Service</th>
+                <th className="text-left text-xs font-medium text-white/60 px-4 sm:px-6 py-3">Message</th>
+                <th className="text-left text-xs font-medium text-white/60 px-4 sm:px-6 py-3">Date</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-white/5">
               {contacts.map((contact) => (
                 <tr key={contact._id} className="hover:bg-white/[0.02] transition-colors">
-                  <td className="px-6 py-4 text-sm text-white">{contact.firstName} {contact.lastName}</td>
-                  <td className="px-6 py-4 text-sm text-white/70">{contact.email}</td>
-                  <td className="px-6 py-4 text-sm text-white/70">{contact.phone || "-"}</td>
-                  <td className="px-6 py-4 text-sm text-white/70">{contact.service || "-"}</td>
-                  <td className="px-6 py-4 text-sm text-white/70 max-w-xs truncate">{contact.message}</td>
-                  <td className="px-6 py-4 text-sm text-white/50">
+                  <td className="px-4 sm:px-6 py-4 text-sm text-white">{contact.firstName} {contact.lastName}</td>
+                  <td className="px-4 sm:px-6 py-4 text-sm text-white/70">{contact.email}</td>
+                  <td className="px-4 sm:px-6 py-4 text-sm text-white/70">{contact.phone || "-"}</td>
+                  <td className="px-4 sm:px-6 py-4 text-sm text-white/70">{contact.service || "-"}</td>
+                  <td className="px-4 sm:px-6 py-4 text-sm text-white/70 max-w-xs truncate">{contact.message}</td>
+                  <td className="px-4 sm:px-6 py-4 text-sm text-white/50">
                     {new Date(contact.createdAt).toLocaleDateString()}
                   </td>
                 </tr>
