@@ -11,19 +11,21 @@ export const AuthProvider = ({ children }) => {
     const token = localStorage.getItem("otake_admin_token");
     const userData = localStorage.getItem("otake_admin_user");
     if (token && userData) {
-      setUser(JSON.parse(userData));
+      const parsed = JSON.parse(userData);
+      setUser({ ...parsed, isAdmin: true });
     }
     setLoading(false);
   }, []);
 
   const login = async (email, password) => {
     const { data } = await api.post("/auth/login", { email, password });
+    const adminUser = { ...data, isAdmin: true, role: 'admin' };
     localStorage.setItem("otake_admin_token", data.token);
-    localStorage.setItem("otake_admin_user", JSON.stringify(data));
+    localStorage.setItem("otake_admin_user", JSON.stringify(adminUser));
     localStorage.setItem("otake_site_token", data.token);
-    localStorage.setItem("otake_site_user", JSON.stringify(data));
-    setUser(data);
-    return data;
+    localStorage.setItem("otake_site_user", JSON.stringify(adminUser));
+    setUser(adminUser);
+    return adminUser;
   };
 
   const logout = () => {
