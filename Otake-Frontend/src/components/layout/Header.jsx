@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const NAV_LINKS = [
   { label: 'Home', page: 'home', href: '#home' },
@@ -31,6 +31,28 @@ function Logo({ onNavigate }) {
 
 function Header({ currentPage = 'home', onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [user, setUser] = useState(null)
+  const [profileOpen, setProfileOpen] = useState(false)
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('otake_user')
+    if (storedUser) {
+      try {
+        setUser(JSON.parse(storedUser))
+      } catch (e) {
+        setUser(null)
+      }
+    }
+  }, [currentPage])
+
+  const handleLogout = () => {
+    localStorage.removeItem('otake_token')
+    localStorage.removeItem('otake_user')
+    setUser(null)
+    setProfileOpen(false)
+    setMenuOpen(false)
+    if (onNavigate) onNavigate('home')
+  }
 
   const handleLinkClick = (e, link) => {
     if (link.page && onNavigate) {
@@ -70,38 +92,69 @@ function Header({ currentPage = 'home', onNavigate }) {
         </ul>
 
         <div className="hidden items-center gap-5 md:flex">
-          <a
-            href="#login"
-            onClick={(e) => {
-              if (onNavigate) {
-                e.preventDefault()
-                onNavigate('login')
-              }
-            }}
-            className={`rounded py-2 text-[12px] tracking-wide transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
-              currentPage === 'login'
-                ? 'font-bold text-neutral-900 underline decoration-pink-400 decoration-2 underline-offset-4'
-                : 'text-neutral-600 hover:text-neutral-900'
-            }`}
-          >
-            Sign In
-          </a>
-          <a
-            href="#register"
-            onClick={(e) => {
-              if (onNavigate) {
-                e.preventDefault()
-                onNavigate('register')
-              }
-            }}
-            className={`inline-flex h-9 items-center rounded-md px-4 text-[12px] font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
-              currentPage === 'register'
-                ? 'bg-neutral-800 text-white ring-2 ring-purple-400'
-                : 'bg-neutral-900 text-white hover:bg-neutral-800'
-            }`}
-          >
-            Try for Free
-          </a>
+          {user ? (
+            <div className="relative">
+              <button
+                onClick={() => setProfileOpen((prev) => !prev)}
+                className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-2 py-1 pr-3 text-[12px] font-medium text-neutral-800 hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+              >
+                <div className="h-7 w-7 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 text-white flex items-center justify-center text-xs font-semibold">
+                  {user.firstName?.[0]}{user.lastName?.[0]}
+                </div>
+                <span>{user.firstName} {user.lastName}</span>
+              </button>
+              {profileOpen && (
+                <div className="absolute right-0 mt-2 w-48 rounded-xl border border-neutral-200 bg-white shadow-lg overflow-hidden z-50">
+                  <div className="px-4 py-3 border-b border-neutral-100">
+                    <p className="text-sm font-medium text-neutral-900 truncate">{user.firstName} {user.lastName}</p>
+                    <p className="text-xs text-neutral-500 truncate">{user.email}</p>
+                  </div>
+                  <button
+                    onClick={handleLogout}
+                    className="w-full flex items-center gap-2 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                    Sign Out
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : (
+            <>
+              <a
+                href="#login"
+                onClick={(e) => {
+                  if (onNavigate) {
+                    e.preventDefault()
+                    onNavigate('login')
+                  }
+                }}
+                className={`rounded py-2 text-[12px] tracking-wide transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
+                  currentPage === 'login'
+                    ? 'font-bold text-neutral-900 underline decoration-pink-400 decoration-2 underline-offset-4'
+                    : 'text-neutral-600 hover:text-neutral-900'
+                }`}
+              >
+                Sign In
+              </a>
+              <a
+                href="#register"
+                onClick={(e) => {
+                  if (onNavigate) {
+                    e.preventDefault()
+                    onNavigate('register')
+                  }
+                }}
+                className={`inline-flex h-9 items-center rounded-md px-4 text-[12px] font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
+                  currentPage === 'register'
+                    ? 'bg-neutral-800 text-white ring-2 ring-purple-400'
+                    : 'bg-neutral-900 text-white hover:bg-neutral-800'
+                }`}
+              >
+                Try for Free
+              </a>
+            </>
+          )}
         </div>
 
         <button
@@ -152,34 +205,60 @@ function Header({ currentPage = 'home', onNavigate }) {
                 </li>
               )
             })}
-            <li>
-              <a
-                href="#login"
-                className={`block rounded py-3 text-[13px] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
-                  currentPage === 'login' ? 'font-bold text-neutral-900' : 'text-neutral-500 hover:text-neutral-900'
-                }`}
-                onClick={(e) => {
-                  e.preventDefault()
-                  if (onNavigate) onNavigate('login')
-                  setMenuOpen(false)
-                }}
-              >
-                Sign In
-              </a>
-            </li>
-            <li className="py-2">
-              <a
-                href="#register"
-                className="inline-flex h-11 items-center rounded-md bg-neutral-900 px-4 text-[13px] font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
-                onClick={(e) => {
-                  e.preventDefault()
-                  if (onNavigate) onNavigate('register')
-                  setMenuOpen(false)
-                }}
-              >
-                Try for Free
-              </a>
-            </li>
+            {user ? (
+              <>
+                <li className="py-3 border-t border-neutral-100 mt-2">
+                  <div className="flex items-center gap-2">
+                    <div className="h-8 w-8 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 text-white flex items-center justify-center text-xs font-semibold">
+                      {user.firstName?.[0]}{user.lastName?.[0]}
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-neutral-900">{user.firstName} {user.lastName}</p>
+                      <p className="text-xs text-neutral-500">{user.email}</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    onClick={handleLogout}
+                    className="w-full text-left block rounded py-3 text-[13px] text-neutral-600 hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+                  >
+                    Sign Out
+                  </button>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <a
+                    href="#login"
+                    className={`block rounded py-3 text-[13px] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 ${
+                      currentPage === 'login' ? 'font-bold text-neutral-900' : 'text-neutral-500 hover:text-neutral-900'
+                    }`}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      if (onNavigate) onNavigate('login')
+                      setMenuOpen(false)
+                    }}
+                  >
+                    Sign In
+                  </a>
+                </li>
+                <li className="py-2">
+                  <a
+                    href="#register"
+                    className="inline-flex h-11 items-center rounded-md bg-neutral-900 px-4 text-[13px] font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      if (onNavigate) onNavigate('register')
+                      setMenuOpen(false)
+                    }}
+                  >
+                    Try for Free
+                  </a>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       )}
