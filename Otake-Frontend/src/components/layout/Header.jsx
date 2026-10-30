@@ -127,17 +127,19 @@ function Header({ currentPage = 'home', onNavigate }) {
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                     My Profile
                   </button>
-                  <button
-                    onClick={() => {
-                      setProfileOpen(false)
-                      const adminUrl = import.meta.env.VITE_ADMIN_URL || 'http://localhost:5173'
-                      window.location.href = adminUrl
-                    }}
-                    className="w-full flex items-center gap-2 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
-                  >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
-                    Admin Panel
-                  </button>
+                  {(user.role === 'admin' || user.isAdmin) && (
+                    <button
+                      onClick={() => {
+                        setProfileOpen(false)
+                        const adminUrl = import.meta.env.VITE_ADMIN_URL || 'http://localhost:5173'
+                        window.location.href = adminUrl
+                      }}
+                      className="w-full flex items-center gap-2 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+                      Admin Panel
+                    </button>
+                  )}
                   <button
                     onClick={handleLogout}
                     className="w-full flex items-center gap-2 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
@@ -259,18 +261,20 @@ function Header({ currentPage = 'home', onNavigate }) {
                     My Profile
                   </button>
                 </li>
-                <li>
-                  <button
-                    onClick={() => {
-                      setMenuOpen(false)
-                      const adminUrl = import.meta.env.VITE_ADMIN_URL || 'http://localhost:5173'
-                      window.location.href = adminUrl
-                    }}
-                    className="w-full text-left block rounded py-3 text-[13px] text-neutral-600 hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
-                  >
-                    Admin Panel
-                  </button>
-                </li>
+                {(user.role === 'admin' || user.isAdmin) && (
+                  <li>
+                    <button
+                      onClick={() => {
+                        setMenuOpen(false)
+                        const adminUrl = import.meta.env.VITE_ADMIN_URL || 'http://localhost:5173'
+                        window.location.href = adminUrl
+                      }}
+                      className="w-full text-left block rounded py-3 text-[13px] text-neutral-600 hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+                    >
+                      Admin Panel
+                    </button>
+                  </li>
+                )}
                 <li>
                   <button
                     onClick={handleLogout}
