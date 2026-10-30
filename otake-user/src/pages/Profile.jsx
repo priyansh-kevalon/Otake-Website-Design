@@ -6,6 +6,16 @@ const Profile = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
+  const isAdmin = Boolean(
+    user && (
+      user.role === "admin" ||
+      user.isAdmin === true ||
+      user.email?.toLowerCase() === "admin@otake.com" ||
+      user.email?.toLowerCase().startsWith("admin@")
+    )
+  );
+  const roleName = isAdmin ? "Admin" : (user?.role ? user.role.charAt(0).toUpperCase() + user.role.slice(1) : "User");
+
   return (
     <div className="max-w-5xl mx-auto">
       <div className="mb-6">
@@ -19,7 +29,7 @@ const Profile = () => {
         <div className="flex items-center gap-3">
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">My Profile</h1>
           <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-purple-400/30 text-[11px] font-medium text-purple-300">
-            User
+            {roleName}
           </span>
         </div>
         <p className="text-white/50 text-sm mt-1.5">View your account details</p>
@@ -42,8 +52,8 @@ const Profile = () => {
               <p className="text-white/60 mt-2 text-base sm:text-lg">{user?.email}</p>
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-4">
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/40 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
-                  <User size={14} className="text-purple-300" />
-                  <span className="text-sm text-purple-200 font-semibold">User</span>
+                  {isAdmin ? <Shield size={14} className="text-purple-300" /> : <User size={14} className="text-purple-300" />}
+                  <span className="text-sm text-purple-200 font-semibold">{roleName}</span>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.05] border border-white/10">
                   <div className="h-2 w-2 rounded-full bg-green-400"></div>
@@ -95,11 +105,11 @@ const Profile = () => {
               <div className="group relative p-4 sm:p-5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-purple-400/40 hover:bg-white/[0.05] transition-all md:col-span-2">
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-purple-400/30 flex items-center justify-center flex-shrink-0 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all">
-                    <User size={18} className="text-white" />
+                    {isAdmin ? <Shield size={18} className="text-white" /> : <User size={18} className="text-white" />}
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-xs text-white/50 uppercase tracking-wider">Account Role</p>
-                    <p className="text-base text-white font-medium mt-1">User</p>
+                    <p className="text-base text-white font-medium mt-1">{roleName}</p>
                   </div>
                 </div>
               </div>

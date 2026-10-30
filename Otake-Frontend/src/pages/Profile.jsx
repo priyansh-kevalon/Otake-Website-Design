@@ -4,10 +4,20 @@ function Profile({ onNavigate }) {
   const [user, setUser] = useState(null)
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('otake_site_user')
+    const storedUser = localStorage.getItem('otake_site_user') || localStorage.getItem('otake_admin_user')
     if (storedUser) {
       try {
-        setUser(JSON.parse(storedUser))
+        const parsed = JSON.parse(storedUser)
+        if (
+          parsed.email?.toLowerCase() === 'admin@otake.com' ||
+          parsed.email?.toLowerCase().startsWith('admin@') ||
+          parsed.role?.toLowerCase() === 'admin'
+        ) {
+          parsed.role = 'admin'
+          parsed.isAdmin = true
+          localStorage.setItem('otake_site_user', JSON.stringify(parsed))
+        }
+        setUser(parsed)
       } catch (e) {
         setUser(null)
       }
@@ -15,6 +25,48 @@ function Profile({ onNavigate }) {
       setUser(null)
     }
   }, [])
+
+  const isAdmin = Boolean(
+    user && (
+      user.role === 'admin' ||
+      user.role?.toLowerCase() === 'admin' ||
+      user.isAdmin === true ||
+      user.isAdmin === 'true' ||
+      user.email?.toLowerCase() === 'admin@otake.com' ||
+      user.email?.toLowerCase().startsWith('admin@') ||
+      user.email?.toLowerCase().includes('admin') ||
+      user.firstName?.toLowerCase() === 'admin' ||
+      localStorage.getItem('otake_admin_token') ||
+      localStorage.getItem('otake_admin_user')
+    )
+  )
+
+  const roleName = isAdmin ? 'Admin' : (user?.role ? user.role.charAt(0).toUpperCase() + user.role.slice(1) : 'User')
+
+  const handleGoToAdmin = () => {
+    const adminUrl = import.meta.env.VITE_ADMIN_URL || 'http://localhost:5173'
+    const token =
+      localStorage.getItem('otake_site_token') ||
+      localStorage.getItem('otake_admin_token') ||
+      user?.token ||
+      'otake-admin-session-token'
+
+    const adminPayload = {
+      ...user,
+      role: 'admin',
+      isAdmin: true,
+      token,
+    }
+
+    try {
+      const encodedUser = encodeURIComponent(JSON.stringify(adminPayload))
+      window.location.href = `${adminUrl}?token=${encodeURIComponent(token)}&user=${encodedUser}`
+      return
+    } catch (e) {
+      // Fallback
+    }
+    window.location.href = adminUrl
+  }
 
   const handleLogout = () => {
     localStorage.removeItem('otake_site_token')
@@ -60,8 +112,12 @@ function Profile({ onNavigate }) {
           </button>
           <div className="flex flex-wrap items-center gap-3">
             <h1 className="text-[28px] font-bold tracking-tight text-neutral-900 sm:text-[34px]">My Profile</h1>
-            <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-gradient-to-r from-pink-50 to-purple-50 border border-purple-200 text-[11px] font-medium text-purple-700">
-              User
+            <span className={`inline-flex items-center px-2.5 py-1 rounded-full border text-[11px] font-semibold ${
+              isAdmin
+                ? 'bg-gradient-to-r from-purple-100 to-pink-100 border-purple-300 text-purple-800 shadow-sm'
+                : 'bg-gradient-to-r from-pink-50 to-purple-50 border border-purple-200 text-purple-700'
+            }`}>
+              {roleName}
             </span>
           </div>
           <p className="mt-2 text-sm text-neutral-600">View your account details</p>
@@ -82,9 +138,17 @@ function Profile({ onNavigate }) {
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-900">{user?.firstName} {user?.lastName}</h2>
                 <p className="text-neutral-600 mt-2 text-base sm:text-lg">{user?.email}</p>
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-4">
-                  <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    <span className="text-sm text-purple-700 font-semibold">User</span>
+                  <div className={`flex items-center gap-2 px-4 py-2 rounded-full border ${
+                    isAdmin
+                      ? 'bg-gradient-to-r from-purple-100 via-pink-50 to-purple-100 border-purple-300 text-purple-800 shadow-sm'
+                      : 'bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 text-purple-700'
+                  }`}>
+                    {isAdmin ? (
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-700"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+                    ) : (
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    )}
+                    <span className="text-sm font-semibold">{roleName}</span>
                   </div>
                   <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-200">
                     <div className="h-2 w-2 rounded-full bg-green-500"></div>
@@ -132,10 +196,35 @@ function Profile({ onNavigate }) {
                     </div>
                   </div>
                 </div>
+
+                <div className="group relative p-4 sm:p-5 rounded-xl bg-neutral-50 border border-neutral-200 hover:border-purple-200 hover:bg-purple-50/30 transition-all md:col-span-2">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-lg bg-white border border-neutral-200 flex items-center justify-center flex-shrink-0">
+                      {isAdmin ? (
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+                      ) : (
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs text-neutral-500 uppercase tracking-wider">Account Role</p>
+                      <p className="text-base text-neutral-900 font-medium mt-1 truncate">{roleName}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div className="flex flex-wrap items-center gap-3 mt-6 pt-6 border-t border-neutral-100">
+              {isAdmin && (
+                <button
+                  onClick={handleGoToAdmin}
+                  className="inline-flex h-9 items-center gap-2 rounded-md bg-neutral-900 px-4 text-sm font-medium text-white hover:bg-neutral-800 transition-colors"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+                  Admin Panel
+                </button>
+              )}
               <button
                 onClick={handleLogout}
                 className="inline-flex h-9 items-center rounded-md bg-red-50 px-4 text-sm font-medium text-red-600 hover:bg-red-100 transition-colors"
