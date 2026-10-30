@@ -4,21 +4,22 @@ function Profile({ onNavigate }) {
   const [user, setUser] = useState(null)
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('otake_site_user') || localStorage.getItem('otake_user')
+    const storedUser = localStorage.getItem('otake_site_user')
     if (storedUser) {
       try {
         setUser(JSON.parse(storedUser))
       } catch (e) {
         setUser(null)
       }
+    } else {
+      setUser(null)
     }
   }, [])
 
   const handleLogout = () => {
     localStorage.removeItem('otake_site_token')
     localStorage.removeItem('otake_site_user')
-    localStorage.removeItem('otake_token')
-    localStorage.removeItem('otake_user')
+    setUser(null)
     if (onNavigate) onNavigate('home')
     window.location.hash = '#home'
     window.location.reload()
