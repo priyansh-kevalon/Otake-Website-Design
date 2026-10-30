@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Profile = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
+  const accountRole = user?.role === "admin" || user?.isAdmin ? "Admin" : "User";
 
   return (
     <div className="max-w-5xl mx-auto">
@@ -99,7 +100,7 @@ const Profile = () => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-xs text-white/50 uppercase tracking-wider">Account Role</p>
-                    <p className="text-base text-white font-medium mt-1">Super Administrator</p>
+                    <p className="text-base text-white font-medium mt-1">{accountRole}</p>
                   </div>
                 </div>
               </div>

@@ -137,7 +137,7 @@ function Header({ currentPage = 'home', onNavigate }) {
                       className="w-full flex items-center gap-2 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
                     >
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
-                      Admin Dashboard
+                      Admin Panel
                     </button>
                   )}
                   <button
@@ -271,7 +271,7 @@ function Header({ currentPage = 'home', onNavigate }) {
                       }}
                       className="w-full text-left block rounded py-3 text-[13px] text-neutral-600 hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
                     >
-                      Admin Dashboard
+                      Admin Panel
                     </button>
                   </li>
                 )}
