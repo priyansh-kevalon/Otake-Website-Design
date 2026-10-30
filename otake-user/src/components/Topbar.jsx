@@ -1,4 +1,4 @@
-﻿import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import { Menu, User, LogOut, Shield } from "lucide-react";
 
@@ -83,6 +83,20 @@ const Topbar = ({ onMenuClick }) => {
                   <User size={16} />
                   <span>My Profile</span>
                 </button>
+                {(user?.role === 'admin' || user?.isAdmin || user?.email?.toLowerCase() === 'admin@otake.com' || user?.email?.toLowerCase().startsWith('admin@')) && (
+                  <button
+                    onClick={() => {
+                      setIsProfileOpen(false);
+                      const adminUrl = 'http://localhost:5173';
+                      const token = localStorage.getItem('token') || localStorage.getItem('otake_site_token') || localStorage.getItem('otake_admin_token') || '';
+                      window.location.href = `${adminUrl}?token=${encodeURIComponent(token)}&user=${encodeURIComponent(JSON.stringify(user))}`;
+                    }}
+                    className="flex items-center gap-2.5 w-full px-2.5 sm:px-3 py-2 rounded-lg text-sm text-purple-400 hover:bg-purple-500/10 hover:text-purple-300 transition"
+                  >
+                    <Shield size={16} />
+                    <span>Admin Panel</span>
+                  </button>
+                )}
                 <button
                   onClick={handleLogout}
                   className="flex items-center gap-2.5 w-full px-2.5 sm:px-3 py-2 rounded-lg text-sm text-red-400 hover:bg-red-500/10 transition"

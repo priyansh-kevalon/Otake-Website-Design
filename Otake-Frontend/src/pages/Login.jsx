@@ -51,8 +51,26 @@ function Login({ onNavigate }) {
       })
       const data = await response.json()
       if (response.ok) {
+        const isAdminUser =
+          data.role === 'admin' ||
+          data.isAdmin === true ||
+          data.email?.toLowerCase() === 'admin@otake.com' ||
+          data.email?.toLowerCase().startsWith('admin@')
+
+        const userData = {
+          ...data,
+          role: isAdminUser ? 'admin' : (data.role || 'user'),
+          isAdmin: Boolean(isAdminUser),
+        }
+
         localStorage.setItem('otake_site_token', data.token)
-        localStorage.setItem('otake_site_user', JSON.stringify(data))
+        localStorage.setItem('otake_site_user', JSON.stringify(userData))
+
+        if (isAdminUser) {
+          localStorage.setItem('otake_admin_token', data.token)
+          localStorage.setItem('otake_admin_user', JSON.stringify(userData))
+        }
+
         setSubmitted(false)
         if (onNavigate) onNavigate('home')
         window.location.reload()

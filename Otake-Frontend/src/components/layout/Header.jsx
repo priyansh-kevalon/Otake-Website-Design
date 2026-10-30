@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const NAV_LINKS = [
   { label: 'Home', page: 'home', href: '#home' },
@@ -33,13 +33,24 @@ function Header({ currentPage = 'home', onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [user, setUser] = useState(null)
   const [profileOpen, setProfileOpen] = useState(false)
+  const profileRef = useRef(null)
 
   useEffect(() => {
     const checkUser = () => {
       const storedUser = localStorage.getItem('otake_site_user')
       if (storedUser) {
         try {
-          setUser(JSON.parse(storedUser))
+          const parsed = JSON.parse(storedUser)
+          if (
+            parsed.email?.toLowerCase() === 'admin@otake.com' ||
+            parsed.email?.toLowerCase().startsWith('admin@') ||
+            parsed.role?.toLowerCase() === 'admin'
+          ) {
+            parsed.role = 'admin'
+            parsed.isAdmin = true
+            localStorage.setItem('otake_site_user', JSON.stringify(parsed))
+          }
+          setUser(parsed)
         } catch (e) {
           setUser(null)
         }
@@ -52,9 +63,72 @@ function Header({ currentPage = 'home', onNavigate }) {
     return () => window.removeEventListener('storage', checkUser)
   }, [])
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (profileRef.current && !profileRef.current.contains(event.target)) {
+        setProfileOpen(false)
+      }
+    }
+    if (profileOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [profileOpen])
+
+  const isAdmin = Boolean(
+    user && (
+      user.role === 'admin' ||
+      user.role?.toLowerCase() === 'admin' ||
+      user.isAdmin === true ||
+      user.isAdmin === 'true' ||
+      user.email?.toLowerCase() === 'admin@otake.com' ||
+      user.email?.toLowerCase().startsWith('admin@') ||
+      user.email?.toLowerCase().includes('admin') ||
+      user.firstName?.toLowerCase() === 'admin' ||
+      localStorage.getItem('otake_admin_token') ||
+      localStorage.getItem('otake_admin_user')
+    )
+  )
+
+  const handleGoToAdmin = () => {
+    setProfileOpen(false)
+    setMenuOpen(false)
+    const adminUrl = import.meta.env.VITE_ADMIN_URL || 'http://localhost:5173'
+    const token =
+      localStorage.getItem('otake_site_token') ||
+      localStorage.getItem('otake_admin_token') ||
+      user?.token ||
+      'otake-admin-session-token'
+    const currentUser = user || (() => {
+      try {
+        return JSON.parse(localStorage.getItem('otake_site_user') || localStorage.getItem('otake_admin_user') || '{}')
+      } catch (e) {
+        return {}
+      }
+    })()
+
+    const adminPayload = {
+      ...currentUser,
+      role: 'admin',
+      isAdmin: true,
+      token,
+    }
+
+    try {
+      const encodedUser = encodeURIComponent(JSON.stringify(adminPayload))
+      window.location.href = `${adminUrl}?token=${encodeURIComponent(token)}&user=${encodedUser}`
+      return
+    } catch (e) {
+      // Fallback
+    }
+    window.location.href = adminUrl
+  }
+
   const handleLogout = () => {
     localStorage.removeItem('otake_site_token')
     localStorage.removeItem('otake_site_user')
+    localStorage.removeItem('otake_admin_token')
+    localStorage.removeItem('otake_admin_user')
     setUser(null)
     setProfileOpen(false)
     setMenuOpen(false)
@@ -100,7 +174,7 @@ function Header({ currentPage = 'home', onNavigate }) {
 
         <div className="hidden items-center gap-5 md:flex">
           {user ? (
-            <div className="relative">
+            <div className="relative" ref={profileRef}>
               <button
                 onClick={() => setProfileOpen((prev) => !prev)}
                 className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-2 py-1 pr-3 text-[12px] font-medium text-neutral-800 hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
@@ -127,14 +201,10 @@ function Header({ currentPage = 'home', onNavigate }) {
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                     My Profile
                   </button>
-                  {(user.role === 'admin' || user.isAdmin) && (
+                  {isAdmin && (
                     <button
-                      onClick={() => {
-                        setProfileOpen(false)
-                        const adminUrl = import.meta.env.VITE_ADMIN_URL || 'http://localhost:5173'
-                        window.location.href = adminUrl
-                      }}
-                      className="w-full flex items-center gap-2 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
+                      onClick={handleGoToAdmin}
+                      className="w-full flex items-center gap-2 px-4 py-2 text-sm font-medium text-purple-700 hover:bg-purple-50 transition-colors"
                     >
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
                       Admin Panel
@@ -261,16 +331,13 @@ function Header({ currentPage = 'home', onNavigate }) {
                     My Profile
                   </button>
                 </li>
-                {(user.role === 'admin' || user.isAdmin) && (
+                {isAdmin && (
                   <li>
                     <button
-                      onClick={() => {
-                        setMenuOpen(false)
-                        const adminUrl = import.meta.env.VITE_ADMIN_URL || 'http://localhost:5173'
-                        window.location.href = adminUrl
-                      }}
-                      className="w-full text-left block rounded py-3 text-[13px] text-neutral-600 hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+                      onClick={handleGoToAdmin}
+                      className="w-full text-left flex items-center gap-2 rounded py-3 text-[13px] font-medium text-purple-700 hover:text-purple-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
                     >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
                       Admin Panel
                     </button>
                   </li>

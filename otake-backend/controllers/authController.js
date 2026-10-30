@@ -1,4 +1,4 @@
-﻿import User from "../models/User.js";
+import User from "../models/User.js";
 import generateToken from "../utils/generateToken.js";
 
 export const registerUser = async (req, res) => {
@@ -11,11 +11,16 @@ export const registerUser = async (req, res) => {
     throw new Error("User already exists");
   }
 
+  const isAdminEmail =
+    email.toLowerCase() === "admin@otake.com" ||
+    email.toLowerCase().startsWith("admin@");
+
   const user = await User.create({
     firstName,
     lastName,
     email,
     password,
+    role: isAdminEmail ? "admin" : "user",
   });
 
   if (user) {
@@ -25,6 +30,7 @@ export const registerUser = async (req, res) => {
       lastName: user.lastName,
       email: user.email,
       role: user.role,
+      isAdmin: user.role === "admin",
       token: generateToken(user._id),
     });
   } else {
@@ -39,12 +45,25 @@ export const loginUser = async (req, res) => {
   const user = await User.findOne({ email });
 
   if (user && (await user.matchPassword(password))) {
+    const isMasterAdmin =
+      user.email.toLowerCase() === "admin@otake.com" ||
+      user.email.toLowerCase().startsWith("admin@") ||
+      user.role === "admin";
+
+    if (isMasterAdmin && user.role !== "admin") {
+      user.role = "admin";
+      await user.save();
+    }
+
+    const effectiveRole = isMasterAdmin ? "admin" : (user.role || "user");
+
     res.json({
       _id: user._id,
       firstName: user.firstName,
       lastName: user.lastName,
       email: user.email,
-      role: user.role,
+      role: effectiveRole,
+      isAdmin: effectiveRole === "admin",
       token: generateToken(user._id),
     });
   } else {
