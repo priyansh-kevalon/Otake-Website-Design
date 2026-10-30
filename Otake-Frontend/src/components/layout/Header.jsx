@@ -35,7 +35,7 @@ function Header({ currentPage = 'home', onNavigate }) {
   const [profileOpen, setProfileOpen] = useState(false)
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('otake_site_user')
+    const storedUser = localStorage.getItem('otake_site_user') || localStorage.getItem('otake_user')
     if (storedUser) {
       try {
         setUser(JSON.parse(storedUser))
@@ -48,6 +48,8 @@ function Header({ currentPage = 'home', onNavigate }) {
   const handleLogout = () => {
     localStorage.removeItem('otake_site_token')
     localStorage.removeItem('otake_site_user')
+    localStorage.removeItem('otake_token')
+    localStorage.removeItem('otake_user')
     setUser(null)
     setProfileOpen(false)
     setMenuOpen(false)
