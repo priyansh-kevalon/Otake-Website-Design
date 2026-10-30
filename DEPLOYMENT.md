@@ -35,6 +35,10 @@ Push this entire project to your GitHub repository.
 5. Publish Directory: `dist`
 6. Environment Variable:
    - `VITE_API_URL` - Your backend URL (e.g., https://otake-backend.onrender.com)
+   - `VITE_ADMIN_URL` - Your admin panel URL (e.g., https://otake-admin.onrender.com)
+
+Set the admin account's `role` field to `admin` in MongoDB. Accounts without
+that role keep the default `user` role and do not see the Admin Dashboard link.
 
 ### 4. Deploy Admin Panel
 1. New → Static Site
