@@ -8,8 +8,8 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem("otake_token");
-    const userData = localStorage.getItem("otake_user");
+    const token = localStorage.getItem("otake_user_token");
+    const userData = localStorage.getItem("otake_user_data");
     if (token && userData) {
       setUser(JSON.parse(userData));
     }
@@ -18,15 +18,15 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     const { data } = await api.post("/auth/login", { email, password });
-    localStorage.setItem("otake_token", data.token);
-    localStorage.setItem("otake_user", JSON.stringify(data));
+    localStorage.setItem("otake_user_token", data.token);
+    localStorage.setItem("otake_user_data", JSON.stringify(data));
     setUser(data);
     return data;
   };
 
   const logout = () => {
-    localStorage.removeItem("otake_token");
-    localStorage.removeItem("otake_user");
+    localStorage.removeItem("otake_user_token");
+    localStorage.removeItem("otake_user_data");
     setUser(null);
   };
 

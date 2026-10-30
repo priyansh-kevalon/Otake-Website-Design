@@ -51,10 +51,11 @@ function Login({ onNavigate }) {
       })
       const data = await response.json()
       if (response.ok) {
-        localStorage.setItem('otake_token', data.token)
-        localStorage.setItem('otake_user', JSON.stringify(data))
+        localStorage.setItem('otake_site_token', data.token)
+        localStorage.setItem('otake_site_user', JSON.stringify(data))
         setSubmitted(false)
         if (onNavigate) onNavigate('home')
+        window.location.reload()
       } else {
         setSubmitted(false)
         alert(data.message || 'Login failed')
