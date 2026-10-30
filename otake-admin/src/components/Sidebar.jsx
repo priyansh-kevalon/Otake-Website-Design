@@ -2,6 +2,8 @@
 import { LayoutDashboard, Users, Mail, Newspaper, FileText, LogOut, X, Globe } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
+const FRONTEND_URL = import.meta.env.VITE_FRONTEND_URL || "http://localhost:5174";
+
 const links = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard },
   { to: "/users", label: "Users", icon: Users },
@@ -71,7 +73,7 @@ const Sidebar = ({ isOpen, onClose }) => {
           <button
             onClick={() => {
               onClose?.();
-              window.location.href = "http://localhost:5174";
+              window.location.href = FRONTEND_URL;
             }}
             className="flex items-center gap-3 w-full px-3 py-2 rounded-lg text-sm font-medium text-white/60 hover:bg-white/[0.05] hover:text-white transition"
           >
