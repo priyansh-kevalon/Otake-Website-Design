@@ -12,6 +12,7 @@ import GrowthAI from './pages/GrowthAI.jsx'
 import BusinessSupport from './pages/BusinessSupport.jsx'
 import Shipping from './pages/Shipping.jsx'
 import Blog from './pages/Blog.jsx'
+import Profile from './pages/Profile.jsx'
 
 function BackToTopButton() {
   const [visible, setVisible] = useState(false)
@@ -63,6 +64,7 @@ function App() {
     if (hash === '#contact') return 'contact'
     if (hash === '#login' || hash === '#signin') return 'login'
     if (hash === '#register' || hash === '#signup' || hash === '#try-for-free') return 'register'
+    if (hash === '#profile' || hash === '#my-profile') return 'profile'
     if (hash === '#startup-support') return 'startup-support'
     if (hash === '#growth-ai') return 'growth-ai'
     if (hash === '#business-support') return 'business-support'
@@ -88,6 +90,9 @@ function App() {
         setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
       } else if (hash === '#register' || hash === '#signup' || hash === '#try-for-free') {
         setCurrentPage('register')
+        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
+      } else if (hash === '#profile' || hash === '#my-profile') {
+        setCurrentPage('profile')
         setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
       } else if (hash === '#startup-support') {
         setCurrentPage('startup-support')
@@ -131,6 +136,7 @@ function App() {
         {currentPage === 'contact' && <Contact />}
         {currentPage === 'login' && <Login onNavigate={handleNavigate} />}
         {currentPage === 'register' && <Register onNavigate={handleNavigate} />}
+        {currentPage === 'profile' && <Profile onNavigate={handleNavigate} />}
         {currentPage === 'startup-support' && <StartupSupport onNavigate={handleNavigate} />}
         {currentPage === 'growth-ai' && <GrowthAI onNavigate={handleNavigate} />}
         {currentPage === 'business-support' && <BusinessSupport onNavigate={handleNavigate} />}

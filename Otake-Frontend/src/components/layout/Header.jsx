@@ -111,13 +111,17 @@ function Header({ currentPage = 'home', onNavigate }) {
                     <p className="text-sm font-medium text-neutral-900 truncate">{user.firstName} {user.lastName}</p>
                     <p className="text-xs text-neutral-500 truncate">{user.email}</p>
                   </div>
-                  <a
-                    href={import.meta.env.VITE_USER_PANEL_URL || 'http://localhost:5176'}
+                  <button
+                    onClick={() => {
+                      setProfileOpen(false)
+                      if (onNavigate) onNavigate('profile')
+                      window.location.hash = '#profile'
+                    }}
                     className="w-full flex items-center gap-2 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
                   >
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                     My Profile
-                  </a>
+                  </button>
                   <button
                     onClick={handleLogout}
                     className="w-full flex items-center gap-2 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
@@ -228,12 +232,16 @@ function Header({ currentPage = 'home', onNavigate }) {
                   </div>
                 </li>
                 <li>
-                  <a
-                    href={import.meta.env.VITE_USER_PANEL_URL || 'http://localhost:5176'}
-                    className="block rounded py-3 text-[13px] text-neutral-600 hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+                  <button
+                    onClick={() => {
+                      setMenuOpen(false)
+                      if (onNavigate) onNavigate('profile')
+                      window.location.hash = '#profile'
+                    }}
+                    className="w-full text-left block rounded py-3 text-[13px] text-neutral-600 hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
                   >
                     My Profile
-                  </a>
+                  </button>
                 </li>
                 <li>
                   <button
