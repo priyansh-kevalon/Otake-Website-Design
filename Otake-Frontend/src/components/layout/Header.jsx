@@ -104,11 +104,18 @@ function Header({ currentPage = 'home', onNavigate }) {
                 <span>{user.firstName} {user.lastName}</span>
               </button>
               {profileOpen && (
-                <div className="absolute right-0 mt-2 w-48 rounded-xl border border-neutral-200 bg-white shadow-lg overflow-hidden z-50">
+                <div className="absolute right-0 mt-2 w-56 rounded-xl border border-neutral-200 bg-white shadow-lg overflow-hidden z-50">
                   <div className="px-4 py-3 border-b border-neutral-100">
                     <p className="text-sm font-medium text-neutral-900 truncate">{user.firstName} {user.lastName}</p>
                     <p className="text-xs text-neutral-500 truncate">{user.email}</p>
                   </div>
+                  <a
+                    href={import.meta.env.VITE_USER_PANEL_URL || 'http://localhost:5176'}
+                    className="w-full flex items-center gap-2 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    My Profile
+                  </a>
                   <button
                     onClick={handleLogout}
                     className="w-full flex items-center gap-2 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
@@ -217,6 +224,14 @@ function Header({ currentPage = 'home', onNavigate }) {
                       <p className="text-xs text-neutral-500">{user.email}</p>
                     </div>
                   </div>
+                </li>
+                <li>
+                  <a
+                    href={import.meta.env.VITE_USER_PANEL_URL || 'http://localhost:5176'}
+                    className="block rounded py-3 text-[13px] text-neutral-600 hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+                  >
+                    My Profile
+                  </a>
                 </li>
                 <li>
                   <button
