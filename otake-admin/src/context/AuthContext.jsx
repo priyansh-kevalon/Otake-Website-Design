@@ -20,6 +20,8 @@ export const AuthProvider = ({ children }) => {
     const { data } = await api.post("/auth/login", { email, password });
     localStorage.setItem("otake_admin_token", data.token);
     localStorage.setItem("otake_admin_user", JSON.stringify(data));
+    localStorage.setItem("otake_site_token", data.token);
+    localStorage.setItem("otake_site_user", JSON.stringify(data));
     setUser(data);
     return data;
   };
@@ -27,6 +29,8 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem("otake_admin_token");
     localStorage.removeItem("otake_admin_user");
+    localStorage.removeItem("otake_site_token");
+    localStorage.removeItem("otake_site_user");
     setUser(null);
   };
 

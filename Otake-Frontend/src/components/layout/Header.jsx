@@ -35,17 +35,22 @@ function Header({ currentPage = 'home', onNavigate }) {
   const [profileOpen, setProfileOpen] = useState(false)
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('otake_site_user')
-    if (storedUser) {
-      try {
-        setUser(JSON.parse(storedUser))
-      } catch (e) {
+    const checkUser = () => {
+      const storedUser = localStorage.getItem('otake_site_user')
+      if (storedUser) {
+        try {
+          setUser(JSON.parse(storedUser))
+        } catch (e) {
+          setUser(null)
+        }
+      } else {
         setUser(null)
       }
-    } else {
-      setUser(null)
     }
-  }, [currentPage])
+    checkUser()
+    window.addEventListener('storage', checkUser)
+    return () => window.removeEventListener('storage', checkUser)
+  }, [])
 
   const handleLogout = () => {
     localStorage.removeItem('otake_site_token')
