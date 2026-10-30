@@ -74,7 +74,10 @@ const Topbar = ({ onMenuClick }) => {
               </div>
               <div className="p-1.5 sm:p-2">
                 <button
-                  onClick={() => setIsProfileOpen(false)}
+                  onClick={() => {
+                    setIsProfileOpen(false);
+                    window.location.href = '/profile';
+                  }}
                   className="flex items-center gap-2.5 w-full px-2.5 sm:px-3 py-2 rounded-lg text-sm text-white/70 hover:bg-white/[0.05] hover:text-white transition"
                 >
                   <User size={16} />

@@ -8,6 +8,7 @@ import Users from "./pages/Users";
 import Contacts from "./pages/Contacts";
 import Newsletter from "./pages/Newsletter";
 import TemplateApplications from "./pages/TemplateApplications";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/newsletter" element={<Newsletter />} />
               <Route path="/template-applications" element={<TemplateApplications />} />
+              <Route path="/profile" element={<Profile />} />
             </Route>
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
