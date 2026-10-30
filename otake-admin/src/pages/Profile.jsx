@@ -8,21 +8,21 @@ const Profile = () => {
 
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <button
-            onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition mb-3"
-          >
-            <ArrowLeft size={16} />
-            Back
-          </button>
-          <span className="inline-block w-fit rounded-full bg-gradient-to-r from-pink-400 to-purple-400 px-3 py-1 text-[11px] font-semibold text-white sm:px-3.5 sm:py-1.5 sm:text-[12px] shadow-[0_0_30px_rgba(168,85,247,0.4)]">
-            Admin Profile
+      <div className="mb-6">
+        <button
+          onClick={() => navigate("/")}
+          className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition mb-4"
+        >
+          <ArrowLeft size={16} />
+          Back to Dashboard
+        </button>
+        <div className="flex items-center gap-3">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">My Profile</h1>
+          <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-purple-400/30 text-[11px] font-medium text-purple-300">
+            Administrator
           </span>
-          <h1 className="mt-3 text-xl sm:text-2xl lg:text-3xl font-semibold text-white">My Profile</h1>
-          <p className="text-white/50 text-sm mt-1">View and manage your personal information</p>
         </div>
+        <p className="text-white/50 text-sm mt-1.5">View your admin account details</p>
       </div>
 
       <div className="relative bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden shadow-[0_40px_80px_rgba(146,118,255,0.15)]">
