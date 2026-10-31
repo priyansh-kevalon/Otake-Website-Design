@@ -1,21 +1,16 @@
 export const getBaseUrl = () => {
-  // If explicitly configured in Vite environment, use it
+  // If explicitly configured in Vite environment with a remote production URL, use it
   const envUrl = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL;
-  if (envUrl) {
+  if (envUrl && !envUrl.includes('localhost') && !envUrl.includes('127.0.0.1')) {
     return envUrl.replace(/\/api\/?$/, '').replace(/\/+$/, '');
   }
 
-  // When running in a browser, use the current host so mobile devices on the same Wi-Fi/LAN reach the backend
-  if (typeof window !== 'undefined' && window.location) {
-    const { hostname, protocol } = window.location;
-    // If mobile or remote device accessed via LAN IP (e.g. 192.168.x.x, 10.x.x.x, etc.)
-    if (hostname && hostname !== 'localhost' && hostname !== '127.0.0.1') {
-      return `${protocol}//${hostname}:5000`;
-    }
-    return `http://${hostname || 'localhost'}:5000`;
-  }
-
-  return 'http://127.0.0.1:5000';
+  // When running locally or on a mobile device on Wi-Fi, return empty base so requests use relative `/api/...`.
+  // This routes all requests through Vite's proxy on the frontend port, which:
+  // 1. Completely bypasses Windows Firewall blocking port 5000 on mobile devices.
+  // 2. Completely eliminates Cross-Origin CORS and preflight OPTIONS failures on mobile.
+  // 3. Works seamlessly on both desktop (localhost) and mobile (LAN IP / tunnels).
+  return '';
 };
 
 const API_BASE_URL = getBaseUrl();
@@ -23,7 +18,10 @@ const API_BASE_URL = getBaseUrl();
 export default API_BASE_URL;
 
 export const getApiUrl = (path) => {
-  const base = getBaseUrl().replace(/\/+$/, '');
+  const base = getBaseUrl();
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  if (!base) {
+    return cleanPath;
+  }
   return `${base}${cleanPath}`;
 };

@@ -1,18 +1,9 @@
 export const getBaseUrl = () => {
   const envUrl = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL;
-  if (envUrl) {
+  if (envUrl && !envUrl.includes('localhost') && !envUrl.includes('127.0.0.1')) {
     return envUrl.replace(/\/api\/?$/, '').replace(/\/+$/, '');
   }
-
-  if (typeof window !== 'undefined' && window.location) {
-    const { hostname, protocol } = window.location;
-    if (hostname && hostname !== 'localhost' && hostname !== '127.0.0.1') {
-      return `${protocol}//${hostname}:5000`;
-    }
-    return `http://${hostname || 'localhost'}:5000`;
-  }
-
-  return 'http://127.0.0.1:5000';
+  return '';
 };
 
 const API_BASE_URL = getBaseUrl();
@@ -20,7 +11,10 @@ const API_BASE_URL = getBaseUrl();
 export default API_BASE_URL;
 
 export const getApiUrl = (path) => {
-  const base = getBaseUrl().replace(/\/+$/, '');
+  const base = getBaseUrl();
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  if (!base) {
+    return cleanPath;
+  }
   return `${base}${cleanPath}`;
 };

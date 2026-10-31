@@ -2,19 +2,11 @@ import axios from "axios";
 
 const getApiBaseUrl = () => {
   const envUrl = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL;
-  if (envUrl) {
+  if (envUrl && !envUrl.includes('localhost') && !envUrl.includes('127.0.0.1')) {
     const clean = envUrl.replace(/\/+$/, '');
     return clean.endsWith('/api') ? clean : `${clean}/api`;
   }
-
-  if (typeof window !== 'undefined' && window.location) {
-    const { hostname, protocol } = window.location;
-    if (hostname && hostname !== 'localhost' && hostname !== '127.0.0.1') {
-      return `${protocol}//${hostname}:5000/api`;
-    }
-  }
-
-  return "http://localhost:5000/api";
+  return "/api";
 };
 
 const api = axios.create({
