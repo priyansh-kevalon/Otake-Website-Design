@@ -4,27 +4,38 @@ import generateToken from "../utils/generateToken.js";
 export const registerUser = async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
 
-  const userExists = await User.findOne({ email });
+  if (!firstName || !email || !password) {
+    return res.status(400).json({ message: "Please fill in all required fields" });
+  }
+
+  const cleanEmail = email.trim().toLowerCase();
+  const escaped = cleanEmail.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+
+  const userExists = await User.findOne({
+    $or: [
+      { email: cleanEmail },
+      { email: { $regex: new RegExp(`^${escaped}$`, "i") } },
+    ],
+  });
 
   if (userExists) {
-    res.status(400);
-    throw new Error("User already exists");
+    return res.status(400).json({ message: "An account with this email already exists" });
   }
 
   const isAdminEmail =
-    email.toLowerCase() === "admin@otake.com" ||
-    email.toLowerCase().startsWith("admin@");
+    cleanEmail === "admin@otake.com" ||
+    cleanEmail.startsWith("admin@");
 
   const user = await User.create({
-    firstName,
-    lastName,
-    email,
+    firstName: firstName.trim(),
+    lastName: (lastName || "").trim(),
+    email: cleanEmail,
     password,
     role: isAdminEmail ? "admin" : "user",
   });
 
   if (user) {
-    res.status(201).json({
+    return res.status(201).json({
       _id: user._id,
       firstName: user.firstName,
       lastName: user.lastName,
@@ -34,15 +45,24 @@ export const registerUser = async (req, res) => {
       token: generateToken(user._id),
     });
   } else {
-    res.status(400);
-    throw new Error("Invalid user data");
+    return res.status(400).json({ message: "Invalid user data" });
   }
 };
 
 export const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
-  const user = await User.findOne({ email });
+  if (!email || !password) {
+    return res.status(400).json({ message: "Please enter your email and password" });
+  }
+
+  const cleanEmail = email.trim().toLowerCase();
+  const escaped = cleanEmail.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+
+  let user = await User.findOne({ email: cleanEmail });
+  if (!user) {
+    user = await User.findOne({ email: { $regex: new RegExp(`^${escaped}$`, "i") } });
+  }
 
   if (user && (await user.matchPassword(password))) {
     const isMasterAdmin =
@@ -57,7 +77,7 @@ export const loginUser = async (req, res) => {
 
     const effectiveRole = isMasterAdmin ? "admin" : (user.role || "user");
 
-    res.json({
+    return res.json({
       _id: user._id,
       firstName: user.firstName,
       lastName: user.lastName,
@@ -67,8 +87,7 @@ export const loginUser = async (req, res) => {
       token: generateToken(user._id),
     });
   } else {
-    res.status(401);
-    throw new Error("Invalid email or password");
+    return res.status(401).json({ message: "Invalid email or password" });
   }
 };
 

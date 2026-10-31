@@ -83,54 +83,63 @@ function Register({ onNavigate }) {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [rememberMe, setRememberMe] = useState(false)
   const [error, setError] = useState('')
+  const [success, setSuccess] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError('')
+    setSuccess('')
 
-    if (!name.trim()) {
+    const cleanName = name.trim()
+    const cleanEmail = email.trim().toLowerCase()
+    const cleanPassword = password
+
+    if (!cleanName) {
       setError('Please enter your full name.')
       return
     }
-    if (!email) {
+    if (!cleanEmail) {
       setError('Please enter your email address.')
       return
     }
-    if (!password) {
+    if (!cleanPassword) {
       setError('Please enter your password.')
       return
     }
-    if (password.length < 8) {
+    if (cleanPassword.length < 8) {
       setError('Password must be at least 8 characters.')
       return
     }
-    if (password !== confirmPassword) {
+    if (cleanPassword !== confirmPassword) {
       setError('Passwords do not match.')
       return
     }
 
     try {
-      const nameParts = name.trim().split(' ')
-      const firstName = nameParts[0] || name
+      const nameParts = cleanName.split(' ')
+      const firstName = nameParts[0] || cleanName
       const lastName = nameParts.slice(1).join(' ') || ''
       const response = await fetch(getApiUrl('/api/auth/register'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ firstName, lastName, email, password }),
+        body: JSON.stringify({ firstName, lastName, email: cleanEmail, password: cleanPassword }),
       })
       const data = await response.json()
       if (response.ok) {
-        setError('Registration successful! You can now login.')
+        setError('')
+        setSuccess('Registration successful! Redirecting to login...')
         setTimeout(() => {
+          window.location.hash = '#login'
           if (onNavigate) onNavigate('login')
-        }, 1500)
+        }, 1200)
       } else {
-        setError(data.message || 'Registration failed')
+        setError(data.message || 'Registration failed. Please try again.')
       }
-    } catch (error) {
-      setError('Error connecting to server')
+    } catch (err) {
+      console.error('Register error:', err)
+      setError('Cannot connect to server. Please check your network connection or verify the backend is running.')
     }
   }
 
@@ -190,6 +199,10 @@ function Register({ onNavigate }) {
                 name="email"
                 type="email"
                 autoComplete="email"
+                autoCapitalize="none"
+                autoCorrect="off"
+                spellCheck={false}
+                inputMode="email"
                 required
                 placeholder="business@gmail.com"
                 value={email}
@@ -207,6 +220,8 @@ function Register({ onNavigate }) {
                 name="new-password"
                 type="password"
                 autoComplete="new-password"
+                autoCapitalize="none"
+                autoCorrect="off"
                 required
                 placeholder="8+ characters"
                 value={password}
@@ -224,6 +239,8 @@ function Register({ onNavigate }) {
                 name="confirm-password"
                 type="password"
                 autoComplete="new-password"
+                autoCapitalize="none"
+                autoCorrect="off"
                 required
                 placeholder="Re-enter password"
                 value={confirmPassword}
@@ -258,7 +275,14 @@ function Register({ onNavigate }) {
             </button>
 
             {error && (
-              <p className="text-center text-[11.5px] text-red-600">{error}</p>
+              <div className="rounded-lg border border-red-200 bg-red-50 p-2.5 text-center text-[12px] font-medium text-red-700">
+                {error}
+              </div>
+            )}
+            {success && (
+              <div className="rounded-lg border border-green-200 bg-green-50 p-2.5 text-center text-[12px] font-medium text-green-700">
+                {success}
+              </div>
             )}
           </form>
 

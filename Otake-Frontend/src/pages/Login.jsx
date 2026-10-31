@@ -37,17 +37,34 @@ function Login({ onNavigate }) {
   const [password, setPassword] = useState('')
   const [rememberMe, setRememberMe] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setError('')
     setSubmitted(true)
+
+    const cleanEmail = email.trim().toLowerCase()
+    const cleanPassword = password
+
+    if (!cleanEmail) {
+      setError('Please enter your email address.')
+      setSubmitted(false)
+      return
+    }
+    if (!cleanPassword) {
+      setError('Please enter your password.')
+      setSubmitted(false)
+      return
+    }
+
     try {
       const response = await fetch(getApiUrl('/api/auth/login'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email: cleanEmail, password: cleanPassword }),
       })
       const data = await response.json()
       if (response.ok) {
@@ -71,16 +88,22 @@ function Login({ onNavigate }) {
           localStorage.setItem('otake_admin_user', JSON.stringify(userData))
         }
 
+        // Notify Header and other listeners immediately without full reload
+        window.dispatchEvent(new Event('storage'))
+
         setSubmitted(false)
-        if (onNavigate) onNavigate('home')
-        window.location.reload()
+        window.location.hash = '#home'
+        if (onNavigate) {
+          onNavigate('home')
+        }
       } else {
         setSubmitted(false)
-        alert(data.message || 'Login failed')
+        setError(data.message || 'Login failed. Please check your credentials.')
       }
-    } catch (error) {
+    } catch (err) {
+      console.error('Login error:', err)
       setSubmitted(false)
-      alert('Error connecting to server')
+      setError('Cannot connect to server. Please check your network connection or verify the backend is running.')
     }
   }
 
@@ -126,6 +149,12 @@ function Login({ onNavigate }) {
               <span className="h-[1px] w-full bg-neutral-400/40" />
             </div>
 
+            {error && (
+              <div className="mb-4 rounded-xl border border-red-200 bg-red-50 p-3 text-[12px] font-medium text-red-700 animate-fadeIn">
+                {error}
+              </div>
+            )}
+
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -139,6 +168,10 @@ function Login({ onNavigate }) {
                   id="login-email"
                   type="email"
                   required
+                  autoCapitalize="none"
+                  autoCorrect="off"
+                  spellCheck={false}
+                  inputMode="email"
                   placeholder="business@mail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -157,6 +190,8 @@ function Login({ onNavigate }) {
                   id="login-password"
                   type="password"
                   required
+                  autoCapitalize="none"
+                  autoCorrect="off"
                   placeholder="min 8 character."
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
